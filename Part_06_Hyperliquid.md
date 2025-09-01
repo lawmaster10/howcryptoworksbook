@@ -4,87 +4,36 @@
 
 ## Chapter 21: The Hyperliquid Ecosystem
 
-### Industry Context: Decentralized Perps & Competitors
+The decentralized perpetuals market has evolved in waves. **Synthetix** pioneered synthetic perps with an AMM‑based, pooled‑debt model, but oracle dependencies and latency constrained professional adoption. **dYdX** popularized decentralized orderbook perps before moving to an appchain, fragmenting liquidity and changing incentives. **GMX** led briefly with an AMM‑and‑vault design (GLP), but inventory constraints and oracle‑driven funding limited scale during high volatility. The market has since consolidated around high‑performance, vertically integrated CLOBs—setting the stage for **Hyperliquid**. Its closest competitor today is **Lighter**, which also targets low‑latency orderbook perps for professional flow. Many DEXs explore AMM–orderbook hybrids and appchain rollups, yet speed, capital efficiency, and permissionless listings increasingly define the frontier where Hyperliquid differentiates.
 
-The decentralized perpetuals market has evolved in waves. **Synthetix** pioneered the category with on-chain synthetic perps, but its pooled-debt AMM design, oracle dependencies, and latency/frictions limited professional trader adoption. **dYdX** then popularized decentralized orderbook perps, but its shift off Ethereum (to an appchain) fragmented liquidity and changed incentives/UX; as newer venues prioritized lower latency, deeper long-tail listings, and maker-friendly microstructure, dYdX’s share slipped. **GMX** briefly led with an AMM-and-vault model (GLP) and simple UX, yet inventory constraints and oracle-driven funding limited scale in highly volatile regimes. The market subsequently consolidated around high-performance, vertically integrated CLOBs—setting the stage for **Hyperliquid**.
+**Hyperliquid** runs a purpose‑built **Layer 1** called **HyperCore** to power its on‑chain **Central Limit Order Book (CLOB)**, integrating matching at the consensus layer for speed comparable to centralized venues. By vertically integrating from consensus to execution, the platform reduces latency and coordinates state transitions tightly around the order book.
 
-Today, the largest direct competitor to Hyperliquid is **Lighter**, which similarly targets low-latency, orderbook-based perps for professional flow. Beyond Lighter, a growing set of perps DEXs experiment with AMM–orderbook hybrids and appchain rollups, but the trend has been toward speed, capital efficiency, and permissionless listings—areas where Hyperliquid has differentiated.
+## Chapter 22: Platform Architecture & Consensus
 
-**Hyperliquid** is a high-performance decentralized derivatives exchange designed to compete with the speed and efficiency of centralized platforms. It achieves this by operating on its own purpose-built **Layer 1 blockchain**, **HyperCore**, which is meticulously optimized for a single function: running an on-chain **Central Limit Order Book (CLOB)**. This vertically integrated approach, from consensus to execution, is the primary source of its speed.
+Hyperliquid’s matching engine is embedded directly in its L1 consensus, **HyperBFT**, inspired by HotStuff. Finality targets are fast under the assumption of more than two‑thirds honest voting power. Epochs span roughly 100,000 rounds (about 90 minutes), and a deterministic leader schedule organizes block production. To ensure developer accessibility, **HyperEVM** provides full EVM compatibility with **HYPE** as the gas token, allowing existing wallets and tooling to integrate naturally.
 
-### Platform Architecture & Consensus
+Validators are required to self‑delegate a minimum stake, and staking follows familiar PoS dynamics: reward rates decline as total stake grows, with lockups and unstaking periods governing liquidity. As with any leader‑based BFT system, temporary censorship risks exist if a leader misbehaves, so rotation and monitoring are essential.
 
-The foundation of Hyperliquid is its bespoke L1 blockchain, **HyperCore**. The matching engine is embedded directly into this consensus layer, enabling extremely fast and optimized trade execution. The network is secured by a consensus mechanism called **HyperBFT**, which is inspired by the **HotStuff protocol** and operates in epochs of **100,000 rounds** (approximately 90 minutes).
+## Chapter 23: Trading Infrastructure & Liquidity
 
-To ensure developer and user accessibility, the platform features **HyperEVM**, making it fully compatible with the **Ethereum Virtual Machine**. This allows for seamless integration with existing DeFi wallets and tools, with **HYPE** serving as the native gas token.
+A distinctive element of Hyperliquid is the **Hyperliquidity Provider (HLP)**, a native liquidity vault that aggregates depositor capital to act as the unified counterparty and liquidator for the exchange. Concentrating liquidation flow through HLP internalizes costs that might otherwise go to third parties and returns fees to depositors, but it also concentrates risk during extreme volatility.
 
-#### Validator Requirements and Staking
-Validators play a crucial role in securing the network. They are required to have a minimum self-delegation of **10,000 HYPE**. Staked tokens have a **1-day lockup period** and a **7-day unstaking period**. The staking reward rate is approximately **~2.37% APR** and follows a model similar to Ethereum's, where the yield is inversely proportional to the total amount of HYPE staked across the network.
+Perpetual markets—"**Hyperps**"—use a funding rate computed from an eight‑hour moving average of the market’s own mark price rather than external spot oracles, reducing exposure to oracle manipulation. Margining supports cross and isolated modes, and maintenance margin breaches trigger liquidations routed to HLP. Order types are familiar (market and limit) with price‑time priority; on‑chain visibility introduces mempool‑to‑book latency games during stress that makers and risk systems must account for.
 
-As a **BFT family protocol**, HyperBFT targets fast finality under the assumption of **>2/3 honest voting power**; leader-based scheduling can introduce temporary censorship risks if a leader misbehaves.
+## Chapter 24: Bridging and Asset Support
 
-### Trading Infrastructure & Liquidity
+The **HyperUnit Bridge** serves as the asset ingress/egress layer and supports native BTC, ETH, and SOL without wrapped representations. A decentralized **Guardian** network secures the bridge using **MPC Threshold Signatures** over a 2‑of‑3 quorum. This improves UX by avoiding wrappers but concentrates trust in a small threshold set relative to light‑client bridges; operators may enforce pauses or limits under incident conditions.
 
-Hyperliquid's trading environment is defined by several unique components:
+## Chapter 25: Governance and Permissionless Innovation
 
-#### Hyperliquidity Provider (HLP)
-This is the protocol's **native liquidity vault**. Users can deposit assets into the HLP, which then acts as the **single counterparty for all trades** on the exchange. It functions as an automated market maker and also manages all liquidations, capturing fees that would otherwise go to third-party liquidators and distributing them to the vault's depositors.
+Upgrades and market expansion proceed through **Hyperliquid Improvement Proposals (HIPs)**. HIP‑1 established a native token standard and a 31‑hour Dutch auction mechanism that allows anyone to list a spot token. HIP‑2 introduced an automated market‑making system to provide baseline liquidity for HIP‑1 tokens. HIP‑3 made perpetual markets permissionless for builders who stake 1 million HYPE in exchange for a share of fees, aligning incentives for responsible listings. Builders must weigh delisting/offboarding risk if liquidity or risk thresholds are breached.
 
-#### Collateral and Leverage
-- **Primary collateral** for perpetual contracts is **USDC**, which provides a unified USD-based margin system
-- The platform offers up to approximately **40x leverage**, depending on the specific asset
+## Chapter 26: Tokenomics and Risk
 
-#### "Hyperps" (Hyperliquid Perpetuals)
-These are Hyperliquid-specific perpetual contracts that use an innovative **funding rate mechanism**. Instead of relying on external spot or index oracle prices, funding rates are calculated based on an **8-hour moving average** of the contract's own mark price (no external spot oracle). This design significantly reduces the risk of oracle manipulation.
-
-Order types include **limit and market orders** with **price-time priority**; on-chain visibility can create mempool-to-book latency arbitrage risks in volatile periods.
-
-**Margining** commonly supports **cross and isolated modes**; maintenance margin breaches trigger liquidations. **HLP capital** absorbs liquidation flow; extreme volatility can lead to drawdowns for HLP depositors.
-
-### Bridging and Asset Support
-
-The **HyperUnit Bridge** serves as the platform's native asset tokenization layer, facilitating deposits and withdrawals. A key feature of this infrastructure is its ability to support **native BTC, ETH, and SOL** without requiring wrapped tokens, which greatly simplifies the user experience. This bridge has proven to be robust, having processed over **$112M in BTC** and **$21M in ETH** in net inflows.
-
-Its architecture is built on a **decentralized Guardian network** that uses a **Multi-Party Computation (MPC) Threshold Signature Scheme** with a **2-of-3 consensus model** for security.
-
-A small **2-of-3 TSS quorum** concentrates trust compared to light-client bridges; operators may implement pauses or limits during incidents to preserve safety.
-
-### Governance and Permissionless Innovation
-
-The platform evolves through **Hyperliquid Improvement Proposals (HIPs)**, which have progressively opened the ecosystem to permissionless activity.
-
-#### HIP-1
-Established a **native token standard** and a unique deployment method via a **31-hour Dutch auction**. This allows anyone to permissionlessly list a new spot token.
-
-#### HIP-2
-Introduced an **automated market-making system** that provides baseline liquidity for new HIP-1 tokens, typically with a **0.3% spread**.
-
-#### HIP-3
-Transformed Hyperliquid into a truly **permissionless infrastructure** by allowing anyone to deploy their own perpetual markets. To do so, a builder must stake **1 million HYPE**, and in return, they can earn up to **50% of the trading fees** from their market.
-
-Builders should consider **market delisting/offboarding risk** if liquidity or risk thresholds are breached; staked HYPE aligns incentives for responsible listings.
-
-### Tokenomics: The HYPE Token
-
-The **HYPE token** is central to the ecosystem's value accrual. A substantial **93% of all protocol fee revenue** is used to systematically buy HYPE tokens from the open market. This creates a direct link between platform trading volume and buy-side pressure for the native token.
-
-### Security and Risk Factors
-
-Despite its robust design, the platform is not without risks.
-
-#### Infrastructure Risk
-The **decentralized Guardian network** for the HyperUnit bridge presents a potential point of failure. In April 2025, the system experienced a service disruption when a Guardian went offline.
-
-#### Market Manipulation
-The platform has been targeted by sophisticated traders. Notable incidents include:
-- **JELLY token manipulation**: Resulted in a **$13.5M loss** for the HLP after the token's price was manipulated by 400%
-- **XPL flash squeeze**: Led to **$46M in profits** for the exploiting traders
-
-#### Microstructure Risks
-An **on-chain CLOB** exposes transactions before inclusion; during high volatility, order racing and toxic flow can increase slippage and liquidation risk for leveraged traders.
-
+The **HYPE** token accrues value through aggressive buybacks: approximately 93% of protocol fee revenue is used to purchase HYPE from the market, tightly linking trading volume to token demand. Despite a robust architecture, risks remain. The Guardian network is an operational dependency for the bridge and has experienced disruptions (e.g., a Guardian outage in April 2025). Market‑microstructure incidents have occurred, including **JELLY** price manipulation that produced significant HLP losses and an **XPL** episode that generated outsized trader profits. An on‑chain CLOB exposes transactions to public ordering; during volatile periods, order racing and toxic flow increase slippage and liquidation risk for leveraged traders.
 
 ## Key Takeaways
+
 - Hyperliquid operates a purpose-built L1 (HyperCore) embedding the CLOB in consensus for speed.
 - HyperBFT (HotStuff-inspired) targets fast finality; HyperEVM ensures EVM compatibility with HYPE gas.
 - HLP is a native vault acting as the unified counterparty and liquidator, socializing PnL to depositors.

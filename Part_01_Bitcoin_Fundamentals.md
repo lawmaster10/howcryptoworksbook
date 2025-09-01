@@ -12,7 +12,7 @@ This act highlights Bitcoin's mission: to be an alternative to the traditional b
 
 ### Consensus and Chain Selection
 
-For a decentralized network to agree on the true history of transactions, it needs a robust consensus mechanism. Bitcoin uses **Nakamoto Consensus**, which is often simplified as the "longest chain rule" but is more accurately described as the "heaviest chain rule." The canonical chain is the one with the most accumulated computational work (chainwork) invested in it, not necessarily the one with the most blocks.
+For a decentralized network to agree on the true history of transactions, it needs a robust consensus mechanism. Bitcoin uses **Nakamoto Consensus**, which is often simplified as the "longest chain rule" but is more accurately described as the "heaviest chain rule." The canonical chain is the one with the most accumulated computational work (chainwork) invested in it, not necessarily the one with the most blocks. (Difficulty relates to the target via difficulty ≈ target₀/target; chainwork sums per-block work across the chain.)
 
 Think of finding a block as a lottery; chainwork is the total sum of "lottery tickets" (hashes) required to build the entire chain, a value calculated from the difficulty target (nBits) of each block. A shorter chain could have a higher cumulative difficulty, making it the valid one. This prevents an attacker from overwriting history with a long but easy-to-produce chain, as the sheer energy invested in the honest chain makes it prohibitively expensive to overcome.
 
@@ -42,7 +42,7 @@ Bitcoin uses an **Unspent Transaction Output (UTXO) model** rather than an accou
 
 This model enhances privacy by encouraging the use of new addresses for change outputs and offers potential scalability benefits by allowing parallel transaction processing. Full nodes are responsible for tracking the entire network's **UTXO set**, which is the complete collection of all spendable outputs available for future transactions.
 
-**Bitcoin Script** locks and unlocks UTXOs with a simple, stack-based language (e.g., P2PKH, P2WPKH, P2TR). **Timelocks** (nLockTime, nSequence/CSV) and CLTV enable contracts like Lightning channels, vaults, and escrow.
+**Bitcoin Script** locks and unlocks UTXOs with a simple, stack-based language (e.g., P2PKH, P2WPKH, P2TR). **Timelocks** (nLockTime, nSequence/CSV) and CLTV enable contracts like Lightning channels, vaults, and escrow. [BIP65/68/112/113]
 
 ### Transaction Structure and Prioritization
 
@@ -72,7 +72,7 @@ Wallets standardize address derivation using BIP32/39/44 and output descriptors;
 
 Activated in 2017, **Segregated Witness (SegWit)** was a landmark upgrade implemented as a backward-compatible soft fork. Its primary achievement was fixing **transaction malleability**, a bug that allowed a third party to alter a transaction's signature and change its ID (TXID) before confirmation.
 
-SegWit solved this by removing the witness (signature) data from the part of the transaction used to calculate the TXID and moving it to a separate structure. This also introduced the concept of **block weight**, replacing the 1MB size limit with a 4,000,000 weight unit maximum. This change effectively increased block capacity and incentivized the adoption of SegWit addresses.
+SegWit solved this by removing the witness (signature) data from the part of the transaction used to calculate the TXID and moving it to a separate structure. This also introduced the concept of **block weight**, replacing the 1MB size limit with a 4,000,000 weight unit maximum. This change effectively increased block capacity and incentivized the adoption of SegWit addresses. Weight = base_bytes×4 + witness_bytes; vbytes = weight/4. Fee (sats) = fee_rate (sats/vB) × vbytes.
 
 Weight discounts witness bytes by 75% (1 WU per witness byte vs 4 WU per non-witness byte). Fees are commonly quoted in **virtual bytes (vB)**, where 1 vB = 4 weight units.
 
@@ -86,7 +86,7 @@ Common activation methods include **BIP9 version bits**, **Speedy Trial**, and *
 
 **Replace-by-Fee (RBF)** is a feature that allows users to increase the fee on an unconfirmed transaction. Defined in BIP-125, **opt-in RBF** lets a sender mark a transaction as replaceable, giving them the option to rebroadcast it with a higher fee to ensure faster confirmation during network congestion.
 
-Another network feature is the **OP_RETURN opcode**, which allows users to embed a small amount of arbitrary data in a transaction. Before the rollout of Bitcoin Core v30.0, the largest OP_RETURN payload relayed by default under standard policy was 80 bytes. Bitcoin Core v30.0 removed this historical 80-byte standardness cap. Policy now allows OP_RETURN outputs up to nearly 4 MB (policy-level, not consensus), though relays/miners may enforce stricter limits.
+Another network feature is the **OP_RETURN opcode**, which allows users to embed a small amount of arbitrary data in a transaction. Bitcoin Core v30 removes the historical 80-byte relay cap; default policy allows OP_RETURN outputs up to nearly 4 MB, though peers/miners may set tighter limits. This is policy, not consensus, and behavior can vary by node and over time.
 
 Policy differs across nodes/miners; some run full-RBF, so replacement behavior can vary by peer and over time.
 
@@ -102,7 +102,7 @@ Together, these features make complex transactions indistinguishable from simple
 
 On a related note, public companies have increasingly adopted Bitcoin as a treasury asset, led by MicroStrategy (MSTR), which holds the most BTC of any publicly traded firm.
 
-Taproot supports **key-path** (single-sig) and **script-path** spends under **Tapscript**, and introduced **SIGHASH_DEFAULT** for simpler signature hashing.
+Taproot supports **key-path** (single-sig) and **script-path** spends under **Tapscript**, and introduced **SIGHASH_DEFAULT** for simpler signature hashing. [BIP340/341/342]
 
 ---
 
@@ -114,11 +114,15 @@ The **Lightning Network** is a Layer 2 protocol designed for instant, low-cost B
 
 Once the channel is established, the parties can transact an unlimited number of times by updating their channel's balance sheet off-chain. All state changes require mutual agreement and are secured by cryptography. When they are finished, they can close the channel by broadcasting the final state to the Bitcoin blockchain. The network can also route payments across multiple interconnected channels.
 
-Lightning uses **HTLCs** and **onion routing** for private, trust-minimized payments; **watchtowers** help penalize cheating. Channel liquidity is directional (inbound vs outbound) and affects routing success.
+Lightning uses **HTLCs** and **onion routing** for private, trust-minimized payments; **watchtowers** help penalize cheating. Channel liquidity is directional (inbound vs outbound) and affects routing success; rebalancing and swap services help manage liquidity for reliable routing.
 
 ---
 
 ## Chapter 5: Bitcoin Network Operations and Security Model
+
+### Roles at a Glance
+
+**Users/wallets** create and sign transactions, then broadcast them to the network (you can do this without running your own node). **Full nodes** independently validate and relay transactions and blocks, enforcing consensus rules for themselves (running a node is not the same as mining). **Miners** assemble validated transactions into candidate blocks and perform Proof‑of‑Work to win block production (miners typically run a full node, but mining is the energy‑intensive block creation role).
 
 ### Node Types and Network Topology
 
