@@ -13,66 +13,66 @@ This repository is a curated, advanced study program designed to take you from p
 ## Parts and chapters
 
 ### Part I — Bitcoin Fundamentals
-- [Chapter 1: Bitcoin Core Concepts](./Part_1_Bitcoin_Fundamentals.md#chapter-1-bitcoin-core-concepts)
-- [Chapter 2: Bitcoin Technical Architecture](./Part_1_Bitcoin_Fundamentals.md#chapter-2-bitcoin-technical-architecture)
-- [Chapter 3: Bitcoin Upgrades and Scaling](./Part_1_Bitcoin_Fundamentals.md#chapter-3-bitcoin-upgrades-and-scaling)
-- [Chapter 4: Bitcoin Layer 2 and Extensions](./Part_1_Bitcoin_Fundamentals.md#chapter-4-bitcoin-layer-2-and-extensions)
-- [Chapter 5: Bitcoin Network Operations and Security Model](./Part_1_Bitcoin_Fundamentals.md#chapter-5-bitcoin-network-operations-and-security-model)
-- [Key Takeaways](./Part_1_Bitcoin_Fundamentals.md#key-takeaways)
+- [Chapter 1: Bitcoin Core Concepts](./Part_01_Bitcoin_Fundamentals.md#chapter-1-bitcoin-core-concepts)
+- [Chapter 2: Bitcoin Technical Architecture](./Part_01_Bitcoin_Fundamentals.md#chapter-2-bitcoin-technical-architecture)
+- [Chapter 3: Bitcoin Upgrades and Scaling](./Part_01_Bitcoin_Fundamentals.md#chapter-3-bitcoin-upgrades-and-scaling)
+- [Chapter 4: Bitcoin Layer 2 and Extensions](./Part_01_Bitcoin_Fundamentals.md#chapter-4-bitcoin-layer-2-and-extensions)
+- [Chapter 5: Bitcoin Network Operations and Security Model](./Part_01_Bitcoin_Fundamentals.md#chapter-5-bitcoin-network-operations-and-security-model)
+- [Key Takeaways](./Part_01_Bitcoin_Fundamentals.md#key-takeaways)
 
 ### Part II — The Ethereum Ecosystem
-- [Chapter 6: Ethereum Core Concepts](./Part_2_Ethereum_Ecosystem.md#chapter-6-ethereum-core-concepts)
-- [Chapter 7: Ethereum Consensus and Staking](./Part_2_Ethereum_Ecosystem.md#chapter-7-ethereum-consensus-and-staking)
-- [Chapter 8: Ethereum Scaling and Layer 2 Solutions](./Part_2_Ethereum_Ecosystem.md#chapter-8-ethereum-scaling-and-layer-2-solutions)
-- [Chapter 9: Account Abstraction and Future Upgrades](./Part_2_Ethereum_Ecosystem.md#chapter-9-account-abstraction-and-future-upgrades)
-- [Key Takeaways](./Part_2_Ethereum_Ecosystem.md#key-takeaways)
+- [Chapter 6: Ethereum Core Concepts](./Part_02_Ethereum_Ecosystem.md#chapter-6-ethereum-core-concepts)
+- [Chapter 7: Ethereum Consensus and Staking](./Part_02_Ethereum_Ecosystem.md#chapter-7-ethereum-consensus-and-staking)
+- [Chapter 8: Ethereum Scaling and Layer 2 Solutions](./Part_02_Ethereum_Ecosystem.md#chapter-8-ethereum-scaling-and-layer-2-solutions)
+- [Chapter 9: Account Abstraction and Future Upgrades](./Part_02_Ethereum_Ecosystem.md#chapter-9-account-abstraction-and-future-upgrades)
+- [Key Takeaways](./Part_02_Ethereum_Ecosystem.md#key-takeaways)
 
 ### Part III — The Solana Ecosystem
-- [Chapter 10: Architecture and Execution](./Part_3_Solana_Ecosystem.md#chapter-10-architecture-and-execution)
-- [Chapter 11: Transactions, Fees, and UX](./Part_3_Solana_Ecosystem.md#chapter-11-transactions-fees-and-ux)
-- [Chapter 12: Consensus, Scheduling, and Networking](./Part_3_Solana_Ecosystem.md#chapter-12-consensus-scheduling-and-networking)
-- [Chapter 13: MEV and Block Building](./Part_3_Solana_Ecosystem.md#chapter-13-mev-and-block-building)
-- [Chapter 14: Developer Stack and Standards](./Part_3_Solana_Ecosystem.md#chapter-14-developer-stack-and-standards)
-- [Chapter 15: Performance, Clients, and Tradeoffs](./Part_3_Solana_Ecosystem.md#chapter-15-performance-clients-and-tradeoffs)
-- [Chapter 16: Use-Case Fit](./Part_3_Solana_Ecosystem.md#chapter-16-use-case-fit)
-- [Key Takeaways](./Part_3_Solana_Ecosystem.md#key-takeaways)
+- [Chapter 10: Architecture and Execution](./Part_03_Solana_Ecosystem.md#chapter-10-architecture-and-execution)
+- [Chapter 11: Transactions, Fees, and UX](./Part_03_Solana_Ecosystem.md#chapter-11-transactions-fees-and-ux)
+- [Chapter 12: Consensus, Scheduling, and Networking](./Part_03_Solana_Ecosystem.md#chapter-12-consensus-scheduling-and-networking)
+- [Chapter 13: MEV and Block Building](./Part_03_Solana_Ecosystem.md#chapter-13-mev-and-block-building)
+- [Chapter 14: Developer Stack and Standards](./Part_03_Solana_Ecosystem.md#chapter-14-developer-stack-and-standards)
+- [Chapter 15: Performance, Clients, and Tradeoffs](./Part_03_Solana_Ecosystem.md#chapter-15-performance-clients-and-tradeoffs)
+- [Chapter 16: Use-Case Fit](./Part_03_Solana_Ecosystem.md#chapter-16-use-case-fit)
+- [Key Takeaways](./Part_03_Solana_Ecosystem.md#key-takeaways)
 
 ### Part IV — Layer 1 Blockchains
-- [Chapter 17: Blockchain Architecture Paradigms](./Part_4_Layer_1_Blockchains.md#chapter-17-blockchain-architecture-paradigms)
-- [Chapter 18: Layer 1 Landscape Survey](./Part_4_Layer_1_Blockchains.md#chapter-18-layer-1-landscape-survey)
-- [Key Takeaways](./Part_4_Layer_1_Blockchains.md#key-takeaways)
+- [Chapter 17: Blockchain Architecture Paradigms](./Part_04_Layer_1_Blockchains.md#chapter-17-blockchain-architecture-paradigms)
+- [Chapter 18: Layer 1 Landscape Survey](./Part_04_Layer_1_Blockchains.md#chapter-18-layer-1-landscape-survey)
+- [Key Takeaways](./Part_04_Layer_1_Blockchains.md#key-takeaways)
 
 ### Part V — Data Availability & MEV
-- [Chapter 19: Celestia and the Data Availability Layer](./Part_5_Data_Availability_MEV.md#chapter-19-celestia-and-the-data-availability-layer)
-- [Chapter 20: The Complex World of MEV](./Part_5_Data_Availability_MEV.md#chapter-20-the-complex-world-of-mev)
-- [Key Takeaways](./Part_5_Data_Availability_MEV.md#key-takeaways)
+- [Chapter 19: Celestia and the Data Availability Layer](./Part_05_Data_Availability_MEV.md#chapter-19-celestia-and-the-data-availability-layer)
+- [Chapter 20: The Complex World of MEV](./Part_05_Data_Availability_MEV.md#chapter-20-the-complex-world-of-mev)
+- [Key Takeaways](./Part_05_Data_Availability_MEV.md#key-takeaways)
 
 ### Part VI — Hyperliquid
-- [Chapter 21: The Hyperliquid Ecosystem](./Part_6_Hyperliquid.md#chapter-21-the-hyperliquid-ecosystem)
-- [Key Takeaways](./Part_6_Hyperliquid.md#key-takeaways)
+- [Chapter 21: The Hyperliquid Ecosystem](./Part_06_Hyperliquid.md#chapter-21-the-hyperliquid-ecosystem)
+- [Key Takeaways](./Part_06_Hyperliquid.md#key-takeaways)
 
 ### Part VII — DeFi Protocols and Mechanisms
-- [Chapter 22: Lending and Borrowing Platforms](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-22-lending-and-borrowing-platforms)
-- [Chapter 23: Decentralized Exchange Innovation](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-23-decentralized-exchange-innovation)
-- [Chapter 24: Liquid Staking Infrastructure](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-24-liquid-staking-infrastructure)
-- [Chapter 25: Yield Optimization and Aggregation](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-25-yield-optimization-and-aggregation)
-- [Chapter 26: Oracle Networks and Price Feeds](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-26-oracle-networks-and-price-feeds)
-- [Chapter 27: Cross-Chain Infrastructure and Interoperability](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-27-cross-chain-infrastructure-and-interoperability)
-- [Chapter 28: Bridge and Oracle Security](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-28-bridge-and-oracle-security)
-- [Chapter 29: Flash Loans and Atomic Transactions](./Part_7_DeFi_Protocols_Mechanisms.md#chapter-29-flash-loans-and-atomic-transactions)
-- [Key Takeaways](./Part_7_DeFi_Protocols_Mechanisms.md#key-takeaways)
+- [Chapter 22: Lending and Borrowing Platforms](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-22-lending-and-borrowing-platforms)
+- [Chapter 23: Decentralized Exchange Innovation](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-23-decentralized-exchange-innovation)
+- [Chapter 24: Liquid Staking Infrastructure](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-24-liquid-staking-infrastructure)
+- [Chapter 25: Yield Optimization and Aggregation](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-25-yield-optimization-and-aggregation)
+- [Chapter 26: Oracle Networks and Price Feeds](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-26-oracle-networks-and-price-feeds)
+- [Chapter 27: Cross-Chain Infrastructure and Interoperability](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-27-cross-chain-infrastructure-and-interoperability)
+- [Chapter 28: Bridge and Oracle Security](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-28-bridge-and-oracle-security)
+- [Chapter 29: Flash Loans and Atomic Transactions](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-29-flash-loans-and-atomic-transactions)
+- [Key Takeaways](./Part_07_DeFi_Protocols_Mechanisms.md#key-takeaways)
 
 ### Part VIII — Stablecoins and Yield Products
-- [Chapter 30: Stablecoin Mechanisms](./Part_8_Stablecoins_Yield_Products.md#chapter-30-stablecoin-mechanisms)
-- [Chapter 31: Yield Generation Mechanisms](./Part_8_Stablecoins_Yield_Products.md#chapter-31-yield-generation-mechanisms)
-- [Chapter 32: Stablecoin Failures and Lessons Learned](./Part_8_Stablecoins_Yield_Products.md#chapter-32-stablecoin-failures-and-lessons-learned)
-- [Chapter 33: Advanced Yield Generation Strategies](./Part_8_Stablecoins_Yield_Products.md#chapter-33-advanced-yield-generation-strategies)
-- [Chapter 34: Stablecoin Adoption and Infrastructure](./Part_8_Stablecoins_Yield_Products.md#chapter-34-stablecoin-adoption-and-infrastructure)
-- [Key Takeaways](./Part_8_Stablecoins_Yield_Products.md#key-takeaways)
+- [Chapter 30: Stablecoin Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-30-stablecoin-mechanisms)
+- [Chapter 31: Yield Generation Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-31-yield-generation-mechanisms)
+- [Chapter 32: Stablecoin Failures and Lessons Learned](./Part_08_Stablecoins_Yield_Products.md#chapter-32-stablecoin-failures-and-lessons-learned)
+- [Chapter 33: Advanced Yield Generation Strategies](./Part_08_Stablecoins_Yield_Products.md#chapter-33-advanced-yield-generation-strategies)
+- [Chapter 34: Stablecoin Adoption and Infrastructure](./Part_08_Stablecoins_Yield_Products.md#chapter-34-stablecoin-adoption-and-infrastructure)
+- [Key Takeaways](./Part_08_Stablecoins_Yield_Products.md#key-takeaways)
 
 ### Part IX — Custody
-- [Chapter 35: Custody Solutions](./Part_9_Custody.md#chapter-35-custody-solutions)
-- [Key Takeaways](./Part_9_Custody.md#key-takeaways)
+- [Chapter 35: Custody Solutions](./Part_09_Custody.md#chapter-35-custody-solutions)
+- [Key Takeaways](./Part_09_Custody.md#key-takeaways)
 
 ### Part X — Market Structure and Trading
 - [Chapter 36: Crypto Trading Fundamentals](./Part_10_Market_Structure_Trading.md#chapter-36-crypto-trading-fundamentals)
