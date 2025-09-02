@@ -92,32 +92,13 @@ This creates a separate, cheaper data market specifically for rollups. EIP-4844 
 
 Blob space has a separate base fee from normal gas, blobs are pruned after the retention window, and blob contents are not directly accessible to EVM contracts.
 
-### MegaETH Architecture
+### High-Performance Rollup Approaches
 
-#### Key Facts:
-- **MegaETH's latency edge comes from**: Single centralized sequencer, pre-confirmations ("miniblocks") plus aggressively optimized, parallel EVM execution pipeline
-- **Pre-confirmation mechanism called**: preconf
-- **Strategy**: Sequential execution optimization for ultra-low latency
-- **Target performance**: Sub-millisecond latency, 100,000+ TPS
+While most rollups balance decentralization with performance, some projects prioritize extreme performance by embracing centralized sequencers. MegaETH exemplifies this approach, deliberately using a single active sequencer to achieve Web2-level latency (sub-millisecond) and throughput (100,000+ TPS).
 
-**MegaETH** is a L2 focused on creating a high-throughput execution layer that is still compatible with the EVM. MegaETH deliberately embraces a **single active sequencer architecture**. Unlike traditional rollups that aim to decentralize their sequencers, MegaETH views the centralized sequencer as necessary to achieve Web2-level performance by eliminating consensus overhead during transaction execution.
+MegaETH provides pre-confirmations (preconf) every ~10 ms through "miniblocks," giving users near-instant feedback before formal L1 finalization. The system achieves these extreme execution metrics while maintaining low network hardware requirements through specialized node types: sequencer nodes process transactions, replica nodes maintain state without re-execution, and the prover node network provides stateless validation of the sequencer's blocks, reporting valid results to the replica nodes for assurances.
 
-#### Node Architecture
-MegaETH decouples execution from verification through specialized node types:
-
-- **Sequencer Nodes**: Process transactions and produce state updates. Only one is active at a time.
-- **Replica Nodes**: Maintain blockchain state copies without re-executing transactions. They receive state diffs from the sequencer and validate using proofs from provers.
-- **Full Nodes**: Re-execute every transaction to validate blocks, essential for bridge operators and market makers requiring fast finality.
-- **Prover Nodes**: Use stateless validation to verify blocks asynchronously, providing cryptographic proofs for replica node validation.
-
-MegaETH provides **pre-confirmations (preconf)** every ~10 ms through **"miniblocks"** - giving users near-instant feedback that transactions are accepted and slated for inclusion before formal on-chain finalization.
-
-#### Current Risks and Planned Mitigations:
-- **Current Risks**: Single point of failure, potential censorship, centralized MEV extraction
-- **Planned Mitigations**:
-  - Sequencer rotation system to reduce centralization risks
-  - Slashable stake for sequencer misbehavior
-  - Security ultimately derives from Ethereum mainnet through optimistic rollup design
+This architecture trades decentralization for performance, accepting risks like single points of failure and potential censorship. Planned mitigations include sequencer rotation systems, slashable stake, and forced inclusion, while security ultimately derives from Ethereum mainnet through the optimistic rollup design with ZK fraud proofs.
 
 ---
 

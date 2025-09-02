@@ -47,35 +47,41 @@ This repository is a curated, advanced study program designed to take you from p
 - [Chapter 20: The Complex World of MEV](./Part_05_Data_Availability_MEV.md#chapter-20-the-complex-world-of-mev)
 - [Key Takeaways](./Part_05_Data_Availability_MEV.md#key-takeaways)
 
-### Part VI — Hyperliquid
-- [Chapter 21: The Hyperliquid Ecosystem](./Part_06_Hyperliquid.md#chapter-21-the-hyperliquid-ecosystem)
-- [Key Takeaways](./Part_06_Hyperliquid.md#key-takeaways)
+### Part VI — DeFi Protocols and Mechanisms
+- [Chapter 21: Why DeFi?](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-21-why-defi)
+- [Chapter 22: Lending and Borrowing Platforms](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-22-lending-and-borrowing-platforms)
+- [Chapter 23: Decentralized Exchange Innovation](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-23-decentralized-exchange-innovation)
+- [Chapter 24: Liquid Staking Infrastructure](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-24-liquid-staking-infrastructure)
+- [Chapter 25: Yield Optimization and Aggregation](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-25-yield-optimization-and-aggregation)
+- [Chapter 26: Oracle Networks and Price Feeds](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-26-oracle-networks-and-price-feeds)
+- [Chapter 27: Cross-Chain Infrastructure and Interoperability](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-27-cross-chain-infrastructure-and-interoperability)
+- [Chapter 28: Bridge and Oracle Security](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-28-bridge-and-oracle-security)
+- [Chapter 29: Flash Loans and Atomic Transactions](./Part_06_DeFi_Protocols_Mechanisms.md#chapter-29-flash-loans-and-atomic-transactions)
+- [Key Takeaways](./Part_06_DeFi_Protocols_Mechanisms.md#key-takeaways)
 
-### Part VII — DeFi Protocols and Mechanisms
-- [Chapter 22: Lending and Borrowing Platforms](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-22-lending-and-borrowing-platforms)
-- [Chapter 23: Decentralized Exchange Innovation](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-23-decentralized-exchange-innovation)
-- [Chapter 24: Liquid Staking Infrastructure](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-24-liquid-staking-infrastructure)
-- [Chapter 25: Yield Optimization and Aggregation](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-25-yield-optimization-and-aggregation)
-- [Chapter 26: Oracle Networks and Price Feeds](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-26-oracle-networks-and-price-feeds)
-- [Chapter 27: Cross-Chain Infrastructure and Interoperability](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-27-cross-chain-infrastructure-and-interoperability)
-- [Chapter 28: Bridge and Oracle Security](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-28-bridge-and-oracle-security)
-- [Chapter 29: Flash Loans and Atomic Transactions](./Part_07_DeFi_Protocols_Mechanisms.md#chapter-29-flash-loans-and-atomic-transactions)
-- [Key Takeaways](./Part_07_DeFi_Protocols_Mechanisms.md#key-takeaways)
+### Part VII — Hyperliquid
+- [Chapter 30: The Hyperliquid Ecosystem](./Part_07_Hyperliquid.md#chapter-30-the-hyperliquid-ecosystem)
+- [Chapter 31: Platform Architecture & Consensus](./Part_07_Hyperliquid.md#chapter-31-platform-architecture--consensus)
+- [Chapter 32: Trading Infrastructure & Liquidity](./Part_07_Hyperliquid.md#chapter-32-trading-infrastructure--liquidity)
+- [Chapter 33: Bridging and Asset Support](./Part_07_Hyperliquid.md#chapter-33-bridging-and-asset-support)
+- [Chapter 34: Governance and Permissionless Innovation](./Part_07_Hyperliquid.md#chapter-34-governance-and-permissionless-innovation)
+- [Chapter 35: Tokenomics and Risk](./Part_07_Hyperliquid.md#chapter-35-tokenomics-and-risk)
+- [Key Takeaways](./Part_07_Hyperliquid.md#key-takeaways)
 
 ### Part VIII — Stablecoins and Yield Products
-- [Chapter 30: Stablecoin Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-30-stablecoin-mechanisms)
-- [Chapter 31: Yield Generation Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-31-yield-generation-mechanisms)
-- [Chapter 32: Stablecoin Failures and Lessons Learned](./Part_08_Stablecoins_Yield_Products.md#chapter-32-stablecoin-failures-and-lessons-learned)
-- [Chapter 33: Advanced Yield Generation Strategies](./Part_08_Stablecoins_Yield_Products.md#chapter-33-advanced-yield-generation-strategies)
-- [Chapter 34: Stablecoin Adoption and Infrastructure](./Part_08_Stablecoins_Yield_Products.md#chapter-34-stablecoin-adoption-and-infrastructure)
+- [Chapter 36: Stablecoin Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-36-stablecoin-mechanisms)
+- [Chapter 37: Yield Generation Mechanisms](./Part_08_Stablecoins_Yield_Products.md#chapter-37-yield-generation-mechanisms)
+- [Chapter 38: Stablecoin Failures and Lessons Learned](./Part_08_Stablecoins_Yield_Products.md#chapter-38-stablecoin-failures-and-lessons-learned)
+- [Chapter 39: Advanced Yield Generation Strategies](./Part_08_Stablecoins_Yield_Products.md#chapter-39-advanced-yield-generation-strategies)
+- [Chapter 40: Stablecoin Adoption and Infrastructure](./Part_08_Stablecoins_Yield_Products.md#chapter-40-stablecoin-adoption-and-infrastructure)
 - [Key Takeaways](./Part_08_Stablecoins_Yield_Products.md#key-takeaways)
 
 ### Part IX — Custody
-- [Chapter 35: Custody Solutions](./Part_09_Custody.md#chapter-35-custody-solutions)
+- [Chapter 41: Custody Fundamentals](./Part_09_Custody.md#chapter-41-custody-fundamentals)
 - [Key Takeaways](./Part_09_Custody.md#key-takeaways)
 
 ### Part X — Market Structure and Trading
-- [Chapter 36: Crypto Trading Fundamentals](./Part_10_Market_Structure_Trading.md#chapter-36-crypto-trading-fundamentals)
+- [Chapter 42: Crypto Trading Fundamentals](./Part_10_Market_Structure_Trading.md#chapter-42-crypto-trading-fundamentals)
 - [Key Takeaways](./Part_10_Market_Structure_Trading.md#key-takeaways)
 
 ## Very brief summary

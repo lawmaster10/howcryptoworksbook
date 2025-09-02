@@ -2,7 +2,7 @@
 
 *This section analyzes the mechanics of cryptocurrency markets, covering trading strategies, market microstructure, liquidity dynamics, and the tools used by both retail and institutional participants in digital asset markets.*
 
-## Chapter 36: Crypto Trading Fundamentals
+## Chapter 42: Crypto Trading Fundamentals
 
 Understanding market structure is crucial for crypto traders navigating both **centralized exchanges (CEXs)** and **decentralized exchanges (DEXs)**. This involves mastering order execution, interpreting on-chain data, and understanding the unique mechanics that drive digital asset behavior.
 

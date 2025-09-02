@@ -2,7 +2,7 @@
 
 *This chapter introduces the core ideas behind institutional crypto custody. The goal is clarity: understand what controls actually prevent loss, how policy and evidence make custody professional, and how to choose the right model for your use case.*
 
-## Chapter 35: Custody Fundamentals
+## Chapter 41: Custody Fundamentals
 
 Crypto turns value into information. That shift eliminates trucks and vaults but replaces them with a new reality: **keys = control**. If a party can authorize a transaction, they effectively own the asset. Most failures in custody are not cryptographic—they are **policy failures**: approvals granted too easily, segregation blurred, evidence missing. Professional custody is a discipline of **least hotness** (keep the minimum online), engineered **recovery**, and **provable operations**.
 

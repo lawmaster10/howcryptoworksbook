@@ -28,7 +28,7 @@ Most hashpower is coordinated through mining pools using specialized ASIC hardwa
 
 Bitcoin has a predictable, algorithmic monetary policy with a fixed issuance schedule. The **block reward**, or subsidy, is cut in half every 210,000 blocks, an event known as the **"halving"** that occurs roughly every four years. The subsidy began at 50 BTC and has since been reduced to 25, 12.5, 6.25, and most recently to 3.125 BTC after the 2024 halving.
 
-This mechanism makes Bitcoin a **disinflationary asset**, as its inflation rate trends toward zero. Around the year 2140, the subsidy will cease, and miners will be compensated solely by transaction fees. This predictable scarcity, often analyzed with the **Stock-to-Flow (S2F) model**, is a cornerstone of Bitcoin's value proposition as a store of value.
+This mechanism makes Bitcoin a **disinflationary asset**, as its inflation rate trends toward zero. Around the year 2140, the subsidy will cease, and miners will be compensated solely by transaction fees. This predictable scarcity is a cornerstone of Bitcoin's value proposition as a store of value, though scarcity alone doesn't guarantee price appreciation—that requires sustained demand to accompany the diminishing supply.
 
 Due to integer rounding in halvings, the terminal supply converges to ~20,999,999.9769 BTC. Over time, miner security budgets shift from subsidy to fees, making a healthy fee market important for long-term incentives.
 
@@ -81,6 +81,8 @@ Weight discounts witness bytes by 75% (1 WU per witness byte vs 4 WU per non-wit
 A **soft fork** is a backward-compatible protocol upgrade that works by tightening the consensus rules. Because new rules are a subset of the old ones, non-upgraded nodes still see new blocks as valid; they simply don't enforce the stricter rules themselves. This allows the network to upgrade without splitting. An early example was the disabling of the OP_CAT opcode in 2010 to mitigate a potential denial-of-service vulnerability.
 
 Common activation methods include **BIP9 version bits**, **Speedy Trial**, and **user-activated soft forks (UASF)**.
+
+Even with backward compatibility, getting any soft fork into Bitcoin is intentionally hard. Many maintainers and long‑time contributors prioritize simplicity and protocol ossification, viewing change—even small, well‑scoped changes—as sources of implementation and game‑theoretic uncertainty. As a result, proposals undergo lengthy review, testing, and community consensus‑building, and nearly every soft‑fork discussion (including SegWit, Taproot, and newer covenant designs) has sparked controversy over activation methods, safety assumptions, and long‑term precedent.
 
 ### Replace-by-Fee and Standards
 
