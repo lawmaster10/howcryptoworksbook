@@ -66,6 +66,12 @@ High‑level entropy and quantum context:
 
 DeFi approvals are the most common institutional trap. Avoid **infinite allowances**, simulate transactions before signing, maintain allowlists, and defend against **address poisoning**. On **Bitcoin**, UTXO consolidation improves operations but can reduce privacy; use **PSBT** workflows and consider **Taproot/muSig** for scalable multi‑party policies. On **Ethereum and L2s**, separate **validator** and **withdrawal** credentials, assess bridge trust assumptions, and consider private relays for sensitive flows.
 
+### Exchange Plumbing and Proof‑of‑Reserves
+
+When assets sit on an exchange, you inherit the exchange’s solvency and operations risk. The practical “plumbing” that makes balances real includes how wallets are tiered across hot, warm, and cold storage, how margin and borrow/lend are accounted for, whether collateral is rehypothecated, and how losses are socialized through insurance funds and auto‑deleveraging in stress.
+
+“Proof‑of‑reserves” (PoR) is how an exchange demonstrates solvency. A useful PoR pairs on‑chain or custodian‑verified asset attestations with client‑verifiable liability proofs (so each customer can check inclusion and totals), clear exclusion proofs, and a published scope and cadence overseen by an independent party. Asset‑only snapshots, vague scopes, or one‑off announcements are not sufficient for professional assurance.
+
 ### Choosing a Path
 
 DAO and protocol teams typically use **Safe** on EVM for transparent governance and DeFi access, sometimes pairing it with a qualified custodian for strategic reserves. Active trading firms benefit from **MPC platforms** (e.g., Fireblocks, Copper) for speed and exchange connectivity while parking long‑term assets with a qualified custodian. Regulated funds and companies usually prefer **Anchorage**, **BitGo**, or **Coinbase Custody** as primary custodians and add MPC where policy allows.

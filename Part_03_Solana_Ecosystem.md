@@ -22,15 +22,15 @@ Ordering derives from **Proof of History (PoH)**, which provides a verifiable cr
 
 ## Chapter 13: MEV and Block Building
 
-Block construction on Solana increasingly routes through **Jito**, which enables sidecar block building with bundle auctions. Searchers simulate bundles off-chain and pay tips for inclusion; validators integrate priority fees and bundle tips when constructing blocks, coordinating on low-latency price discovery without a public mempool. Private order flow and simulation reduce sandwich risk, while the joint pricing of priority fees and tips determines inclusion and latency in practice.
+Block construction on Solana increasingly routes through **Jito**, which enables sidecar block building with bundle auctions. Searchers simulate bundles off-chain and pay tips for inclusion; validators integrate priority fees and bundle tips when constructing blocks. See also: Part V, Chapter 20 (MEV) for cross-ecosystem roles and mitigations.
 
 ## Chapter 14: Developer Stack and Standards
 
 Developers typically write programs in Rust compiled to BPF. The **Anchor** framework provides IDLs, account validation, PDAs, and ergonomic cross‑program invocations. Token standards center on SPL tokens and token accounts, with **Associated Token Accounts** standardizing ownership. **Token‑2022** extends SPL with transfer hooks, interest‑bearing mints, metadata pointers, and permanent delegates, while confidential transfer features are under active development. Programs are deployed via the **Upgradeable Loader** with governed upgrade paths, and **sysvars** expose read‑only protocol state such as clock, rent, and instructions. **Metaplex** standards define NFT metadata and verified collections, and **state compression** uses concurrent Merkle trees with off‑chain storage to make large asset sets economical.
 
-## Chapter 15: Performance, Clients, and Trade‑offs
+## Chapter 15: Performance, Clients, and Trade-offs
 
-Sealevel’s parallel runtime scales with core count when account conflicts are minimized, delivering high throughput and low latency. This performance comes with trade‑offs: recommended validator hardware is demanding (e.g., large RAM and high‑end networking), which can raise entry costs and centralization pressure. Client diversity is a priority; **Firedancer** (by Jump) is an independent, high‑performance validator client targeting major throughput and resiliency gains. Network upgrades—QUIC, Turbine refinements, runtime fixes—have reduced the frequency and severity of historical outages. Bridges such as Wormhole and Circle CCTP connect Solana to EVM ecosystems and introduce cross‑chain risk that applications must manage explicitly.
+Sealevel’s parallel runtime scales with core count when account conflicts are minimized, delivering high throughput and low latency. This performance comes with trade-offs: recommended validator hardware is demanding (e.g., large RAM and high‑end networking), which can raise entry costs and centralization pressure. Client diversity is a priority; **Firedancer** (by Jump) is an independent, high‑performance validator client targeting major throughput and resiliency gains. Network upgrades—QUIC, Turbine refinements, runtime fixes—have reduced the frequency and severity of historical outages. Bridges such as Wormhole and Circle CCTP connect Solana to EVM ecosystems and introduce cross‑chain risk that applications must manage explicitly.
 
 ## Chapter 16: Use‑Case Fit
 

@@ -43,28 +43,41 @@ V4's hooks and singleton architecture generalize Uniswap into a programmable exc
 Alternative exchange models broaden choices. **Intent‑based systems** (e.g., CoW Swap) collect signed intents and settle trades via off‑chain solvers in **batch auctions via solvers** that reduce sandwich MEV, not eliminate it. **RFQ flows** obtain firm quotes from market makers off‑chain and settle on‑chain at a guaranteed price. **App‑chains** such as dYdX v4 embrace sovereign execution for order books that need CEX‑like performance. Each model trades user protection, latency, and trust differently.
 
 Beyond spot DEXs, decentralized perpetual exchanges have grown rapidly, bringing on‑chain leverage with AMM–orderbook hybrids and full on‑chain orderbooks. Part VII explores this derivative segment in depth, using Hyperliquid as a case study.
+See also: Part X, Chapter 43 for market microstructure and execution considerations.
+
+## Chapter 25: Yield Generation Mechanisms
+
+Crypto yield arises from multiple sources: staking, MEV sharing, structured products, RWAs, and protocol incentives. **Pendle** illustrates how future yield can be **tokenized** and traded. A yield‑bearing asset such as stETH is split into a **Principal Token (PT)**—redeemable 1:1 for the asset at maturity—and a **Yield Token (YT)**—a claim on yield until maturity. The core relationship is simple: PT price plus YT price equals the price of the underlying. Selling YT after deposit locks a fixed‑rate profile; buying YT is a leveraged bet on future yield. Pricing reflects expected APRs and liquidity; risks include YT depth, interest‑rate path dependency, and unwind slippage before maturity. RWAs such as **Ondo’s USDY** bring T‑bill yield on‑chain; staking and restaking layer protocol rewards and AVS incentives; MEV sharing (e.g., Jito on Solana) distributes searcher tips to token holders.
 
 ## Chapter 24: Liquid Staking Infrastructure
 
 Liquid staking frees staked capital by issuing **Liquid Staking Tokens (LSTs)** that represent a staker's position plus rewards. **Lido** remains the largest ETH staker with **stETH** (wrap as **wstETH** for DeFi compatibility). **Rocket Pool** emphasizes permissionless node operation with **8 ETH bond + RPL**. Risks include validator centralization, smart‑contract failures, and **slashing**. **Liquid Restaking Tokens (LRTs)** extend yield by securing **AVSs** on EigenLayer, adding **AVS slashing correlation** and **LST basis risk** that can propagate through collateral.
 
-## Chapter 25: Yield Optimization and Aggregation
+### Restaking and Actively‑Validated Services (AVSs)
+
+Building on liquid staking, restaking repurposes ETH’s security to back external services such as oracles, data availability layers, sequencers, and bridges. Shared‑security markets introduce correlated slashing risk and make operator selection a first‑order concern. Liquid Restaking Tokens package yield but also stack risk, add withdrawal latency, and can amplify liquidity cascades under stress. Practical diligence focuses on an AVS’s slashing conditions, operator set composition, upgrade keys, and the guarantees behind its data availability.
+
+## Chapter 26: Yield Optimization and Aggregation
 
 Yield farming supplies liquidity to protocols in exchange for fees and incentives, but realizing returns requires operational discipline—harvest cadence, strategy risk limits, and ERC‑4626 share accounting affect outcomes. Aggregators and vaults automate this work, balancing performance and risk across venues.
 
-## Chapter 26: Oracle Networks and Price Feeds
+## Chapter 27: Advanced Yield Generation Strategies
+
+Beyond basic staking and LP fees, DeFi supports more complex strategies. **Yield aggregators** such as Yearn and Beefy automate harvesting and rebalancing via ERC‑4626 vaults, standardizing share accounting and integrations. Strategy design balances harvest cadence, withdrawal queues, and risk limits against gas and slippage. **Options vaults (DOVs)** generate income by selling options systematically—often covered calls—trading upside for premium. Ribbon’s “theta” strategies exemplify weekly automated issuance with collateralized positions. These vaults are effectively short volatility: they can underperform in strong bull markets when options are exercised frequently, while providing income in range‑bound regimes. Risk management hinges on strike selection, sizing, and awareness of gap moves and regime shifts.
+
+## Chapter 28: Oracle Networks and Price Feeds
 
 Oracles bridge on‑chain systems to off‑chain data and are a primary risk vector. **Chainlink** dominates with OCR‑based updates, deviation thresholds, and heartbeats; **Pyth** favors a pull model; **RedStone** and **Band** provide alternatives and redundancy. Many exploits combine flash loans with price manipulation in thin pools to borrow against inflated collateral. Defenses include staleness checks, circuit breakers, medianization across sources, and oracle medianization/read‑only reentrancy guards. More subtle are **intra‑transaction** manipulation paths via callbacks that bypass naive TWAP assumptions; robust designs limit reentrancy and control when reads occur.
 
-## Chapter 27: Cross‑Chain Infrastructure and Interoperability
+## Chapter 29: Cross‑Chain Infrastructure and Interoperability
 
 As DeFi goes multichain, bridges move both tokens and messages. Leading systems—**Stargate (LayerZero)**, **Across**, **Synapse**, **Wormhole**—span trust models from lock‑and‑mint to native messaging. The "bridging trilemma" trades instant finality and unified liquidity against minimal trust. Message passing differs from token bridging; native asset transfers avoid wrapped‑asset risk but are harder to implement. Security failures remain common and costly, with incidents like Ronin ($600M), Wormhole ($325M), Nomad ($190M), and BSC Token Hub (~$568M) punctuating the landscape.
 
-## Chapter 28: Bridge and Oracle Security
+## Chapter 30: Bridge and Oracle Security
 
 Security models fall on a spectrum. **Light‑client bridges** (e.g., **Succinct Telepathy**) verify headers and Merkle proofs on-chain and are the most trust‑minimized, though complex and resource‑intensive. **Multisig quorums** (e.g., **Wormhole Guardians** with VAAs) rely on a threshold of signers. **Optimistic designs** (e.g., **Across** with UMA disputes) separate oracle and relayer with a challenge window to catch collusion. Emerging **zk light‑client** bridges verify succinct proofs of consensus, reducing trust while raising verification costs. Oracle hardening and bridge design increasingly intersect as systems route value across domains.
 
-## Chapter 29: Flash Loans and Atomic Transactions
+## Chapter 31: Flash Loans and Atomic Transactions
 
 **Flash loans**—borrowed and repaid within a single transaction—enable capital‑efficient arbitrage, collateral swaps, and liquidations without upfront capital. Constraints are strict: repayment plus fee must occur atomically, or the transaction reverts. Protocol defenses include reentrancy guards, price bounds, TWAPs, cooldowns, and oracle medianization/read‑only reentrancy guards. Flash‑loan scale amplifies oracle and bridge risks when coupled with thin liquidity and poor guardrails.
 

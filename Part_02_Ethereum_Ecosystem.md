@@ -52,11 +52,7 @@ Fork choice uses **LMD-GHOST** with **Casper FFG finality**; **inactivity leaks*
 
 ### MEV and Block Production
 
-**Maximal Extractable Value (MEV)** is profit from transaction ordering; Ethereum widely uses **Proposer-Builder Separation (PBS)** via **MEV-Boost** to separate building from proposing.
-
-*See Chapter 20 for the full roles, centralization pressures, and mitigation approaches.*
-
-MEV-Boost is off-protocol today; **enshrined PBS** and **inclusion lists** are active research to reduce builder centralization and censorship.
+Ethereum widely uses **Proposer-Builder Separation (PBS)** via **MEV-Boost**. See Part V, Chapter 20 for roles, centralization pressures, and mitigations. Enshrined PBS and inclusion lists remain active research.
 
 ### Rollup Technologies
 
@@ -77,6 +73,10 @@ Most rollups use a **centralized sequencer** today; decentralizing sequencers or
 #### Practical Considerations
 Most sequencers are centralized today, so favor designs with forced inclusion/escape hatches and credible paths to shared or decentralized sequencing. Proof systems (fault or validity) vary in maturity and coverage, and some still operate with training wheels. Prefer canonical bridges and audit upgrade/admin keys and pause powers. UI “finality” on L2 differs from L1: optimistic exits take ~7 days, while ZK exits depend on proving latency. Total fees combine L2 execution gas with L1 data‑availability and inclusion costs. Prover choices (SNARK vs STARK), recursion, and hardware shape latency and fees. Data‑availability modes (on‑chain rollup vs validium/hybrid) trade cost against security. Censorship mitigations include inclusion lists, escrow/force mechanisms, and multi‑sequencer failover.
 
+### Sequencer Decentralization and Shared Sequencing
+
+Against this backdrop, decentralizing the sequencing layer seeks to preserve fast confirmations while reducing single‑operator risk. Centralized sequencers deliver speed and a single inclusion queue, but they also concentrate power and introduce censorship risk. Emerging designs distribute ordering through shared sequencing networks, rotate sequencer sets, and enforce inclusion lists that proposers can check. Preconfirmations offer soft commitments to improve UX, while slashing, escrow, and bounded dispute windows curb griefing. For safety, favor canonical rollup bridges and scrutinize upgrade keys, pause powers, and escape hatches.
+
 ### High-Performance Rollup Approaches
 
 While most rollups balance decentralization with performance, some projects prioritize extreme performance by embracing centralized sequencers. MegaETH exemplifies this approach, deliberately using a single active sequencer to achieve Web2-level latency (sub-millisecond) and throughput (100,000+ TPS).
@@ -89,7 +89,7 @@ This architecture trades decentralization for performance, accepting risks like 
 
 The primary cost for rollups is posting their transaction data to L1. **EIP-4844 (Proto-Danksharding)** dramatically reduced this cost by introducing a new transaction type: the **blob-carrying transaction**. **Blobs** are large packets of data that are made available on the consensus layer for a temporary period (~18 days) instead of being stored permanently in the execution layer's state.
 
-This creates a separate, cheaper data market specifically for rollups. Integrity is enforced by **KZG commitments**; blob availability is provided by protocol rules and data retention. Post-Pectra, the per-block blob maximum increased to 9 (from the original 6). This cryptographic technique is a cornerstone of **"full danksharding,"** as it allows light clients to verify that the data in a blob was made available simply by checking the commitment and a small proof, rather than having to download the entire blob themselves.
+This creates a separate, cheaper data market specifically for rollups. Integrity is enforced by **KZG commitments**; blob availability is provided by protocol rules and data retention. Post-Pectra, the per-block blob maximum increased to 9 (from the original 6) (as of 2025-05). This cryptographic technique is a cornerstone of **"full danksharding,"** as it allows light clients to verify that the data in a blob was made available simply by checking the commitment and a small proof, rather than having to download the entire blob themselves.
 
 Blob space has a separate base fee from normal gas, blobs are pruned after the retention window, and blob contents are not directly accessible to EVM contracts.
 
@@ -119,6 +119,10 @@ While ERC-4337 is powerful, it requires users to migrate to a new smart contract
 This EIP allows **Externally Owned Accounts (EOAs)** to temporarily set their code and behave like a smart account for a single transaction. An EOA user can delegate their authority to a smart wallet implementation for one transaction to access features like batched transactions or gas sponsorship, and then immediately revert to a normal EOA. This provides a much smoother transition for the millions of existing users, allowing them to tap into AA features without migrating their assets.
 
 EIP-7702 enables **ephemeral delegation per-transaction** without permanent smart wallet deployment, superseding earlier approaches such as EIP-3074.
+
+### Intents, Solvers, and UX
+
+With these primitives in place, the UX frontier is shifting from transactions to intents. Intent systems let users express desired outcomes while solvers or bundlers compete to satisfy them through order‑flow auctions or private routes. Session keys provide scoped, time‑bound permissions; passkeys and social recovery reduce reliance on mnemonics. Safe UX relies on thorough simulation, sensible limits and allowlists, human‑readable prompts, and paymasters that can sponsor gas without adding hidden trust.
 
 ## Key Takeaways
 - Gas measures EVM work; fees = Gas Used × (Base Fee + Priority Fee) under EIP-1559.
