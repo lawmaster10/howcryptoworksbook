@@ -11,14 +11,12 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section IV: Bitcoin Layer 2 and Extensions](./Chapter_01_Bitcoin_Fundamentals.md#section-iv-bitcoin-layer-2-and-extensions)
 - [Section V: Bitcoin Network Operations and Security Model](./Chapter_01_Bitcoin_Fundamentals.md#section-v-bitcoin-network-operations-and-security-model)
 - [Section VI: Corporate Bitcoin Treasuries](./Chapter_01_Bitcoin_Fundamentals.md#section-vi-corporate-bitcoin-treasuries)
-- [Key Takeaways](./Chapter_01_Bitcoin_Fundamentals.md#key-takeaways)
 
 ### Chapter II — The Ethereum Ecosystem
 - [Section I: Ethereum Core Concepts](./Chapter_02_Ethereum_Ecosystem.md#section-i-ethereum-core-concepts)
 - [Section II: Ethereum Consensus and Staking](./Chapter_02_Ethereum_Ecosystem.md#section-ii-ethereum-consensus-and-staking)
 - [Section III: Ethereum Scaling and Layer 2 Solutions](./Chapter_02_Ethereum_Ecosystem.md#section-iii-ethereum-scaling-and-layer-2-solutions)
 - [Section IV: Account Abstraction and Future Upgrades](./Chapter_02_Ethereum_Ecosystem.md#section-iv-account-abstraction-and-future-upgrades)
-- [Key Takeaways](./Chapter_02_Ethereum_Ecosystem.md#key-takeaways)
 
 ### Chapter III — The Solana Ecosystem
 - [Section I: Architecture and Execution](./Chapter_03_Solana_Ecosystem.md#section-i-architecture-and-execution)
@@ -28,20 +26,17 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section V: Developer Stack and Standards](./Chapter_03_Solana_Ecosystem.md#section-v-developer-stack-and-standards)
 - [Section VI: Performance, Clients, and Trade-offs](./Chapter_03_Solana_Ecosystem.md#section-vi-performance-clients-and-trade-offs)
 - [Section VII: Use-Case Fit](./Chapter_03_Solana_Ecosystem.md#section-vii-use-case-fit)
-- [Key Takeaways](./Chapter_03_Solana_Ecosystem.md#key-takeaways)
 
 ### Chapter IV — Layer 1 Blockchains
 - [Section I: Blockchain Architecture Paradigms](./Chapter_04_Layer_1_Blockchains.md#section-i-blockchain-architecture-paradigms)
 - [Section II: Layer 1 Landscape Survey](./Chapter_04_Layer_1_Blockchains.md#section-ii-layer-1-landscape-survey)
 - [Section III: Bridges and Cross-Chain Interoperability](./Chapter_04_Layer_1_Blockchains.md#section-iii-bridges-and-cross-chain-interoperability)
-- [Key Takeaways](./Chapter_04_Layer_1_Blockchains.md#key-takeaways)
 
 ### Chapter V — MEV
 - [Section I: MEV Fundamentals and Ecosystem Structure](./Chapter_05_MEV.md#section-i-mev-fundamentals-and-ecosystem-structure)
 - [Section II: MEV Strategies and Market Impact](./Chapter_05_MEV.md#section-ii-mev-strategies-and-market-impact)
 - [Section III: Centralization Pressures and Mitigation Solutions](./Chapter_05_MEV.md#section-iii-centralization-pressures-and-mitigation-solutions)
 - [Section IV: Cross-Domain MEV and Future Challenges](./Chapter_05_MEV.md#section-iv-cross-domain-mev-and-future-challenges)
-- [Key Takeaways](./Chapter_05_MEV.md#key-takeaways)
 
 ### Chapter VI — DeFi Protocols and Mechanisms
 - [Section I: Why DeFi?](./Chapter_06_DeFi_Protocols_Mechanisms.md#section-i-why-defi)
@@ -55,7 +50,6 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section IX: Cross‑Chain Infrastructure and Interoperability](./Chapter_06_DeFi_Protocols_Mechanisms.md#section-ix-cross‑chain-infrastructure-and-interoperability)
 - [Section X: Bridge and Oracle Security](./Chapter_06_DeFi_Protocols_Mechanisms.md#section-x-bridge-and-oracle-security)
 - [Section XI: Flash Loans and Atomic Transactions](./Chapter_06_DeFi_Protocols_Mechanisms.md#section-xi-flash-loans-and-atomic-transactions)
-- [Key Takeaways](./Chapter_06_DeFi_Protocols_Mechanisms.md#key-takeaways)
 
 ### Chapter VII — Hyperliquid
 - [Section I: The Hyperliquid Ecosystem](./Chapter_07_Hyperliquid.md#section-i-the-hyperliquid-ecosystem)
@@ -64,14 +58,12 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section IV: Bridging and Asset Support](./Chapter_07_Hyperliquid.md#section-iv-bridging-and-asset-support)
 - [Section V: Governance and Permissionless Innovation](./Chapter_07_Hyperliquid.md#section-v-governance-and-permissionless-innovation)
 - [Section VI: Tokenomics and Risk](./Chapter_07_Hyperliquid.md#section-vi-tokenomics-and-risk)
-- [Key Takeaways](./Chapter_07_Hyperliquid.md#key-takeaways)
 
 ### Chapter VIII — Stablecoins and Real World Assets
 - [Section I: Stablecoin Mechanisms](./Chapter_08_Stablecoins_and_RWAs.md#section-i-stablecoin-mechanisms)
 - [Section II: Stablecoin Failures and Lessons Learned](./Chapter_08_Stablecoins_and_RWAs.md#section-ii-stablecoin-failures-and-lessons-learned)
 - [Section III: Stablecoin Adoption and Infrastructure](./Chapter_08_Stablecoins_and_RWAs.md#section-iii-stablecoin-adoption-and-infrastructure)
 - [Section IV: Real World Asset Tokenization](./Chapter_08_Stablecoins_and_RWAs.md#section-iv-real-world-asset-tokenization)
-- [Key Takeaways](./Chapter_08_Stablecoins_and_RWAs.md#key-takeaways)
 
 ### Chapter IX — Custody Fundamentals
 - [Section I: Custody Core Concepts](./Chapter_09_Custody.md#section-i-custody-core-concepts)
@@ -79,7 +71,6 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section III: Controls and Security Implementation](./Chapter_09_Custody.md#section-iii-controls-and-security-implementation)
 - [Section IV: Technical Implementation Details](./Chapter_09_Custody.md#section-iv-technical-implementation-details)
 - [Section V: Operations and Risk Management](./Chapter_09_Custody.md#section-v-operations-and-risk-management)
-- [Key Takeaways](./Chapter_09_Custody.md#key-takeaways)
 
 ### Chapter X — Market Structure and Trading
 - [Section I: Exchange Architecture and Core Products](./Chapter_10_Market_Structure_Trading.md#section-i-exchange-architecture-and-core-products)
@@ -88,7 +79,6 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section IV: Risk Management and Margining Systems](./Chapter_10_Market_Structure_Trading.md#section-iv-risk-management-and-margining-systems)
 - [Section V: Pricing Mechanisms and Market Signals](./Chapter_10_Market_Structure_Trading.md#section-v-pricing-mechanisms-and-market-signals)
 - [Section VI: Advanced Analytics and Market Intelligence](./Chapter_10_Market_Structure_Trading.md#section-vi-advanced-analytics-and-market-intelligence)
-- [Key Takeaways](./Chapter_10_Market_Structure_Trading.md#key-takeaways)
 
 ### Chapter XI — Non-Fungible Token (NFT) Fundamentals
 - [Section I: NFT Core Concepts](./Chapter_11_NFTs.md#section-i-nft-core-concepts)
@@ -96,7 +86,6 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section III: NFT Standards and Implementation](./Chapter_11_NFTs.md#section-iii-nft-standards-and-implementation)
 - [Section IV: NFT Infrastructure and Marketplaces](./Chapter_11_NFTs.md#section-iv-nft-infrastructure-and-marketplaces)
 - [Section V: NFT Utility and Future Applications](./Chapter_11_NFTs.md#section-v-nft-utility-and-future-applications)
-- [Key Takeaways](./Chapter_11_NFTs.md#key-takeaways)
 
 ### Chapter XII — Quantum Resistance and Cryptographic Security
 - [Section I: Quantum Computing and Cryptographic Threats](./Chapter_12_Quantum_Resistance.md#section-i-quantum-computing-and-cryptographic-threats)
@@ -104,13 +93,11 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section III: Risk Categories and Exposure Analysis](./Chapter_12_Quantum_Resistance.md#section-iii-risk-categories-and-exposure-analysis)
 - [Section IV: Mitigation Strategies and Quantum-Resistant Solutions](./Chapter_12_Quantum_Resistance.md#section-iv-mitigation-strategies-and-quantum-resistant-solutions)
 - [Section V: Network Coordination and Future Preparations](./Chapter_12_Quantum_Resistance.md#section-v-network-coordination-and-future-preparations)
-- [Key Takeaways](./Chapter_12_Quantum_Resistance.md#key-takeaways)
 
 ### Chapter XIII — Decentralized Physical Infrastructure Networks (DePIN)
 - [Section I: DePIN Fundamentals and Architecture](./Chapter_13_DePIN.md#section-i-depin-fundamentals-and-architecture)
 - [Section II: DePIN Categories and Use Cases](./Chapter_13_DePIN.md#section-ii-depin-categories-and-use-cases)
 - [Section III: Economic Models and Sustainability Challenges](./Chapter_13_DePIN.md#section-iii-economic-models-and-sustainability-challenges)
-- [Key Takeaways](./Chapter_13_DePIN.md#key-takeaways)
 
 ### Chapter XIV — Governance, Token Economics & DAO Operations
 - [Section I: DAO Core Concepts](./Chapter_14_Governance_Token_Economics_DAO_Operations.md#section-i-dao-core-concepts)
@@ -119,5 +106,3 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section IV: Advanced Governance Mechanisms](./Chapter_14_Governance_Token_Economics_DAO_Operations.md#section-iv-advanced-governance-mechanisms)
 - [Section V: DAO Types and Specializations](./Chapter_14_Governance_Token_Economics_DAO_Operations.md#section-v-dao-types-and-specializations)
 - [Section VI: Legal Framework and Compliance](./Chapter_14_Governance_Token_Economics_DAO_Operations.md#section-vi-legal-framework-and-compliance)
-- [Key Takeaways](./Chapter_14_Governance_Token_Economics_DAO_Operations.md#key-takeaways)
-
