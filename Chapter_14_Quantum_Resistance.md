@@ -165,29 +165,3 @@ Meanwhile, **zero-knowledge proof systems** require special consideration. Many 
 **Governance mechanisms** for emergency cryptographic upgrades require careful design to maintain decentralization while enabling rapid response to demonstrated quantum threats. **Community coordination** across developers, users, and institutions becomes critical for successful migration.
 
 **Economic modeling** of post-quantum transitions must account for transaction fee impacts, network capacity changes, and potential market dynamics from quantum-compromised funds recovery.
-
-## Key Takeaways
-
-### **For Users: Immediate Actions**
-- Practice address hygiene with single-use addresses and avoid address reuse
-- Migrate funds from any address that has exposed its public key through spending
-- Understand your exposure: Bitcoin P2PKH/P2WPKH hide keys until spend; Bitcoin **P2TR** publishes the x-only pubkey in the output (key exposed pre-spend); Ethereum EOAs expose recoverable pubkeys after any outbound transaction
-- Consider multi-signature schemes for transitional protection during quantum emergence
-
-### **For Developers: Technical Preparation**
-- NIST standardized ML-KEM, ML-DSA, SLH-DSA with HQC as additional KEM; Falcon expected later (NIST FN-DSA)
-- Signature sizes (examples): ML-DSA **2420/3309/4627 B** (PK **1312/1952/2592 B**); Falcon-512 **~666 B** (PK **~897 B**); SLH-DSA **~7.9–49 KB**
-- SNARK systems need quantum-resistant alternatives (pairing-based SNARKs break under Shor); STARK systems appear more resilient
-- Plan hybrid schemes, soft fork integration, and hash-based alternatives as migration paths
-
-### **For Organizations: Strategic Planning**
-- CRQCs may emerge within 10-30 years—institutional preparation requires extensive advance planning
-- Cross-chain compatibility, economic incentives, and emergency procedures need coordination
-- Custodial services face complex multi-institutional upgrade challenges
-- Hardware acceleration and optimization remain critical for adoption feasibility
-
-### **For the Ecosystem: Systemic Risks**
-- Risk correlates with public key exposure (P2PK, reused addresses, spent outputs) rather than wallet age
-- Harvest-now forge-later attacks present immediate concern for exposed keys
-- Dormant addresses with exposed keys create systemic vulnerability
-- Early P2PK outputs (estimated 1.7-2.0 million BTC) remain highly vulnerable

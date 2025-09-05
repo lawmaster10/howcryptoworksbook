@@ -79,17 +79,3 @@ This mechanism is more direct than typical governance tokens, which often strugg
 These incidents illustrate a fundamental tension in high-performance trading systems: the optimizations that enable speed and efficiency can create new failure modes. The on-chain CLOB's transparency, while beneficial for composability, enables sophisticated actors to engage in latency arbitrage during volatile periods, increasing costs for regular traders through order racing and toxic flow.
 
 These aren't design flaws but inevitable consequences of the trade-offs Hyperliquid has chosen. The question isn't whether such risks exist, but whether the performance benefits justify them for the platform's target market of professional traders.
-
-## Key Takeaways
-
-Hyperliquid represents the most aggressive attempt to match centralized exchange performance while preserving blockchain benefits. Every architectural choice reflects a deliberate trade-off prioritizing speed and capital efficiency over generalizability and decentralization.
-
-The platform's core innovation—embedding order matching in consensus through HyperCore—eliminates traditional smart contract latency but requires an application-specific blockchain. HyperBFT achieves fast finality through leader-based consensus, accepting temporary censorship risks for consistent performance. EVM compatibility preserves developer accessibility at the cost of computational efficiency.
-
-The HLP vault system solves liquidity provision and liquidation handling through community ownership, but concentrates risk among depositors during extreme volatility. Perpetual funding mechanisms reduce oracle dependencies while maintaining accuracy, though on-chain transparency enables latency arbitrage that increases costs during volatile periods.
-
-Governance balances permissionless innovation with quality control through progressive HIPs and stake-based market launches. The Unit bridge prioritizes user experience over trust minimization, concentrating bridge security in a small Guardian set. HYPE tokenomics create direct value capture through fee buybacks, tightly linking token performance to trading volume.
-
-Operational incidents—from vault manipulations to API outages—demonstrate that even sophisticated architectures face new failure modes when optimized for performance. These aren't design flaws but inevitable consequences of the trade-offs required to compete with centralized venues.
-
-Hyperliquid's success will ultimately depend on whether professional traders value its performance benefits enough to accept the associated risks and trust assumptions. The platform has chosen speed over decentralization, efficiency over composability, and user experience over trust minimization—trade-offs that may define the next generation of decentralized trading infrastructure.

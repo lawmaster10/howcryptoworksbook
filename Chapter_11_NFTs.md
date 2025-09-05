@@ -255,14 +255,3 @@ The most successful NFT projects don't just sell digital collectibles—they bui
 **Cultural factors drive pricing**: NFT valuation combines mathematical rarity with social psychology, creator reputation, and network effects. Algorithmic appraisals help, but human judgment remains crucial for understanding cultural significance and meme potential.
 
 **Cross-chain complexity is growing**: As NFT activity spreads beyond Ethereum, bridge protocols and wrapped representations create new opportunities and risks. Each blockchain develops distinct communities and standards—understanding these differences helps you navigate the expanding ecosystem.
-
-### NFT Risk Checklist
-
-- Metadata permanence ensured (content-addressed URIs, multiple pinning providers, on-chain fallbacks)
-- Royalty and license terms explicit and enforced where applicable (marketplace behavior understood)
-- Approval safety reviewed (minimize setApprovalForAll exposure; revoke tooling and monitoring)
-- Contract upgrade paths audited (proxies, ownership, pause/kill switches)
-- Marketplace and aggregator dependencies assessed (listing security, phishing vectors)
-- Bridge and cross-chain representations validated (wrapped asset risks, custody model)
-- Randomness and mint mechanics audited (sybil resistance, fair distribution, bot protections)
-- Compliance and IP considerations reviewed (licenses, takedown risks, jurisdictional constraints)

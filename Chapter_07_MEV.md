@@ -78,11 +78,3 @@ Yet the response has been equally sophisticated. From private orderflow to batch
 The stakes couldn't be higher. MEV extraction that benefits sophisticated actors at the expense of regular users undermines the promise of decentralized finance. But the solutions emerging—intent-based systems, private execution, fair ordering mechanisms—point toward a future where the benefits of programmable money can be realized without the extractive dynamics that plague traditional finance.
 
 As blockchain networks multiply and interconnect, the next chapter of this story is already being written across domains and chains. The question isn't whether MEV will continue to evolve, but whether the mitigations can keep pace with the extraction.
-
-## Key Takeaways
-
-- **MEV emerges from transaction ordering control**, creating a sophisticated ecosystem where searchers find opportunities, builders optimize extraction, and proposers select the most profitable arrangements
-- **Harmful MEV strategies** like sandwiching directly tax users, while beneficial activities like arbitrage and liquidations serve market functions but still concentrate value among sophisticated actors
-- **Centralization pressures** from MEV competition have led to dangerous concentration in block building, spurring innovations like BuilderNet and research into enshrined PBS
-- **Cross-domain MEV** represents the next frontier, potentially creating exponentially more complex extraction opportunities as blockchain networks interconnect
-- **Mitigation strategies** range from user-level protections (private RPCs, intent systems) to protocol-level solutions (batch auctions, fair ordering) to infrastructure innovations (TEE builders, shared sequencing)

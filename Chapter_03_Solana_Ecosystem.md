@@ -103,11 +103,3 @@ But for applications that can leverage Solana's strengths—the CLOB exchanges t
 As we'll see in subsequent chapters, this performance foundation enables entirely new categories of applications. DeFi protocols that were impossible on slower chains. Trading strategies that exploit microsecond advantages. Gaming experiences that feel native rather than blockchain-constrained.
 
 Solana's ultimate success won't be measured in transactions per second or validator counts, but in whether it enables applications that couldn't exist anywhere else. The early evidence suggests it's succeeding on exactly that metric.
-
-## Key Takeaways
-
-- **Architecture drives application possibilities**: Solana's monolithic, high-throughput design with PoH + Tower BFT consensus and Sealevel parallelism creates unique capabilities for latency-sensitive applications.
-- **Developer experience reflects design philosophy**: Stateless programs, explicit account management, and compute budgets require different mental models but enable unprecedented performance.
-- **Fee markets balance efficiency and fairness**: Base fees plus priority pricing with local fee markets let applications pay for performance while preventing network-wide congestion.
-- **Infrastructure maturity is accelerating**: QUIC networking, Turbine propagation, Gulf Stream transaction routing, and Jito's MEV infrastructure create a sophisticated foundation for applications.
-- **Trade-offs shape the ecosystem**: Hardware demands and centralization risks are real, but client diversity efforts and network upgrades continue improving robustness and accessibility.

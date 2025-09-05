@@ -225,19 +225,3 @@ Historical failures follow predictable patterns that inform current best practic
 The consistent lesson across incidents is the need to **enforce strict segregation**, **harden policy change processes**, **monitor continuously for anomalies**, and **maintain independent evidence** of all operations.
 
 Successful custody operations combine technical excellence with operational discipline, regulatory compliance, and continuous improvement based on industry incidents and evolving best practices.
-
-## Key Takeaways
-
-Cryptocurrency custody fundamentally transforms the relationship between keys and control, where possession of cryptographic keys equals ownership of assets. This reality means that most custody failures stem not from cryptographic weaknesses but from policy and operational breakdowns—approvals granted too easily, segregation boundaries blurred, and evidence trails missing.
-
-The threat landscape divides into four primary categories that shape all custody decisions. External attackers deploy increasingly sophisticated techniques, from targeted phishing to state-level capabilities. Insider risks emerge from privileged access and policy shortcuts during stressful situations. Operational failures hide in untested procedures and weak change management. Legal and jurisdictional risks can neutralize even perfect technical security through asset seizures and regulatory action.
-
-Each custody model offers distinct trade-offs that serve different organizational needs. Multisig provides unmatched transparency through on-chain policy enforcement, making it ideal for DAOs and DeFi protocols. MPC and threshold signatures deliver speed and privacy for active trading operations. Qualified custodians offer regulatory compliance and legal protections that institutional investors require. Smart contract wallets enable programmable policies and recovery mechanisms for complex organizational structures.
-
-Operational excellence demands comprehensive controls across multiple layers. HSM-based key generation with split knowledge and dual control provides the cryptographic foundation. Policy engines enforce role-based access, quorum approvals, and velocity limits. Immutable evidence systems create verifiable audit trails. Tested disaster recovery procedures ensure business continuity under stress.
-
-Temperature segregation remains the operational backbone of institutional custody, with cold storage holding at least 90% of assets, warm storage maintaining 5-10%, and hot storage limited to under 5%. These should be enforced ceilings with continuous reconciliation, not merely aspirational targets.
-
-The technical landscape presents ongoing challenges that require careful planning. Mnemonic seed phrases offer simplicity but create single points of failure, while multisig distributes control at the cost of operational complexity. Quantum computing threatens signature schemes more than entropy, requiring long-term migration strategies to post-quantum cryptography. DeFi integration introduces risks from infinite approvals and bridge vulnerabilities that demand specialized monitoring.
-
-Exchange relationships require understanding the underlying custody plumbing, solvency risks, and demanding comprehensive proof-of-reserves with independent verification. Historical incidents from Mt. Gox to FTX consistently emphasize the critical importance of segregation enforcement, change control rigor, anomaly detection, and independent evidence as the differentiators between successful and failed custody operations.

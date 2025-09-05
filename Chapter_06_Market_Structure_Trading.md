@@ -236,7 +236,46 @@ The **volatility risk premium** (IV minus RV) captures whether option sellers de
 
 ---
 
-## Section VI: Advanced Analytics and Market Intelligence
+## Section VI: The Corporate Treasury Trend
+
+Beginning in 2020, a handful of public companies began allocating portions of their corporate cash reserves to Bitcoin. They viewed it as a long-duration, non-sovereign monetary asset that could serve multiple purposes: portfolio diversification, inflation hedging, and brand alignment with digital-native finance.
+
+This trend reflects Bitcoin's evolution from a niche digital experiment to an asset class that major corporations consider suitable for treasury management, though adoption remains limited relative to total corporate cash balances.
+
+### The Strategy Playbook
+
+**Strategy** (formerly known as MicroStrategy; rebranded Feb 2025, ticker MSTR) developed a financing playbook to accumulate Bitcoin at scale. The approach centers on issuing **senior unsecured convertible notes** at low coupons—including $2B of 0% due 2030—alongside at‑the‑market (ATM) equity programs.
+
+The key dynamic is that MSTR's stock volatility (variable; often markedly higher than broad equity indices) makes the embedded **conversion option** valuable to institutional investors. Convert‑arb funds buy the bonds and hedge the equity, monetizing volatility via **gamma trading**.
+
+This creates a self-reinforcing cycle: bond proceeds fund Bitcoin purchases → Bitcoin holdings increase net asset value → stock price rises → higher volatility makes future convertible issuances even cheaper → cycle repeats.
+
+### Performance and Risk Profile
+
+The strategy has delivered notable results while maintaining structural protections against liquidation. Strategy reported ~**74% BTC Yield** for FY2024 (their KPI measuring % change in BTC per share) and holds ~**636,505 BTC**. At BTC $110,000, that stack is ≈ **≈$70B**.
+
+- **Liquidation risk remains minimal** due to several factors:
+- Convertible notes are **senior unsecured** with no BTC collateral requirements
+- Outstanding maturities are 2028, 2030 (two tranches), 2031, and 2032; the 2027 notes were settled earlier in 2025 via conversion/redemption (the company received conversion requests for substantially all of the $1.05B before the Feb 24, 2025 redemption date)
+- Conversion prices vary by tranche; being "in the money" depends on the strike:
+  - 2028 notes: ~$183.19/share (ITM above that)
+  - 2030 0% notes (issued Feb 2025): ~$433.43/share
+  - 2032 notes (Jun 2024): ~$2,043.32/share
+  - 2031 notes: >$2,300/share
+- Cash interest outlay depends on the mix of 0% converts (no coupon) and preferred dividends (e.g., STRK/STRF at ~8–10%). SEC filings indicated materially higher annualized interest on remaining notes prior to the 2030 0% issuance; given changes over time, avoid a point estimate without a dated source.
+- Authorized capacity includes a disclosed **$21B common‑stock ATM** and a separate **$21B preferred (STRK) ATM**
+
+### Strategic Risks and Limitations
+
+The flywheel mechanism faces several critical vulnerabilities:
+
+**Premium compression** represents the primary threat—if MicroStrategy's stock price converges toward its Bitcoin net asset value, the effectiveness of their accretive dilution strategy diminishes significantly.
+
+The model exhibits **diminishing returns at scale**: the company required just 2.6 Bitcoin to generate one basis point of yield in 2021 but needed 58 Bitcoin by 2025 for the same result.
+
+Long-term success depends on three key conditions: Bitcoin maintaining its upward trajectory, MicroStrategy's stock preserving high volatility to attract convertible arbitrageurs, and continued access to capital markets for refinancing operations. While these conditions persist, the company appears positioned to continue its Bitcoin accumulation strategy with structural protections against forced liquidation.
+
+## Section VII: Advanced Analytics and Market Intelligence
 
 Understanding pricing signals provides valuable context for trading decisions, but sophisticated market participants go further by developing proprietary analytics and intelligence frameworks. These advanced techniques can reveal opportunities and risks that aren't immediately apparent from standard market data.
 
@@ -265,39 +304,3 @@ The key principle: treat on-chain flows as **contextual information** rather tha
 **Cliff periods** represent initial lockup phases with zero token releases, followed by **linear vesting** over subsequent periods. The notation **"1+3"** indicates a 1-year cliff followed by 3 years of linear releases—meaning no tokens unlock in Year 1, then approximately 1/36th of the allocation unlocks monthly throughout Years 2-4.
 
 **Supply overhang** models combine vesting calendars with holder behavior analysis and exchange inventory tracking to anticipate potential selling pressure. Not all unlocked tokens hit markets immediately, as recipients may have different time preferences and price sensitivities.
-
-### Advanced Research Applications
-
-Several sophisticated research angles emerge from understanding market microstructure:
-
-**Execution analytics**: Build simulators consuming order book depth snapshots to estimate slippage across venues and time periods, enabling smarter routing decisions.
-
-**Funding convergence studies**: Measure cross-venue funding rate persistence and mean-reversion patterns to identify arbitrage opportunities and risk management techniques.
-
-**Volatility event studies**: Construct IV-RV monitors around predictable events like token unlocks and exchange listings to test whether volatility term structures efficiently price supply-side risks.
-
-**Liquidity reliability scoring**: Develop metrics for order book stability and fill rates to improve execution models and venue selection algorithms.
-
----
-
-## Key Takeaways
-
-This chapter began with a promise: to connect secure asset handling to the realities of how intent becomes execution and PnL. Having explored exchange architecture, execution mechanics, market participants, risk systems, pricing signals, and advanced analytics, several critical insights emerge about successfully navigating crypto market structure:
-
-**The path from intent to execution is never neutral.** Every trading decision—from choosing between market and limit orders to selecting margin modes—shapes your ultimate PnL through fees, slippage, timing, and risk exposure. Understanding these mechanics allows you to optimize execution quality rather than accepting whatever the market gives you.
-
-**Market quality is multidimensional and dynamic.** Spreads, depth, stability, latency, and cross-venue synchronization all impact trading outcomes, but their relative importance changes based on market conditions, your position size, and strategy timeframe. What works during calm periods may fail during volatility spikes.
-
-**Reference prices determine your reality.** Most unpleasant surprises stem from misunderstanding whether liquidations, funding calculations, and margin requirements use market price, index price, or mark price. These distinctions matter more in crypto than traditional markets due to 24/7 trading and funding mechanisms.
-
-**Information flows through incentive structures.** Maker rebates, token options, vesting schedules, and market maker programs create persistent microstructural patterns. Sophisticated participants identify and exploit these patterns, while others unknowingly subsidize them through higher execution costs.
-
-**Risk control starts with system design, not position management.** Choosing appropriate margin modes, understanding liquidation mechanics, and pre-planning hedging approaches prevent problems rather than reacting to them. The crypto markets' leverage, volatility, and cascade risks make proactive risk design essential.
-
-**Execution quality compounds exponentially.** Small improvements in slippage, fees, and timing can dramatically impact strategy profitability over thousands of trades. A 2 basis point improvement in average execution costs can mean the difference between a profitable and unprofitable systematic strategy.
-
-**Context transforms signals into intelligence.** Funding rates, open interest changes, on-chain flows, and order book dynamics provide valuable context, but are unreliable as standalone predictors. Combining multiple signals with understanding of participant incentives creates actionable intelligence.
-
-The crypto markets' 24/7 nature, rapid innovation in products and venues, and unique tokenomic considerations create both opportunities and challenges for sophisticated participants. Success requires combining traditional market microstructure knowledge with crypto-specific understanding of funding mechanisms, on-chain dynamics, and evolving regulatory landscapes.
-
-Most importantly, remember that market structure is not static. The techniques and insights in this chapter provide a framework for analysis, but the specific patterns, opportunities, and risks will continue evolving as the crypto ecosystem matures. The participants who consistently generate alpha are those who adapt their understanding of market structure as quickly as the markets themselves change.
