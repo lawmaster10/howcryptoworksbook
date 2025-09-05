@@ -10,7 +10,9 @@ This act highlights Bitcoin's mission: to be an alternative to the traditional b
 
 But creating a decentralized alternative to traditional banking raises a fundamental challenge: how do you get thousands of computers around the world to agree on who owns what, without a central authority to settle disputes?
 
-### Consensus and Chain Selection Bitcoin solves this through a robust consensus mechanism. Bitcoin uses **Nakamoto Consensus**, which is often simplified as the "longest chain rule" but is more accurately described as the "heaviest chain rule." The canonical chain is the one with the most accumulated computational work invested in it, not necessarily the one with the most blocks.
+### Consensus and Chain Selection 
+
+Bitcoin solves this through a robust consensus mechanism. Bitcoin uses **Nakamoto Consensus**, which is often simplified as the "longest chain rule" but is more accurately described as the "heaviest chain rule." The canonical chain is the one with the most accumulated computational work invested in it, not necessarily the one with the most blocks.
 
 Imagine two climbers racing to the summit on different routes. One takes 1,000 easy steps up a gentle trail; the other takes 600 steps up a steep face where each step is worth more points because it's harder. The judges don't count steps; they total points. That's chainwork: nodes sum per-block work (from each block's nBits) and choose the chain with the most total work—even if it has fewer blocks. This prevents an attacker from overwriting history with a long but easy-to-produce chain, as the sheer energy invested in the honest chain makes it prohibitively expensive to overcome.
 
