@@ -168,6 +168,16 @@ Crypto yield comes from fundamentally different sources than traditional finance
 
 **MEV Sharing**: Platforms like **Jito** on Solana distribute MEV profits to token holders, letting users earn from the value extraction they would otherwise lose to searchers.
 
+### Ethena: Delta-Neutral Yield-Bearing Stablecoins
+
+Ethena represents an innovative approach to stablecoin design and yield generation through its USDe synthetic dollar. Unlike traditional collateralized stablecoins, Ethena maintains stability via delta-neutral hedging: it backs USDe with staked ETH (or other assets) while taking offsetting short positions in perpetual futures markets. When users mint USDe, their collateral is staked for yield while hedged to neutralize directional exposure. The protocol earns from two primary sources: staking rewards on the collateral (such as ETH staking APR) and funding rate payments from short perpetual positions, which are typically positive in bull markets.
+
+This creates a stablecoin that inherently generates yield, which can be compounded through sUSDe (staked USDe). The system aims to provide scalable, crypto-native dollars without relying on traditional banking infrastructure. By combining staking mechanics with derivatives hedging, Ethena transforms stablecoin issuance from a passive backing mechanism into an active yield generation strategy.
+
+While innovative, Ethena introduces unique risks that users must carefully consider. The protocol faces custody risk through its reliance on centralized exchanges for hedging positions, and funding rate risk during bear markets when negative funding rates could erode yields. Oracle dependencies create additional vulnerabilities, as accurate pricing is critical for maintaining delta neutrality. Basis risk also emerges from potential mismatches between spot and perpetual prices, which could affect the hedging effectiveness.
+
+Launched in 2024, Ethena quickly grew to billions in TVL by offering competitive yields on stable assets. It demonstrates how DeFi can create new financial primitives by combining staking, derivatives, and stablecoin mechanics. The protocol also issues ENA governance tokens, with mechanisms for yield sharing and protocol growth. This approach expands the yield generation landscape by turning stablecoin issuance itself into a yield source, complementing traditional liquidity provision and staking strategies.
+
 ## Section V: Yield Optimization and Aggregation
 
 Individual yield farming can be profitable, but it requires constant attention: monitoring rates, harvesting rewards, rebalancing positions, and managing gas costs. This operational complexity led to the rise of automated yield strategies.

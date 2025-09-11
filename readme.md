@@ -29,17 +29,14 @@ This is an advanced study plan to take you from competent to expert in the parts
 - [Section VII: Use-Case Fit and Design Patterns](./Chapter_03_Solana_Ecosystem.md#section-vii-use-case-fit-and-design-patterns)
 
 ### Chapter IV: Layer 1 Blockchains
-- [Section I: What Makes an L1? The Four Planes](./Chapter_04_Layer_1_Blockchains.md#section-i-what-makes-an-l1-the-four-planes)
-- [Section II: Monolithic vs Modular Architectures](./Chapter_04_Layer_1_Blockchains.md#section-ii-monolithic-vs-modular-architectures)
-- [Section III: Consensus & Finality](./Chapter_04_Layer_1_Blockchains.md#section-iii-consensus--finality)
-- [Section IV: Virtual Machines & Programming Models](./Chapter_04_Layer_1_Blockchains.md#section-iv-virtual-machines--programming-models)
+- [Section I: Blockchain Architectures](./Chapter_04_Layer_1_Blockchains.md#section-i-blockchain-architectures)
+- [Section II: Consensus & Finality](./Chapter_04_Layer_1_Blockchains.md#section-ii-consensus--finality)
+- [Section III: Virtual Machines & Programming Models](./Chapter_04_Layer_1_Blockchains.md#section-iii-virtual-machines--programming-models)
 - [Section V: The Trilemma in Practice](./Chapter_04_Layer_1_Blockchains.md#section-v-the-trilemma-in-practice)
 - [Section VI: Scaling Patterns](./Chapter_04_Layer_1_Blockchains.md#section-vi-scaling-patterns)
-- [Section VII: Fees, MEV & Security Budget](./Chapter_04_Layer_1_Blockchains.md#section-vii-fees-mev--security-budget)
+- [Section VII: Fees & Security Budget](./Chapter_04_Layer_1_Blockchains.md#section-vii-fees--security-budget)
 - [Section VIII: Governance & Upgrades](./Chapter_04_Layer_1_Blockchains.md#section-viii-governance--upgrades)
-- [Section IX: Liquidity/Attention Game](./Chapter_04_Layer_1_Blockchains.md#section-ix-liquidityattention-game)
-- [Section X: Comparing Major L1 Families](./Chapter_04_Layer_1_Blockchains.md#section-x-comparing-major-l1-families)
-- [Section XI: Key Takeaways](./Chapter_04_Layer_1_Blockchains.md#section-xi-key-takeaways)
+- [Section IX: Attention Game](./Chapter_04_Layer_1_Blockchains.md#section-ix-attention-game)
 
 ### Chapter V: Custody Fundamentals
 - [Section I: Custody Core Concepts](./Chapter_05_Custody.md#section-i-custody-core-concepts)
