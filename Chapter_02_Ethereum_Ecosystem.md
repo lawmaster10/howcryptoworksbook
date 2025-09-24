@@ -46,7 +46,7 @@ Before ERC-20, every new token was essentially a unique snowflake, requiring cus
 
 Suddenly, developers could build applications that worked with thousands of different tokens without writing custom code for each one. A decentralized exchange could list any ERC-20 token, a lending protocol could accept any ERC-20 as collateral, and users could seamlessly move assets between different applications. This composability (the ability for different protocols to work together like Lego blocks) became one of Ethereum's defining characteristics.
 
-The ecosystem continued to evolve with additional standards: **ERC-721** and **ERC-1155** for non fungible tokens (which we'll explore in Chapter XI), **ERC-2612** for permit based approvals (where token holders sign approvals off chain so they don't spend gas, though someone still pays gas to submit the permit), and the **Ethereum Name Service (ENS)** which allows users to replace those cryptographic addresses with human readable names like "larry.eth". These standards, combined with **EIP 55 checksums** that help prevent address typos, make Ethereum increasingly user friendly while maintaining its technical rigor.
+The ecosystem continued to evolve with additional standards: **ERC-721** and **ERC-1155** for non fungible tokens (which we'll explore in Chapter XI), and the **Ethereum Name Service (ENS)** which allows users to replace those cryptographic addresses with human readable names like "larry.eth". These standards, combined with **EIP 55 checksums** that help prevent address typos, make Ethereum increasingly user friendly while maintaining its technical rigor.
 
 Understanding how Ethereum processes transactions and maintains standards is just the beginning. The real magic happens in how the network reaches consensus about what transactions are valid and in what order they should be processed. This brings us to one of Ethereum's significant transformations: its evolution from an energy intensive system to a proof of stake mechanism.
 
@@ -195,8 +195,6 @@ While Ethereum's proof-of-stake system secures the network itself, an innovative
 This creates what's known as **shared security** - multiple protocols can tap into Ethereum's massive validator set and the billions of dollars they have at stake, rather than bootstrapping their own security from scratch. AVSs span a wide range of applications: data availability layers like EigenDA, oracle networks that provide price feeds, cross-chain bridges, rollup sequencers, and automated keeper networks that maintain DeFi protocols.
 
 Each AVS defines its own **slashing conditions** - the specific rules validators must follow to avoid penalties. A data availability service might require validators to prove they're storing certain data, while an oracle network might slash validators who submit price feeds that deviate too far from consensus. This flexibility allows different types of applications to leverage Ethereum's security while maintaining their own operational requirements.
-
-For users who want exposure to restaking rewards without the complexity of running validators, **Liquid Restaking Tokens (LRTs)** provide a solution. Protocols like **EtherFi**, **Renzo**, and **Kelp** allow users to deposit ETH and receive tokens (eETH, ezETH, rsETH respectively) that represent their restaked position. These tokens accrue rewards from both Ethereum staking and AVS participation while remaining liquid and tradeable.
 
 ### Understanding the Risks
 

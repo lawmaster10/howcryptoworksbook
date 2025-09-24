@@ -20,13 +20,12 @@ Merkle proofs let Solana programs:,C,Choose leaders,Create ALTs,Verify off-chain
 Solana's Tower BFT builds on:,A,Proof of History,Sealevel,Gulf Stream,Turbine,4
 Solana's Turbine propagates blocks as:,D,Whole frames,Full blocks,Vote shards,Data shreds,4
 SBF in Solana defines:,C,Consensus rules,L2 bridges,Bytecode execution environment,PoH tick size,4
-Solana's Firedancer aims to:,A,Increase client diversity,Reduce latency of on-chain proofs,Enable horizontal scaling,Provide enhanced developer tooling,4
 What execution engine enables Solana's parallel transaction processing?,B,Tower BFT,Sealevel,Turbine,Gulf Stream,2
 What must Solana transactions pre-declare before execution?,A,All accounts they touch,Gas limits only,Validator addresses,Priority fee amounts,1
 What are Program Derived Addresses (PDAs) on Solana?,C,Regular Ed25519 public keys,Wallet addresses with private keys,Addresses without private keys,Compressed account storage,2
-What is the smallest unit of SOL called on Solana?,D,Gwei,Satoshi,Wei,Lamports,1
+What is the smallest unit of SOL called on Solana?,D,Gwei,Satoshi,mSOL,Lamports,1
 What is the base fee per signature in Solana transactions?,B,1000 lamports,5000 lamports,10000 lamports,2500 lamports,2
-"According to SIMD-0096, what percentage of Solana base fees are burned?",C,25%,75%,50%,100%,3
+What percentage of Solana base fees are burned?,C,25%,75%,50%,100%,3
 What programming language is primarily used for Solana smart contracts?,A,Rust,Solidity,JavaScript,Python,1
 What framework is the primary development toolkit for Solana?,B,Hardhat,Anchor,Truffle,Foundry,1
 What standard do all Solana tokens share?,C,ERC-20,Token-2022,SPL tokens,BEP-20,1
@@ -35,7 +34,7 @@ What networking protocol does Solana use with stake-weighted QoS?,D,TCP,HTTP,Web
 What optional infrastructure enables bundle auctions in Solana?,B,Metaplex,Jito,Wormhole,Firedancer,2
 What is the typical archive ledger size for Solana?,C,Less than 100 TB,Close to 0,Approximately 300-400 TB,More than 1 PB,3
 What is Solana's annual archive growth rate approximately?,B,20 TB,80-95 TB,200 TB,500 TB,3
-What independent Solana validator implementation is being developed by Jump Crypto?,D,Alpenglow,Tower BFT,Sealevel,Firedancer,2
+What independent Solana validator implementation is being developed by Jump?,D,Alpenglow,Tower BFT,Sealevel,Firedancer,2
 What proposed Solana consensus rewrite targets 100-150ms finality?,A,Alpenglow,Firedancer,Tower BFT,Gulf Stream,3
 "How long was Solana's outage on February 6, 2024?",C,10 minutes,One hour,Five hours,1 day,2
 What type of exchange excels on Solana due to its speed?,B,AMMs,Central Limit Order Books,Prediction markets,Automatic Auctions,2
@@ -58,18 +57,13 @@ What signature scheme does Solana use for regular addresses?,B,secp256k1,Ed25519
 What does preflight simulation help with on Solana?,B,Fee calculation only,Preview transaction effects,Network routing,Validator selection,2
 What is the primary trade-off of Solana's architecture?,A,Hardware demands vs decentralization,Speed vs security only,Cost vs features,Simplicity vs functionality,2
 What do compute unit caps in Solana transactions enforce?,A,Fairness and bounded execution time,Unlimited CPIs,Validator elections,Higher base fees,2
-Solana's versioned transactions primarily enable what via ALTs?,C,Higher priority fees,Cross-chain swaps,Referencing long account lists with lookups,Fewer signatures,2
 A Solana tx with an expired recent blockhash is most likely?,C,Finalized anyway,Failed with a revert,Dropped without on-chain record,Replayed next slot,3
-Solana’s composability is bounded by?,D,Gas per opcode,Token-2022 features,Rent exemptions only,Compute limits and CPI depth,3
 How is data availability handled in Solana?,A,Integrated at L1 via shreds + erasure coding,External blob markets only,Rollup sequencers,L2 DA committees,3
 What is Solana's Firedancer's current network status?,B,Default mainnet validator,Testnet/gradual rollout; not broadly voting on mainnet,Deprecated client,Off-chain SDK,2
 Which standard underpins NFTs on Solana?,C,ERC-721,Serum,Metaplex,OpenSea,1
 Which is a Solana Token-2022 capability?,A,Transfer hooks,Proof of History,QUIC,Turbine,2
-Sysvars in Solana are:,A,Read-only protocol state,Writable program accounts,PDA seed stores,FEE market configs,2
 How do most Solana validators handle historical data?,C,Store full archive forever,Bridge to Bigtable only,Prune old slots and bootstrap from snapshots,Rely on light clients,3
-Benefit of Solana’s single-shard single-state design:,B,Multiple fee tokens,Atomic composability across the whole network,Global public mempool,Asynchronous-only finality,2
-How can a Solana program authorize a PDA?,C,With its private key,Through sysvars,Using invoke_signed,By setting rent-exempt,3
+Benefit of Solana's single-shard single-state design:,B,Multiple fee tokens,Atomic composability across the whole network,Global public mempool,Asynchronous-only finality,2
 Solana's Alpenglow proposes removing which elements?,B,Sealevel + QUIC,Proof of History and Tower BFT,Sysvars and PDAs,Metaplex and Jito,4
 How are Solana program execution fees metered?,B,Per opcode gas schedule,Per compute unit and per signature,Flat per-transaction base only,Per account byte read,2
 What enables Solana throughput to scale with hardware improvements?,A,Sealevel schedules non-overlapping transactions across CPU cores,Dynamic sharding,Rollup compression,Longer block times,2
-How are Program Derived Addresses (PDAs) created on Solana?,C,Random Ed25519 keypairs generated by wallets,Concatenating owner and token mints,Derived via SHA256 from seeds program ID bump,Assigned by validators during deployment,3

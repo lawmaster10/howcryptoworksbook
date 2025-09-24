@@ -25,8 +25,8 @@ This system enables **non-repudiation**: once someone signs a transaction, they 
 **Addresses** serve as public identifiers for receiving cryptocurrency, derived from public keys through cryptographic hashing. Different blockchains use different address formats:
 
 - **Bitcoin addresses** come in several types: Legacy (P2PKH starting with "1"), Script Hash (P2SH starting with "3"), and modern Bech32 formats (starting with "bc1")
-- **Ethereum addresses** are 40-character hexadecimal strings (like `0x742d35Cc6634C0532925a3b844Bc454e4438f44e`) derived from the last 20 bytes of the public key hash
-- **Solana addresses** are base58-encoded Ed25519 public keys
+- **Ethereum addresses** are 40-character hexadecimal-encoded strings that always start with 0x (like `0x742d35Cc6634C0532925a3b844Bc454e4438f44e`) derived from the last 20 bytes of the public key hash
+- **Solana addresses** are 44-character base58-encoded Ed25519 public keys (like `9WzDXwBbmkg8ZTbNMqUxvQRAyrZzDsGYdLVL9zYtAWWM`)
 
 The key insight: addresses can be shared publicly for receiving funds, but spending requires the corresponding private key. This asymmetry enables the entire cryptocurrency ecosystem.
 

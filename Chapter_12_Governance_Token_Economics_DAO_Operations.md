@@ -1,14 +1,16 @@
 # Chapter XII: Governance, Token Economics & DAO Operations
 
-*September 16, 2020. Uniswap's team drops the ultimate surprise: 400 UNI tokens to every wallet that had ever used their protocol (with additional allocations for historical LPs and SOCKS users). On day one, those 400 UNI were worth roughly $1,300-$2,000; months later, when UNI neared $15, the same grant briefly looked like ~$6,000. Democracy or chaos?*
+In 2020, Uniswap team drops the ultimate surprise: 400 UNI tokens to every wallet that had ever used their protocol. On day one, those 400 UNI were worth roughly $2,000 and a few months later, the same 400 UNI airdrop was worth about $6,000. Democracy or chaos?
 
 This single moment crystallized the central tension of decentralized governance: How do you coordinate thousands of strangers to make billion-dollar decisions without traditional management, boards of directors, or even legal entities? How do you prevent the wealthy from simply buying control while still rewarding meaningful participation?
 
-Welcome to the world of DAOs (Decentralized Autonomous Organizations), where code becomes constitution, tokens become voting power, and communities attempt to govern themselves at internet scale. This chapter traces the journey from launching your first governance proposal to architecting sophisticated cross-chain coordination systems that manage treasuries worth billions.
+Welcome to the world of DAOs (Decentralized Autonomous Organizations), where code becomes constitution, tokens become voting power, and communities attempt to govern themselves at internet scale.
 
 ## Section I: DAO Core Concepts
 
 ### The Great Experiment Begins
+
+While the Uniswap airdrop brought decentralized governance to the masses in 2020, the story of DAOs begins several years earlier, with a far more cautionary tale.
 
 Picture this: It's 2016, and Ethereum has been live for barely a year. A group of developers launches "The DAO", a venture capital fund with no managers, no office, and no legal structure. Just smart contracts and the collective wisdom of token holders. Within weeks, it raises $150 million, becoming the largest crowdfunding campaign in history.
 
@@ -115,6 +117,12 @@ MakerDAO takes a different approach with MKR. Instead of distributing profits, t
 
 **Utility Tokens: Pay-to-Play**
 Chainlink's LINK token serves a clear function: it is used to pay for many oracle services. Today, Data Streams supports payment in assets other than LINK (with a surcharge), while Functions bills in LINK. Holding LINK isn't universally required across all services. This creates natural demand regardless of governance participation, but with payment flexibility. The downside? If someone builds a better oracle, your token's utility (and value) could evaporate overnight.
+
+#### veTokenomics: Lock-to-Vote and Emission Steering
+
+Curve introduced vote-escrowed tokenomics (veTokenomics) for CRV. Users lock CRV for a fixed period (up to four years) to receive veCRV; voting power scales with lock duration and decays linearly until unlock. veCRV holders vote on liquidity "gauge" weights that determine how newly minted CRV is distributed across pools, aligning long-term participation with control over emissions. The design ties governance influence to time-committed ownership rather than purely transferable balances.
+
+The model also links governance to liquidity incentives. Liquidity providers with sufficient veCRV relative to their position can receive boosted CRV rewards (up to a defined cap, commonly referenced as ~2.5x), encouraging token locking over short-term farming. The mechanism catalyzed competition (often called the "Curve Wars"), with external protocols accumulating or aggregating veCRV (e.g., via Convex) and using vote markets (such as Votium or Hidden Hand) to direct emissions. Variants inspired by Curve, including veBAL (Balancer) and veFXS (Frax), have been adopted across DeFi to steer emissions and strengthen alignment.
 
 #### The Supply Dilemma: Scarcity vs. Sustainability
 

@@ -1,94 +1,54 @@
 Question,Correct Answer,Answer A,Answer B,Answer C,Answer D,Difficulty
-What fundamental problem did Bitcoin solve according to the document?,A,Digital money without banks,Programmable applications without servers,Smart contract execution,Decentralized computation,1
-What does Ethereum attempt to solve?,B,Digital money without banks,Programmable applications without traditional servers,Cross-chain interoperability,High-frequency trading,1
+What problem does Ethereum attempt to solve?,B,Digital money without banks,Programmable applications without traditional servers,Cross-chain interoperability,High-frequency trading,1
 What unit measures computational effort in Ethereum?,C,Wei,Gwei,Gas,Ether,1
-How many units of gas does a simple ETH transfer consume?,B,10000,21000,42000,100000,2
+How many units of gas does a simple ETH transfer consume?,B,"10,000","21,000","42,000","100,000",2
 What is the smallest unit of ether called?,A,Wei,Gwei,Szabo,Finney,1
 What is gwei in relation to ether?,B,One millionth,One billionth,One thousandth,One hundredth,2
 Which EIP transformed Ethereum's fee system?,C,EIP-721,EIP-4844,EIP-1559,EIP-3074,2
-What happens to the base fee in EIP-1559?,A,Gets burned,Goes to validators,Returns to users,Goes to treasury,2
+What happens to the base fee in EIP-1559?,A,Gets burned,Goes to validators,Gets refunded to users,Goes to Ethereum Foundation,2
 How does the base fee adjust?,B,Randomly,Based on network congestion,Fixed by validators,Set by users,2
 What are the two types of Ethereum accounts?,A,EOAs and smart contract accounts,Hot and cold wallets,Primary and secondary accounts,User and system accounts,1
 How many hex characters are in an Ethereum address (excluding the 0x prefix)?,C,20,32,40,64,2
-What Ethereum standard created a universal language for digital assets?,B,ERC-721,ERC-20,ERC-1155,EIP-1559,1
-When did Ethereum's transition to Proof of Stake (The Merge) occur?,C,September 15 2021,September 15 2023,September 15 2022,December 15 2022,2
+What Ethereum standard supports universal fungible tokens?,B,ERC-721,ERC-20,ERC-1155,EIP-1559,1
+What year did Ethereum's transition to Proof of Stake occur?,B,2021,2022,2023,2024,2
 By what percentage did The Merge reduce Ethereum's energy consumption?,D,50%,75%,90%,Over 99.9%,2
-What replaced miners in Ethereum's new system?,A,Validators,Sequencers,Proposers,Stakers,1
+What replaced miners in Ethereum's new system?,A,Validators,Sequencers,Searchers,Stakers,1
 How long is one slot in Ethereum?,B,6 seconds,12 seconds,32 seconds,64 seconds,2
 How many slots form an epoch in Ethereum?,C,16,24,32,64,2
 What is the minimum ETH required to become an Ethereum validator?,D,16 ETH,24 ETH,28 ETH,32 ETH,1
 "After Ethereum's Pectra upgrade, what is the maximum effective balance for validators?",C,64 ETH,1024 ETH,2048 ETH,4096 ETH,3
-What type of signatures does Ethereum use for efficiency?,A,BLS signatures,ECDSA signatures,RSA signatures,Schnorr signatures,3
+What type of signatures does Ethereum use for efficiency?,A,BLS signatures,XMSS signatures,RSA signatures,Schnorr signatures,3
 What is the punishment mechanism for malicious Ethereum validators called?,B,Burning,Slashing,Freezing,Locking,1
-What is Lido's share of Ethereum's staked ETH as of Aug 2025?,B,15-20%,24-25%,30-35%,40-45%,3
 What is Lido's Ethereum liquid staking token called?,C,rETH,wETH,stETH,lETH,2
-How much ETH bond does Rocket Pool require for Ethereum validators?,A,8 ETH,16 ETH,24 ETH,32 ETH,2
-What are Ethereum's scaling solutions called?,D,Sidechains,Shards,Bridges,Rollups,1
+What are Ethereum's primary scaling solutions called?,D,Sidechains,Shards,Bridges,Rollups,1
 Which Ethereum rollup type uses fraud proofs?,A,Optimistic rollups,ZK rollups,Validium rollups,Plasma chains,2
 What is the challenge period for Ethereum optimistic rollups?,C,1 day,3 days,7 days,14 days,2
 Which Ethereum rollup type uses validity proofs?,B,Optimistic rollups,ZK rollups,State channels,Sidechains,1
-Which proof system does Scroll (Ethereum rollup) use?,A,Pure SNARKs,Pure STARKs,Hybrid SNARK-STARK,Fraud proofs,3
-Which proof system does Starknet (Ethereum rollup) use?,B,SNARKs,STARKs,Hybrid proofs,Optimistic proofs,2
-What does zkSync (Ethereum rollup) use for on-chain verification?,C,Pure STARKs,Pure SNARKs,STARK wrapped in SNARK,Fraud proofs,3
 What centralized component do many current Ethereum rollups rely on?,B,Centralized validators,Centralized sequencers,Centralized provers,Centralized bridges,2
-How many transactions per second can MegaETH (Ethereum rollup) deliver?,D,"10,000","50,000","75,000","Over 100,000",3
-How often does MegaETH (Ethereum rollup) deliver preconfirmations?,A,Every 10 milliseconds,Every 100 milliseconds,Every second,Every 10 seconds,3
 What did EIP-4844 introduce to Ethereum?,B,Account abstraction,Blob-carrying transactions,Liquid staking,Smart wallets,2
 How large is each Ethereum blob approximately?,C,32 KB,64 KB,128 KB,256 KB,3
 How long are blobs retained on Ethereum?,B,7 days,~18 days,30 days,Permanently,2
 What cryptographic technique identifies Ethereum blob contents?,A,KZG commitments,Merkle proofs,ZK-SNARKs,BLS signatures,3
-What does EIP-7691 change Ethereum blob targets from and to?,D,1 to 3,2 to 4,2 to 6,3 to 6,4
-What does Celestia provide as an alternative to Ethereum's data availability?,B,Execution and consensus,Consensus and data availability only,Execution only,Data availability only,3
-What technique does Celestia use for light clients (as an Ethereum alternative)?,A,Data Availability Sampling,Fraud proofs,Validity proofs,Merkle proofs,3
+What does Celestia provide as an alternative to Ethereum?,B,Execution and consensus,Consensus and data availability only,Execution only,Data availability only,3
 What does EigenDA leverage for data availability?,C,Proof of Work,Liquid staking,Ethereum's restaking ecosystem,Sidechains,2
-What do users submit in Ethereum's ERC-4337 account abstraction?,B,Transactions,UserOperations,Smart contracts,Session keys,2
 What can paymasters do in Ethereum's account abstraction?,A,Sponsor gas or enable ERC-20 payments,Create smart contracts,Validate blocks,Generate proofs,2
-What type of transaction does EIP-7702 introduce to Ethereum?,D,Type-1,Type-2,Type-3,Type-4,3
-What does EIP-7702 set as Ethereum account code?,B,Smart contract,Delegation pointer,Session key,Validator key,3
-Which Ethereum EIP did EIP-7702 supersede?,C,EIP-1559,EIP-4844,EIP-3074,EIP-2612,4
 Which protocol pioneered Ethereum restaking?,A,EigenLayer,Lido,Rocket Pool,Celestia,1
-What do Ethereum validators secure through restaking besides Ethereum?,B,Only bridges,Actively Validated Services (AVSs),Only oracles,Only rollups,2
-What is created when multiple protocols use Ethereum's validator set?,C,Distributed security,Pooled security,Shared security,Layered security,2
-What Ethereum restaking protocol provides eETH tokens?,A,EtherFi,Renzo,Kelp,Lido,3
-What Ethereum restaking protocol provides ezETH tokens?,B,EtherFi,Renzo,Kelp,Rocket Pool,3
-What Ethereum restaking protocol provides rsETH tokens?,C,EtherFi,Renzo,Kelp,Lido,3
+What do Ethereum validators secure through restaking?,B,Only bridges,Actively Validated Services (AVSs),Only oracles,Only rollups,2
 What is the most significant risk in Ethereum restaking?,A,Correlated slashing risk,Liquidity risk,Smart contract risk,Validator downtime,3
-What is EigenLayer's current escrow period for Ethereum restaking?,B,3 days,7 days,14 days,21 days,3
-What will EigenLayer's Ethereum restaking escrow period move to after slashing upgrades?,C,7 days,10 days,14 days,21 days,4
-What type of slashing in Ethereum handles violations that can't be algorithmically proven?,D,Automated slashing,Social slashing,Committee slashing,Intersubjective slashing,4
-What separates in EigenLayer's Ethereum restaking architecture?,A,Strategy contracts from slashing contracts,Validators from delegators,Deposits from withdrawals,Proofs from signatures,4
-What provides additional security for critical Ethereum slashing decisions?,B,Multi-sig wallets,Veto committees,Time locks,Governance tokens,4
 How long does it typically take to achieve finality on Ethereum?,C,6.4 minutes,10 minutes,12.8 minutes,15 minutes,3
-What is the wrapped version of Lido's Ethereum staking token (stETH) called?,D,wETH,rETH,aETH,wstETH,2
-What percentage range can RPL be staked in Rocket Pool for Ethereum validation?,B,5% to 100%,10% to 150%,15% to 200%,20% to 250%,4
-What Ethereum upgrade contained EIP-7251?,A,Pectra hard fork,Dencun upgrade,Shanghai upgrade,The Merge,4
-What does Ethereum's CREATE2 use for address derivation?,C,Only sender and nonce,Only salt and init_code,0xff sender salt keccak256(init_code),Random generation,4
-What Ethereum standard enables permit-based approvals?,D,ERC-20,ERC-721,ERC-1155,ERC-2612,3
-What Ethereum service replaced cryptographic addresses with readable names?,B,EIP-55,Ethereum Name Service (ENS),ERC-20,Account abstraction,2
-What helps prevent Ethereum address typos?,A,EIP-55 checksums,ENS names,Hardware wallets,Multi-sig verification,3
-What do Ethereum optimistic rollups post immediately to Layer 1?,C,Fraud proofs,Validity proofs,New state updates,Transaction data,3
+What is the wrapped version of Lido's Ethereum staking token called?,D,wETH,rETH,aETH,wstETH,2
+What Ethereum service replaced cryptographic addresses with readable names?,B,EIP-55,ENS,ERC-721,Account abstraction,2
+What helps prevent Ethereum address typos?,A,EIP-55 checksums,Validator voting,Hardware wallets,Multi-sig verification,3
 What does Ethereum's Beacon Chain embody?,D,Execution layer,Data availability,Transaction processing,Separation of execution and consensus layers,3
-What formula represents Ethereum's total fee calculation?,B,gasUsed × baseFee,gasUsed × effectiveGasPrice,gasUsed × maxFeePerGas,gasUsed × priorityFee,2
 What two fee parameters do users set under Ethereum's EIP-1559?,C,baseFee and tip,priorityFee and gasLimit,maxFeePerGas and maxPriorityFeePerGas,gasPrice and gasLimit,2
-Which contract validates and executes Ethereum ERC-4337 operations?,C,Bundler,Alternative mempool,EntryPoint,Paymaster,2
-Who packages Ethereum ERC-4337 UserOperations for L1 submission?,A,Bundlers,Validators,Sequencers,Paymasters,2
-"What pattern provides scoped, time-bound permissions in Ethereum smart wallets?",B,Passkeys,Session keys,Social recovery,Multisig approvals,2
-"Under Ethereum's CREATE, how is a contract address derived?",C,keccak256(0xff||sender||salt||keccak256(init_code)),hash(sender||init_code),"keccak256(rlp(sender, nonce))",keccak256(publicKey),3
 An Ethereum block becomes justified when it receives attestations from at least what fraction of validators?,B,One half,Two thirds,Three quarters,Nine tenths,3
 What mechanism penalizes offline Ethereum validators during network partitions?,C,Social slashing,Committee slashing,Inactivity leaks,Intersubjective slashing,3
 "Before Ethereum's EIP-4844, what dominated rollup costs on Ethereum?",A,Data availability on L1,Proof generation,Execution gas on L2,Bridging fees,2
-"Under Ethereum's EIP-4844, blobs are stored where (and for how long)?",C,Execution layer permanently,Execution layer ~18 days,Consensus layer ~18 days,Consensus layer permanently,3
-Ethereum's EIP-7691 also changed the maximum blobs per block from what to what?,B,3 to 6,6 to 9,4 to 8,9 to 12,3
-What data structure does Celestia (Ethereum alternative) use for per-namespace proofs?,C,Patricia tries,Binary Merkle trees,Namespaced Merkle trees,AVL trees,3
-"In EigenDA (Ethereum data availability), which component coordinates encoding and distribution of data?",A,Disperser,Relayer,Aggregator,Indexer,3
-Which Ethereum data availability mode keeps transaction data off-chain under a committee?,B,Rollups,Validiums,Shards,Plasma,2
-What explicit trade-off does MegaETH (Ethereum rollup) make to achieve performance?,A,Single active sequencer,No DA commitments,No L1 settlement,No proofs,3
-"With Rocket Pool's Saturn 0 for Ethereum staking, is RPL staking required to launch a minipool?",B,Required,Optional,Forbidden,Only for withdrawals,3
-Why is wstETH preferred in Ethereum DeFi integrations over stETH?,C,Lower fees,Automatic restaking,Fixed token amount while value accrues,Cheaper gas on L1,2
-"Under Ethereum's EIP-1559, how is the effective gas price determined?",D,maxFeePerGas,baseFee,baseFee + maxPriorityFeePerGas,"min(maxFeePerGas, baseFee + maxPriorityFeePerGas)",3
+Where are blobs stored and for how long?,C,"Execution layer, stored permanently","Execution layer, stored for ~18 days","Consensus layer, stored for ~18 days","Consensus layer, stored permanently",3
+What explicit trade-off does MegaETH make to achieve performance?,A,Single active sequencer,No DA commitments,No L1 settlement,No proofs,3
+Why is wrapped stETH preferred in DeFi integrations over regular stETH?,C,Lower fees,Automatic restaking,Fixed token amount while value accrues,Cheaper gas on L1,2
 "Under EIP-1559, who receives the non-burned portion of transaction fees?",A,Validators,Miners,Treasury,Users,2
-"Post-Shapella, what governs how quickly stakers can exit/withdraw?",B,Fixed 24-hour delay,Dynamic exit queue,Immediate withdrawal,Gan price and base fee,3
+What governs how quickly Ethereum stakers can exit/withdraw?,B,Fixed 24-hour delay,Dynamic exit queue,Immediate withdrawal,Gan price and base fee,3
 When do rollups fully inherit Ethereum's security guarantees?,A,When all transaction data is posted on Ethereum L1,When using validium external DA,When using ETH as the gas token,When sequencers are decentralized,3
 Why is a canonical bridge to Ethereum mainnet important for rollups?,B,It reduces L2 gas fees by 50%,It provides a trust-minimized official path between L2 and L1,It eliminates MEV on L2,It enables ZK proof generation on L1,3
-What do inclusion lists aim to enforce in rollup designs?,A,Sequencers must include specified transactions within set timeframes,Randomize transaction ordering,Increase blob sizes per block,Slash validators directly on L1,4
 What changed about fees for blobs under EIP-4844?,A,Blobs have a separate fee market and temporary retention,Blobs pay the same gas as calldata,Blobs are free to post,Blobs are stored permanently on L1,3
