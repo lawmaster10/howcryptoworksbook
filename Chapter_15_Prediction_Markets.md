@@ -32,16 +32,6 @@ From a pure market efficiency perspective, this accelerates price discovery. The
 
 Decentralized platforms have historically operated through **regulatory arbitrage**, functioning offshore without KYC while geofencing certain jurisdictions on the frontend. This approach enables the permissionless access and information aggregation discussed above, but it comes with substantial risk. The CFTC's 2022 action against Polymarket demonstrated that "license-free global operation" carries real enforcement consequences. While decentralized architecture complicates regulatory action, platforms remain vulnerable to scrutiny, fines, and operational restrictions.
 
-### Kalshi: The Compliance Alternative
-
-At the opposite end of the spectrum, some platforms embrace full U.S. compliance. The trade-offs between decentralization and regulation become concrete when examining **Kalshi**, a fully centralized competitor that chose the opposite path. Operating as a CFTC-regulated Designated Contract Market, Kalshi requires KYC verification and uses traditional central limit order book trading rather than blockchain execution. The platform now supports almost all countries as long as users complete KYC, representing a compliant global approach that contrasts with offshore platforms' permissionless strategy.
-
-Ensuring compliance with U.S. financial regulations, Kalshi accepts crypto deposits (USDC, BTC, WLD, RLUSD, XRP) through Zero Hash, immediately converting them to USD and never actually touching crypto. Traditional funding methods like bank transfers and card payments are also supported, with all accounts denominated in dollars and settled through conventional clearing procedures.
-
-In September 2025, Kalshi launched the KalshiEco Hub with Solana and Base to support on-chain and off-chain builders via grants and integrations. This initiative bridges traditional prediction markets with the cryptocurrency ecosystem while preserving the platform's centralized, compliant framework.
-
-The competitive landscape shifted dramatically when Polymarket acquired **QCX**, a CFTC-regulated derivatives exchange, for $112 million. This acquisition provides Polymarket with the regulatory infrastructure to legally operate in the United States with full compliance, positioning it to directly compete with Kalshi. Polymarket plans to run both platforms simultaneously: the existing offshore, permissionless platform without KYC requirements for global users, and the new QCX-based platform with full KYC for U.S. users. This dual-platform strategy allows Polymarket to maintain its permissionless advantage internationally while capturing the regulated U.S. market.
-
 ## Section III: The Early Failures
 
 To understand why pragmatism on user experience, liquidity, and resolution mechanisms became decisive, consider the first wave of decentralized platforms. The advantages of decentralized prediction markets (transparency, censorship resistance, and global liquidity) motivated significant investment and development in the mid-2010s, with **Gnosis** and **Augur** emerging as the most prominent attempts to build this infrastructure. Both projects raised substantial funding and generated considerable excitement, yet neither achieved meaningful adoption. Understanding their failures reveals the challenges that later platforms would need to overcome.
@@ -73,6 +63,16 @@ The platform's regulatory approach proved crucial. By operating offshore without
 Polymarket's breakthrough came through focus on high-visibility events. Rather than trying to be everything to everyone, it concentrated on major political and current events markets, essentially cherry-picking the topics most likely to generate volume. The 2024 presidential election provided the ideal catalyst: a globally significant event with massive public interest, clear binary outcomes, and strong opinions that people were willing to back with money.
 
 Presidential elections combine several factors that make prediction markets particularly compelling: massive public interest, clear binary outcomes, strong partisan opinions, and extended time horizons that allow for meaningful price discovery. Unlike sports betting, which appeals primarily to gambling enthusiasts, election markets attract politically engaged users who view their participation as informed analysis rather than pure speculation. The 2024 cycle also benefited from unique circumstances: unprecedented polarization, questions about polling accuracy, and a media environment hungry for new ways to analyze and predict outcomes.
+
+### Kalshi: The Compliance Alternative
+
+At the opposite end of the spectrum, some platforms embrace full U.S. compliance. The trade-offs between decentralization and regulation become concrete when examining **Kalshi**, a fully centralized competitor that chose the opposite path. Operating as a CFTC-regulated Designated Contract Market, Kalshi requires KYC verification and uses traditional central limit order book trading rather than blockchain execution. The platform now supports almost all countries as long as users complete KYC, representing a compliant global approach that contrasts with offshore platforms' permissionless strategy.
+
+Ensuring compliance with U.S. financial regulations, Kalshi accepts crypto deposits (USDC, BTC, WLD, RLUSD, XRP) through Zero Hash, immediately converting them to USD and never actually touching crypto. Traditional funding methods like bank transfers and card payments are also supported, with all accounts denominated in dollars and settled through conventional clearing procedures.
+
+In September 2025, Kalshi launched the KalshiEco Hub with Solana and Base to support on-chain and off-chain builders via grants and integrations. This initiative bridges traditional prediction markets with the cryptocurrency ecosystem while preserving the platform's centralized, compliant framework.
+
+The competitive landscape shifted dramatically when Polymarket acquired **QCX**, a CFTC-regulated derivatives exchange, for $112 million. This acquisition provides Polymarket with the regulatory infrastructure to legally operate in the United States with full compliance, positioning it to directly compete with Kalshi. Polymarket plans to run both platforms simultaneously: the existing offshore, permissionless platform without KYC requirements for global users, and the new QCX-based platform with full KYC for U.S. users. This dual-platform strategy allows Polymarket to maintain its permissionless advantage internationally while capturing the regulated U.S. market.
 
 ## Section V: The Technical Architecture Behind the Success
 
