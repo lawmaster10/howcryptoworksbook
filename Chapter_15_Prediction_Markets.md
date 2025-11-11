@@ -34,11 +34,13 @@ Decentralized platforms have historically operated through **regulatory arbitrag
 
 ### Kalshi: The Compliance Alternative
 
-At the opposite end of the spectrum, some platforms embrace full U.S. compliance. The trade-offs between decentralization and regulation become concrete when examining **Kalshi**, a fully centralized competitor that chose the opposite path. Operating as a CFTC-regulated Designated Contract Market, Kalshi requires KYC verification and uses traditional central limit order book trading rather than blockchain execution. The platform currently serves only U.S.-based users, which represents the opposite of offshore platforms' global strategy.
+At the opposite end of the spectrum, some platforms embrace full U.S. compliance. The trade-offs between decentralization and regulation become concrete when examining **Kalshi**, a fully centralized competitor that chose the opposite path. Operating as a CFTC-regulated Designated Contract Market, Kalshi requires KYC verification and uses traditional central limit order book trading rather than blockchain execution. The platform now supports almost all countries as long as users complete KYC, representing a compliant global approach that contrasts with offshore platforms' permissionless strategy.
 
 Ensuring compliance with U.S. financial regulations, Kalshi accepts crypto deposits (USDC, BTC, WLD, RLUSD, XRP) through Zero Hash, immediately converting them to USD and never actually touching crypto. Traditional funding methods like bank transfers and card payments are also supported, with all accounts denominated in dollars and settled through conventional clearing procedures.
 
 In September 2025, Kalshi launched the KalshiEco Hub with Solana and Base to support on-chain and off-chain builders via grants and integrations. This initiative bridges traditional prediction markets with the cryptocurrency ecosystem while preserving the platform's centralized, compliant framework.
+
+The competitive landscape shifted dramatically when Polymarket acquired **QCX**, a CFTC-regulated derivatives exchange, for $112 million. This acquisition provides Polymarket with the regulatory infrastructure to legally operate in the United States with full compliance, positioning it to directly compete with Kalshi. Polymarket plans to run both platforms simultaneously: the existing offshore, permissionless platform without KYC requirements for global users, and the new QCX-based platform with full KYC for U.S. users. This dual-platform strategy allows Polymarket to maintain its permissionless advantage internationally while capturing the regulated U.S. market.
 
 ## Section III: The Early Failures
 
