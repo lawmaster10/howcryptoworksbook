@@ -52,6 +52,10 @@ A spectrum of storage solutions has emerged:
 
 More sophisticated NFT collections take a layered approach. They use content-addressed URIs (IPFS/Arweave hashes) to ensure files can't silently change. They store critical provenance information directly on-chain. And they employ multiple pinning providers as backup. With reliable storage infrastructure in place, NFTs evolve beyond static images into programmable, dynamic assets.
 
+Most NFT marketplaces and wallets regularly indexed this metadata and cached resized images via CDNs for faster browser load times. This introduced a subtle centralization: when a project updated its metadata or images, the change wasn't instantly reflected across every platform. It also revealed a structural tension: the serving layer can be deeply centralized even when the underlying storage is decentralized and permissionless.
+
+Abandoned collections have made this fragility visible. For projects that shut down or stopped maintaining their infrastructure, image links break when centralized servers go offline or IPFS content is no longer pinned by anyone willing to keep hosting it.
+
 ### Advanced Token Types
 
 **Dynamic NFTs** evolve over time. A sports card NFT might automatically update a player's stats after each game. Digital art might change colors based on weather data from the owner's city. Game characters accumulate experience points and level up, with their appearance and abilities changing accordingly. The token itself becomes a living, breathing entity that responds to the world around it.
@@ -158,9 +162,9 @@ Blur's strategy worked, at first. By February 2023, Blur had surpassed OpenSea i
 
 Understanding how NFTs are priced requires grasping a few key concepts that differ from traditional markets.
 
-The most watched metric in any NFT collection is the floor price. It serves as the collection's baseline valuation, but it can be deeply misleading. An NFT with rare traits might sell for 10x or more above the floor. A Bored Ape with golden fur and laser eyes, for example, is worth far more than one with common brown fur and normal eyes.
+Although each item is non-fungible, items within a collection typically share a trait system. Each Bored Ape Yacht Club ape, for instance, is defined by a combination of attributes (hat, clothes, earrings, background) drawn from a predefined palette. Rarity emerges from how frequently each trait appears across the full set. A Bored Ape with golden fur and laser eyes commands far more than one with common brown fur and standard eyes. This layered approach also simplified large-scale generation: artists could define a trait palette and algorithmically combine attributes into thousands of distinct but coherent pieces.
 
-This variability created a need for more sophisticated pricing approaches. Trait-based pricing emerged as one solution, taking into account the individual characteristics of each NFT rather than treating all pieces in a collection as equivalent.
+The most watched metric in any NFT collection is the floor price. It serves as the collection's baseline valuation, but it can be deeply misleading. An NFT with rare traits might sell for 10x or more above the floor. This variability created a need for more sophisticated pricing approaches. Trait-based pricing emerged as one solution, taking into account the individual characteristics of each NFT rather than treating all pieces in a collection as equivalent.
 
 Another innovation, collection-wide bidding, addressed a different problem: illiquidity. Instead of bidding on one specific NFT, buyers could place bids on any NFT meeting certain criteria, like "any Bored Ape with laser eyes." This improved liquidity for sellers and made price discovery more efficient. The tradeoff was philosophical: it commoditized supposedly unique assets. Blur attempted to popularize trait-level bidding by rewarding it with loyalty points, and OpenSea added support for both collection and trait offers, but in practice trait bidding never gained widespread adoption. Most trading activity continued to center on floor sweeps and collection-wide bids rather than granular trait-based strategies.
 
