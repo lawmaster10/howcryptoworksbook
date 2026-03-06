@@ -13,18 +13,18 @@
 - [Section I: Bitcoin Core Concepts](./Chapters/ch01_bitcoin.md#section-i-bitcoin-core-concepts)
 - [Section II: Bitcoin Technical Architecture](./Chapters/ch01_bitcoin.md#section-ii-bitcoin-technical-architecture)
 - [Section III: Bitcoin Upgrades and Scaling](./Chapters/ch01_bitcoin.md#section-iii-bitcoin-upgrades-and-scaling)
-- [Section IV: Bitcoin Layer 2 and Extensions](./Chapters/ch01_bitcoin.md#section-iv-bitcoin-layer-2-and-extensions)
-- [Section V: Bitcoin Network Operations and Security Model](./Chapters/ch01_bitcoin.md#section-v-bitcoin-network-operations-and-security-model)
-- [Section VI: Bitcoin Ordinals](./Chapters/ch01_bitcoin.md#section-vi-bitcoin-ordinals)
-- [Section VII: Key Takeaways](./Chapters/ch01_bitcoin.md#section-vii-key-takeaways)
+- [Section IV: Bitcoin Network Operations and Security Model](./Chapters/ch01_bitcoin.md#section-iv-bitcoin-network-operations-and-security-model)
+- [Section V: Bitcoin Layer 2 and Extensions](./Chapters/ch01_bitcoin.md#section-v-bitcoin-layer-2-and-extensions)
+- Section VI: Bitcoin Ordinals
+- Section VII: Key Takeaways
 
 ### [Chapter 2: The Ethereum Ecosystem](./Chapters/ch02_ethereum.md)
 - [Section I: Ethereum Core Concepts](./Chapters/ch02_ethereum.md#section-i-ethereum-core-concepts)
 - [Section II: Ethereum Consensus and Staking](./Chapters/ch02_ethereum.md#section-ii-ethereum-consensus-and-staking)
 - [Section III: Ethereum Scaling and Layer 2 Solutions](./Chapters/ch02_ethereum.md#section-iii-ethereum-scaling-and-layer-2-solutions)
-- [Section IV: Account Abstraction and Future Upgrades](./Chapters/ch02_ethereum.md#section-iv-account-abstraction-and-future-upgrades)
-- [Section V: Restaking](./Chapters/ch02_ethereum.md#section-v-restaking)
-- [Section VI: Key Takeaways](./Chapters/ch02_ethereum.md#section-vi-key-takeaways)
+- [Section IV: Restaking](./Chapters/ch02_ethereum.md#section-iv-restaking)
+- Section V: Account Abstraction and Future Upgrades
+- Section VI: Key Takeaways
 
 ### [Chapter 3: The Solana Ecosystem](./Chapters/ch03_solana.md)
 - [Section I: Architecture and Execution](./Chapters/ch03_solana.md#section-i-architecture-and-execution)
@@ -34,32 +34,35 @@
 - [Section V: Developer Stack and Standards](./Chapters/ch03_solana.md#section-v-developer-stack-and-standards)
 - [Section VI: Performance and Its Trade-offs](./Chapters/ch03_solana.md#section-vi-performance-and-its-trade-offs)
 - [Section VII: Use-Case Fit and Design Patterns](./Chapters/ch03_solana.md#section-vii-use-case-fit-and-design-patterns)
-- [Section VIII: Key Takeaways](./Chapters/ch03_solana.md#section-viii-key-takeaways)
+- Section VIII: Key Takeaways
 
 ### [Chapter 4: L1 Blockchains](./Chapters/ch04_l1_blockchains.md)
-- [Section I: Blockchain Architectures](./Chapters/ch04_l1_blockchains.md#section-i-blockchain-architectures)
-- [Section II: Consensus & Finality](./Chapters/ch04_l1_blockchains.md#section-ii-consensus--finality)
-- [Section III: Virtual Machines & Programming Models](./Chapters/ch04_l1_blockchains.md#section-iii-virtual-machines--programming-models)
-- [Section IV: The Trilemma in Practice](./Chapters/ch04_l1_blockchains.md#section-iv-the-trilemma-in-practice)
-- [Section V: Scaling Patterns](./Chapters/ch04_l1_blockchains.md#section-v-scaling-patterns)
-- [Section VI: Interoperability & Cross-Chain Architecture](./Chapters/ch04_l1_blockchains.md#section-vi-interoperability--cross-chain-architecture)
-- [Section VII: Attention Game](./Chapters/ch04_l1_blockchains.md#section-vii-attention-game)
-- [Section VIII: Key Takeaways](./Chapters/ch04_l1_blockchains.md#section-viii-key-takeaways)
+- [Section I: The Adoption Reality](./Chapters/ch04_l1_blockchains.md#section-i-the-adoption-reality)
+- [Section II: Blockchain Architectures](./Chapters/ch04_l1_blockchains.md#section-ii-blockchain-architectures)
+- [Section III: Consensus and Finality](./Chapters/ch04_l1_blockchains.md#section-iii-consensus-and-finality)
+- [Section IV: Virtual Machines and Programming Models](./Chapters/ch04_l1_blockchains.md#section-iv-virtual-machines-and-programming-models)
+- [Section V: Vertical Scaling Approaches](./Chapters/ch04_l1_blockchains.md#section-v-vertical-scaling-approaches)
+- [Section VI: Interoperability and Cross-Chain Architecture](./Chapters/ch04_l1_blockchains.md#section-vi-interoperability-and-cross-chain-architecture)
+- Section VII: The Trilemma in Practice
+- Section VIII: Scaling Patterns
+- Section IX: Attention Game
+- Section X: Key Takeaways
 
 ### [Chapter 5: Custody Fundamentals](./Chapters/ch05_custody.md)
 - [Section I: Cryptographic Foundations](./Chapters/ch05_custody.md#section-i-cryptographic-foundations)
 - [Section II: Individual Self-Custody](./Chapters/ch05_custody.md#section-ii-individual-self-custody)
 - [Section III: Institutional Custody Models and Architecture](./Chapters/ch05_custody.md#section-iii-institutional-custody-models-and-architecture)
-- [Section IV: Key Takeaways](./Chapters/ch05_custody.md#section-iv-key-takeaways)
+- Section IV: Key Takeaways
 
 ### [Chapter 6: Crypto Market Structure & Trading](./Chapters/ch06_market_structure.md)
 - [Section I: Exchange Architecture and Core Products](./Chapters/ch06_market_structure.md#section-i-exchange-architecture-and-core-products)
-- [Section II: Order Types and Execution](./Chapters/ch06_market_structure.md#section-ii-order-types-and-execution)
-- [Section III: Market Makers](./Chapters/ch06_market_structure.md#section-iii-market-makers)
-- [Section IV: Risk Management](./Chapters/ch06_market_structure.md#section-iv-risk-management)
-- [Section V: Price Discovery and Volatility Analysis](./Chapters/ch06_market_structure.md#section-v-price-discovery-and-volatility-analysis)
-- [Section VI: The Corporate Treasury Trend](./Chapters/ch06_market_structure.md#section-vi-the-corporate-treasury-trend)
-- [Section VII: Key Takeaways](./Chapters/ch06_market_structure.md#section-vii-key-takeaways)
+- [Section II: Perpetual Futures Strategies](./Chapters/ch06_market_structure.md#section-ii-perpetual-futures-strategies)
+- [Section III: Order Types and Execution](./Chapters/ch06_market_structure.md#section-iii-order-types-and-execution)
+- [Section IV: Market Makers](./Chapters/ch06_market_structure.md#section-iv-market-makers)
+- [Section V: Risk Management](./Chapters/ch06_market_structure.md#section-v-risk-management)
+- [Section VI: Price Discovery and Volatility Analysis](./Chapters/ch06_market_structure.md#section-vi-price-discovery-and-volatility-analysis)
+- Section VII: The Corporate Treasury Trend
+- Section VIII: Key Takeaways
 
 ### [Chapter 7: DeFi](./Chapters/ch07_defi.md)
 - [Section I: DeFi Core Concepts and Philosophy](./Chapters/ch07_defi.md#section-i-defi-core-concepts-and-philosophy)
@@ -67,64 +70,66 @@
 - [Section III: Lending and Borrowing Fundamentals](./Chapters/ch07_defi.md#section-iii-lending-and-borrowing-fundamentals)
 - [Section IV: Yield Generation and Optimization](./Chapters/ch07_defi.md#section-iv-yield-generation-and-optimization)
 - [Section V: Infrastructure Dependencies](./Chapters/ch07_defi.md#section-v-infrastructure-dependencies)
-- [Section VI: Key Takeaways](./Chapters/ch07_defi.md#section-vi-key-takeaways)
+- Section VI: Key Takeaways
 
 ### [Chapter 8: MEV](./Chapters/ch08_mev.md)
-- [Section I: The Market Chaos: Understanding MEV Fundamentals](./Chapters/ch08_mev.md#section-i-the-market-chaos-understanding-mev-fundamentals)
+- [Section I: MEV Fundamentals](./Chapters/ch08_mev.md#section-i-mev-fundamentals)
 - [Section II: How Value Gets Extracted](./Chapters/ch08_mev.md#section-ii-how-value-gets-extracted)
 - [Section III: Flashbots: Taming the Dark Forest](./Chapters/ch08_mev.md#section-iii-flashbots-taming-the-dark-forest)
 - [Section IV: The Centralization Crisis](./Chapters/ch08_mev.md#section-iv-the-centralization-crisis)
-- [Section V: Cross-Domain MEV](./Chapters/ch08_mev.md#section-v-cross-domain-mev)
-- [Section VI: Key Takeaways](./Chapters/ch08_mev.md#section-vi-key-takeaways)
+- [Section V: The Cross-Domain Challenge](./Chapters/ch08_mev.md#section-v-the-cross-domain-challenge)
+- Section VI: Key Takeaways
 
 ### [Chapter 9: Stablecoins and RWAs](./Chapters/ch09_stablecoins_rwas.md)
-- [Section I: Fiat Stablecoins](./Chapters/ch09_stablecoins_rwas.md#section-i-fiat-stablecoins)
-- [Section II: Real World Assets](./Chapters/ch09_stablecoins_rwas.md#section-ii-real-world-assets)
-- [Section III: Key Takeaways](./Chapters/ch09_stablecoins_rwas.md#section-iii-key-takeaways)
+- [Section I: Types of Stablecoins](./Chapters/ch09_stablecoins_rwas.md#section-i-types-of-stablecoins)
+- [Section II: Fiat Stablecoins](./Chapters/ch09_stablecoins_rwas.md#section-ii-fiat-stablecoins)
+- [Section III: Real World Assets](./Chapters/ch09_stablecoins_rwas.md#section-iii-real-world-assets)
+- Section IV: Key Takeaways
 
 ### [Chapter 10: Hyperliquid](./Chapters/ch10_hyperliquid.md)
 - [Section I: Road to Domination](./Chapters/ch10_hyperliquid.md#section-i-road-to-domination)
 - [Section II: HyperBFT and EVM](./Chapters/ch10_hyperliquid.md#section-ii-hyperbft-and-evm)
-- [Section III: The HLP Design](./Chapters/ch10_hyperliquid.md#section-iii-the-hlp-design)
-- [Section IV: The Governance Balance](./Chapters/ch10_hyperliquid.md#section-iv-the-governance-balance)
-- [Section V: Road to Decentralization](./Chapters/ch10_hyperliquid.md#section-v-road-to-decentralization)
-- [Section VI: Emerging Competitors](./Chapters/ch10_hyperliquid.md#section-vi-emerging-competitors)
-- [Section VII: Key Takeaways](./Chapters/ch10_hyperliquid.md#section-vii-key-takeaways)
+- [Section III: Tradable Products](./Chapters/ch10_hyperliquid.md#section-iii-tradable-products)
+- [Section IV: The HLP Design](./Chapters/ch10_hyperliquid.md#section-iv-the-hlp-design)
+- [Section V: The Decentralization Challenge](./Chapters/ch10_hyperliquid.md#section-v-the-decentralization-challenge)
+- [Section VI: The Governance Balance](./Chapters/ch10_hyperliquid.md#section-vi-the-governance-balance)
+- [Section VII: Emerging Competitors](./Chapters/ch10_hyperliquid.md#section-vii-emerging-competitors)
+- Section VIII: Key Takeaways
 
 ### [Chapter 11: Non-Fungible Tokens (NFTs)](./Chapters/ch11_nfts.md)
 - [Section I: The Digital Ownership Revolution](./Chapters/ch11_nfts.md#section-i-the-digital-ownership-revolution)
 - [Section II: Beyond Simple Ownership](./Chapters/ch11_nfts.md#section-ii-beyond-simple-ownership)
 - [Section III: The Technical Foundation](./Chapters/ch11_nfts.md#section-iii-the-technical-foundation)
 - [Section IV: Where NFTs Actually Trade](./Chapters/ch11_nfts.md#section-iv-where-nfts-actually-trade)
-- [Section V: Key Takeaways](./Chapters/ch11_nfts.md#section-v-key-takeaways)
+- Section V: Key Takeaways
 
 ### [Chapter 12: Governance & Token Economics](./Chapters/ch12_governance.md)
 - [Section I: The Foundations of Digital Democracy](./Chapters/ch12_governance.md#section-i-the-foundations-of-digital-democracy)
 - [Section II: From Discord Drama to On-Chain Democracy](./Chapters/ch12_governance.md#section-ii-from-discord-drama-to-on-chain-democracy)
 - [Section III: Token Economics and Distribution](./Chapters/ch12_governance.md#section-iii-token-economics-and-distribution)
 - [Section IV: A Three-Pillar Structure](./Chapters/ch12_governance.md#section-iv-a-three-pillar-structure)
-- [Section V: Key Takeaways](./Chapters/ch12_governance.md#section-v-key-takeaways)
+- Section V: Key Takeaways
 
 ### [Chapter 13: DePIN](./Chapters/ch13_depin.md)
-- [Section I: DePIN Core Concepts](./Chapters/ch13_depin.md#section-i-depin-core-concepts)
-- [Section II: DePIN Technical Architecture](./Chapters/ch13_depin.md#section-ii-depin-technical-architecture)
-- [Section III: DePIN Economics and Governance](./Chapters/ch13_depin.md#section-iii-depin-economics-and-governance)
-- [Section IV: DePIN Categories and Implementation](./Chapters/ch13_depin.md#section-iv-depin-categories-and-implementation)
-- [Section V: Risks and Challenges](./Chapters/ch13_depin.md#section-v-risks-and-challenges)
-- [Section VI: Key Takeaways](./Chapters/ch13_depin.md#section-vi-key-takeaways)
+- [Section I: The Infrastructure Gap](./Chapters/ch13_depin.md#section-i-the-infrastructure-gap)
+- [Section II: The Economic Engine](./Chapters/ch13_depin.md#section-ii-the-economic-engine)
+- [Section III: The Trust Machine](./Chapters/ch13_depin.md#section-iii-the-trust-machine)
+- [Section IV: Categories and Implementation](./Chapters/ch13_depin.md#section-iv-categories-and-implementation)
+- [Section V: The Reality Check](./Chapters/ch13_depin.md#section-v-the-reality-check)
+- Section VI: Key Takeaways
 
 ### [Chapter 14: Quantum Resistance](./Chapters/ch14_quantum_resistance.md)
 - [Section I: Quantum Computing](./Chapters/ch14_quantum_resistance.md#section-i-quantum-computing)
 - [Section II: Blockchain Vulnerability Assessment](./Chapters/ch14_quantum_resistance.md#section-ii-blockchain-vulnerability-assessment)
 - [Section III: Quantum-Resistance Transition](./Chapters/ch14_quantum_resistance.md#section-iii-quantum-resistance-transition)
-- [Section IV: Key Takeaways](./Chapters/ch14_quantum_resistance.md#section-iv-key-takeaways)
+- Section IV: Key Takeaways
 
 ### [Chapter 15: Prediction Markets](./Chapters/ch15_prediction_markets.md)
 - [Section I: The Core Mechanism](./Chapters/ch15_prediction_markets.md#section-i-the-core-mechanism)
 - [Section II: The Case for Decentralization](./Chapters/ch15_prediction_markets.md#section-ii-the-case-for-decentralization)
-- [Section III: The Early Failures: Gnosis and Augur's Lessons](./Chapters/ch15_prediction_markets.md#section-iii-the-early-failures-gnosis-and-augurs-lessons)
+- [Section III: The Early Failures](./Chapters/ch15_prediction_markets.md#section-iii-the-early-failures)
 - [Section IV: The Breakthrough](./Chapters/ch15_prediction_markets.md#section-iv-the-breakthrough)
 - [Section V: The Technical Architecture Behind the Success](./Chapters/ch15_prediction_markets.md#section-v-the-technical-architecture-behind-the-success)
 - [Section VI: The Network Effects of Political Prediction](./Chapters/ch15_prediction_markets.md#section-vi-the-network-effects-of-political-prediction)
 - [Section VII: The Future of Information Markets](./Chapters/ch15_prediction_markets.md#section-vii-the-future-of-information-markets)
-- [Section VIII: Key Takeaways](./Chapters/ch15_prediction_markets.md#section-viii-key-takeaways)
+- Section VIII: Key Takeaways
