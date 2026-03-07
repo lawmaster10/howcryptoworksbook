@@ -48,11 +48,11 @@ To understand this intuitively, imagine a special marketplace with two buckets o
 
 When someone wants to buy red marbles, they have to add blue marbles to the blue bucket. But here's the catch: they can only take out enough red marbles so that the multiplication rule stays true.
 
-If the buckets start with 100 red marbles and 100 blue marbles (100 × 100 \= 10,000), and someone wants to buy 20 red marbles. They need add 25 blue marbles to the bucket (making it 125 blue and leaving 80 red). This works because 125 × 80 ≈ 10,000.
+If the buckets start with 100 red marbles and 100 blue marbles (100 × 100 \= 10,000), and someone wants to buy 20 red marbles. They need to add 25 blue marbles to the bucket (making it 125 blue and leaving 80 red). This works because 125 × 80 ≈ 10,000.
 
 The more red marbles someone wants, the exponentially more blue marbles they need to add. The bucket becomes "stingier" with each marble taken, the first marble is cheap, but the 50th costs exponentially more.
 
-If someone wants to buy 50 red marbles. They need add 100 blue marbles to the bucket (making it 200 blue and leaving 50 red). The math still works because 200 × 50 ≈ 10,000.
+If someone wants to buy 50 red marbles. They need to add 100 blue marbles to the bucket (making it 200 blue and leaving 50 red). The math still works because 200 × 50 ≈ 10,000.
 
 The deeper the buckets (more marbles), the less each individual trade affects the overall balance. Shallow buckets create large price swings; deep buckets maintain price stability.
 
@@ -389,4 +389,3 @@ Additional protective measures include isolation modes with debt ceilings and su
 Flash loans exemplify DeFi's core tension: the same composability that enables innovation also amplifies risks. They don't create vulnerabilities but rather amplify existing ones, requiring protocols to be designed securely even when attackers have substantial capital available within the constraints of pool liquidity and transaction limits.
 
 Fees are typically small but not uniform, some protocols set or dynamically adjust them, which can render thin arbitrage opportunities unprofitable, providing some natural economic protection. Some tokens also support flash minting (mint and burn within a single transaction), which functions similarly to a flash loan for that specific token.
-
