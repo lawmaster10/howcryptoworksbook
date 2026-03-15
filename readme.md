@@ -66,6 +66,12 @@ If you read this carefully and absorb the key ideas, you'll end up knowing more 
 
 Start with the [Preface](Chapters/_preface.md), or see the [Table of Contents](table_of_contents.md) for a full section-by-section breakdown.
 
+## Translations
+
+| Language | Repository |
+|----------|------------|
+| 🇰🇷 Korean | [gtg7784/howcryptoworksbook-kr](https://github.com/gtg7784/howcryptoworksbook-kr) |
+
 ## Contributing
 
 This is a **pre-first edition** release. We are actively seeking expert reviewers and contributors to help refine the content before the official first edition.
