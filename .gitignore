@@ -1,2 +1,9 @@
 # Tests (not ready for public release yet)
 Tests/
+
+# Generated book artifacts
+build/*.epub
+build/*.pdf
+
+# macOS
+.DS_Store

@@ -1,0 +1,24 @@
+---
+title: "How Crypto Actually Works"
+subtitle: "The Missing Manual"
+author: "Larry Cermak"
+date: "Pre-First Edition"
+lang: en-US
+rights: "Copyright Larry Cermak. Licensed under CC BY-NC-ND 4.0."
+description: >
+  A comprehensive technical book explaining how crypto actually works,
+  from Bitcoin's UTXO model to quantum-resistant cryptography.
+# PDF (LaTeX / xelatex) options
+documentclass: book
+classoption:
+  - oneside
+geometry: "margin=1in"
+fontsize: 11pt
+mainfont: "DejaVu Serif"
+sansfont: "DejaVu Sans"
+monofont: "DejaVu Sans Mono"
+linkcolor: "RoyalBlue"
+toccolor: "black"
+urlcolor: "RoyalBlue"
+colorlinks: true
+...
