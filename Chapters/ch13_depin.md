@@ -32,7 +32,7 @@ Not all DePINs ask for the same kind of commitment. Hardware-heavy projects requ
 
 If the goal is to build a global network without a central treasury, the immediate hurdle is the **cold-start problem**. In the early days, a network has no utility and therefore no customers. A ride-sharing app with no drivers has no riders, and a telecom network with no towers has no subscribers.
 
-While a traditional startup burns venture capital to subsidize this phase, DePIN protocols utilize **token emissions** as a temporary subsidy. Early adopters purchase and deploy hardware not because there is existing demand, but to capture these emissions, effectively acting as angel investors who are paid in equity-like tokens rather than in cash.
+While a traditional startup burns venture capital to subsidize this phase, DePIN protocols utilize **token emissions** as a temporary subsidy. Early adopters purchase and deploy hardware not because there is existing demand, but to capture these emissions, effectively acting as early investors who are paid in tokens rather than cash. Unlike equity, those tokens carry no claim on the network's future revenue unless the design creates one.
 
 ### The Emission Schedule
 
@@ -40,11 +40,11 @@ This mechanism only works if two things line up: the emission schedule and real 
 
 In the early stages, most of the real-world cost is actually carried by passive buyers. Operators sell part of their rewards to cover hardware and operating costs, while speculators absorb that sell pressure. These speculators aren't funding the network out of altruism; they're betting it will be worth much more later. Bitcoin followed this same pattern: miners mined to make money and sell BTC to pay their power bills, while long-term holders financed the build-out by buying what miners had to dump.
 
-DePIN projects like Helium often employ a halving schedule similar to Bitcoin's, where rewards drop at fixed intervals to create urgency. To prevent hardware from clustering in already saturated cities, these schedules frequently include **geographic multipliers** that offer higher rewards for deploying in underserved areas. These geographic zones discretize the world into reward-bearing cells, steering the physical growth of the network through economic code.
+DePIN projects like Helium have used halving schedules similar to Bitcoin's, where base emissions drop at fixed intervals to create urgency. Early coverage incentives also used **geographic multipliers** to offer higher rewards for deploying in underserved areas rather than already saturated cities. These geographic zones divided the world into reward-bearing cells, steering the physical growth of the network through economic code. Helium's later shift toward usage rewards and supplemental issuance, discussed below, shows how governance can change the economics even while retaining the base halving schedule.
 
 ### The Transition to Real Revenue
 
-Emissions are a bootstrap subsidy, not a business model. In the long run, a DePIN network must be funded by real customers paying real money. For the token to have durable value, some portion of that external revenue needs to flow back to token holders, whether through a treasury, fee-sharing, or buy-and-burn mechanics.
+Emissions are a bootstrap subsidy, not a business model. In the long run, a DePIN network must be funded by real customers paying real money. That raises two separate questions, using the accounting from Chapter XII. The first is about the service: do customers pay enough to cover what it costs operators to provide it? The second is about the token: does any of that customer money reach token holders, whether through a treasury, fee-sharing, or buy-and-burn mechanics? A network can pass one test and fail the other.
 
 A common approach is the **burn-and-mint equilibrium**, similar to buyback-and-burn mechanisms in token economics (Chapter XII). Using the network requires burning the native token, permanently reducing its supply. If those tokens were first bought with outside capital (for example, customers paying in fiat while an intermediary buys and burns tokens on their behalf), then network revenue effectively repurchases and destroys supply. Over time, this can support the token price and keep operator rewards economically meaningful, assuming usage grows large enough relative to new issuance and selling pressure.
 
@@ -52,7 +52,32 @@ Helium demonstrates this design in practice. Access to the network is paid for i
 
 This structure links HNT's value to actual network usage rather than speculation alone. However, the strength of that link depends on scale. As long as token emissions and speculative trading dominate, burning remains mostly a structural feature waiting for real demand.
 
-A DePIN network becomes economically sustainable only when usage-driven burns grow large enough to meaningfully offset emissions and fund operator rewards without relying on an endless stream of new speculators.
+Even at scale, burn totals are easy to over-read. Under burn-and-mint, the burn measures what customers pay, and the mint measures what operators are paid. Comparing the two shows whether the token's supply is growing or shrinking. It does not show whether operators cover their costs, and it does not guarantee that the token rises in price. A network that pays operators directly from customer fees and uses issuance for something else can be viable with a growing supply; a network whose burns exceed its emissions can still be paying operators less than their hardware costs to run. Burns minus issuance is one design-specific indicator. The test that applies to every design is whether customer payments cover the full cost of the service: the electricity, bandwidth, and maintenance operators pay every month, plus the hardware they will eventually have to replace.
+
+### A Network That Looks Profitable
+
+Consider a hypothetical network of 10,000 nodes. Each node costs its operator $60 a month to run (electricity, bandwidth, a site) plus $20 a month for hardware that will eventually need replacing, the cost of a $960 device spread over four years. Customers buy and burn tokens worth $300,000 a month to use the service, or $30 per node. The protocol mints tokens worth $1 million a month for operators, or $100 per node at today's token price.
+
+From the outside, this network looks healthy. Customer revenue is real and growing, nodes keep coming online, and every operator clears $20 a month. A dashboard would show $300,000 in monthly revenue, $300,000 in burns, and a profitable supply side.
+
+| Per node, per month | Today | Subsidy removed |
+| :--- | ---: | ---: |
+| Matched by customer payments (burned) | $30 | $30 |
+| Net new issuance | $70 | $0 |
+| **Operator income** | **$100** | **$30** |
+| Running costs | −$60 | −$60 |
+| Hardware replacement | −$20 | −$20 |
+| **Operator profit** | **+$20** | **−$50** |
+
+Now follow the money. Operators receive $1 million a month in value, but customers supply only $300,000 of it. The other $700,000 is net new issuance. Operators sell much of it to pay their bills, so it is ultimately paid for by the buyers who take those tokens and by holders whose share is diluted. The operators are profitable; the network, as a business, is not. Customers cover $300,000 of its $800,000 in monthly costs, and new tokens cover the rest plus the operators' profit.
+
+Remove the subsidy by minting only what customers burn, and each node earns $30 against $80 of costs. That is a $50 monthly loss per node, or $500,000 across the network. The subsidy does not need to disappear entirely to cause trouble: if the token's price halves, rewards worth $100 become $50, and the same $20 profit becomes a $30 loss, with customer usage unchanged.
+
+Operators respond the way any business would, by unplugging, starting with those who have the highest costs, until the remaining capacity matches what customers actually pay for. At full cost, $300,000 a month supports only 3,750 nodes. The other 6,250 exist because of the subsidy. For all 10,000 to survive on their own, customer payments must rise from $30 to at least $80 per node, by selling more service, charging more for it, or both.
+
+Hardware replacement is the cost most often left out. After a 30% fall in the token's price, income of $70 still covers $60 in running costs, so an operator who ignores the device sees a $10 monthly margin and keeps running. Counting replacement, the same node loses $10 a month. The operator finds out when the device fails and is not replaced, which delays the reckoning without avoiding it.
+
+The token-supply view misses all of this. Suppose governance tries to fix the problem by cutting the mint to $250,000 a month. Burns of $300,000 now exceed emissions, and the supply shrinks, a milestone often celebrated as proof of sustainability. Yet operators would receive $25 per node against $80 of costs. Nor does the shrinking supply protect the price: as operators unplug and service degrades, customers leave, burns fall, and demand for the token can fall faster than its supply. The questions that matter are the ones a supply chart cannot answer: what customers pay, what the service costs, and who covers the difference.
 
 ### Revenue Model Diversity
 
@@ -66,7 +91,7 @@ Take Filecoin, a decentralized storage network where users pay to have their dat
 
 On the compute side, Render Network coordinates GPU providers to perform rendering and AI workloads. Here, token burns are tied directly to completed jobs: when users pay for rendering, a portion of the tokens involved is destroyed, so supply reduction is explicitly linked to delivered compute.
 
-Many other DePIN designs add a third ingredient: staking. Operators must lock up tokens as collateral to participate, taking those tokens out of effective circulation. If they fail to meet service guarantees or act dishonestly, part of that stake can be slashed (similar to validator slashing in Proof-of-Stake systems, covered in Chapter II). Between burned fees, job-linked burns, and staked collateral, each network assembles a different mix of inflation and deflation to align incentives and anchor long-term token value in actual usage.
+Many other DePIN designs add a third ingredient: staking. Operators must lock up tokens as collateral to participate, taking those tokens out of effective circulation. If they fail to meet service guarantees or act dishonestly, part of that stake can be slashed (similar to validator slashing in Proof-of-Stake systems, covered in Chapter II). Staked tokens are locked rather than destroyed, so they stay out of circulation only as long as operators choose to stay. Between burned fees, job-linked burns, and staked collateral, each network assembles a different mix of inflation and deflation to align incentives and anchor long-term token value in actual usage.
 
 When these systems work, they exhibit powerful network effects. Early deployments may see little usage, but as coverage density increases and more applications integrate the network, usage and revenue per node can rise non-linearly. When the cycle runs in reverse, the network faces a potential death spiral: usage stalls, token burns decrease, the price drops, and hardware operators begin unplugging their nodes as rewards no longer cover electricity, bandwidth, and maintenance.
 
@@ -86,17 +111,17 @@ Monitoring their performance are validators and oracles. Unlike service provider
 
 Oracles serve as the bridge between the physical and digital worlds, verifying off-chain data such as local weather conditions or vehicle location and relaying it on-chain for reward calculations. (Oracle networks and their security considerations were introduced in Chapter VII's infrastructure dependencies section.)
 
-### Proof-of-Coverage for Wireless Networks
+### Proof-of-Coverage and the Shift to Usage
 
-In wireless networks, verification is achieved through Proof-of-Coverage. Hotspots periodically issue radio challenges, encrypted packets sent over the airwaves, to their neighbors. When a nearby hotspot witnesses this packet, it reports the signal strength to the network, creating a cryptographic map of coverage anchored in physical radio propagation.
+Helium's early wireless deployment used **Proof-of-Coverage** to verify that hotspots were providing radio coverage before substantial paid traffic existed. Hotspots issued radio challenges, encrypted packets sent over the airwaves, to their neighbors. When a nearby hotspot witnessed a packet, it reported the signal strength to the network, creating a map of coverage anchored in physical radio propagation. This was a mechanism for bootstrapping infrastructure, not proof that customers were paying to use it.
 
-A key tuning knob is the challenge frequency. Challenge too often and verification floods the network with data and cost; challenge too rarely and attackers have wide windows to spoof coverage without being caught. Most designs are a compromise: enough probes to make cheating unprofitable, but not so many that verification overwhelms the economic value of the service.
+A key tuning knob in such a design is the challenge frequency. Challenge too often and verification floods the network with data and cost; challenge too rarely and attackers have wide windows to spoof coverage without being caught. The compromise is enough probes to make cheating unprofitable, but not so many that verification overwhelms the economic value of the service.
 
-To represent coverage in a way that resists gaming, the world is often divided into a hexagonal grid that prevents tightly co-located hotspots from claiming outsized rewards for overlapping service. To manage the massive data load of verifying millions of radio pings, many implementations offload computation to specialized oracle networks (introduced earlier in this chapter and covered in depth in Chapter VII), which aggregate raw witness data and post summarized proofs to a high-throughput blockchain such as Solana.
+Coverage systems also use geographic grids and specialized oracles to limit overlapping rewards and aggregate verification data. Helium's subsequent direction shows the limits of paying for coverage alone: HIP-149, approved in July 2026, retired IoT and Mobile Proof-of-Coverage rewards in favor of rewards tied to actual data transfer. Verification of useful service remains essential, but the thing being rewarded has shifted from demonstrated radio presence toward customer usage.
 
 ### Proof-of-Spacetime for Storage Networks
 
-Storage networks face a different challenge: proving that data is not just stored, but persists over time. Filecoin replaces the legal contracts and service-level agreements of centralized providers with two cryptographic systems that target these questions directly: **Proof-of-Replication** and Proof-of-Spacetime.
+Storage networks face a different challenge: proving that data is not just stored, but persists over time. Filecoin's traditional sealed storage uses two cryptographic systems to target these questions directly: **Proof-of-Replication** and Proof-of-Spacetime. Its newer Proof of Data Possession (PDP) supports readily accessible storage without sealing, with programmable proof-based payments available through Filecoin Onchain Cloud, launched in March 2026.
 
 Proof-of-Replication is used when the deal starts. The storage provider takes the client's data, creates a uniquely encoded copy of it on their own hardware, and produces a proof that this specific copy exists on their disks. This prevents a dishonest operator from pretending to offer large capacity while actually reusing the same underlying data for many different clients.
 
@@ -128,17 +153,17 @@ Geographic coverage networks aim to fill physical space with hardware in order t
 
 #### Wireless Connectivity: The Helium Model
 
-In wireless connectivity, Helium serves as the archetype for the field-deploy model. By incentivizing individuals to host low-power wireless hotspots designed for IoT devices, the network deployed over 900,000 nodes across roughly 170 countries, validating the thesis that token incentives can finance massive capital expenditures without a centralized carrier balance sheet.
+In wireless connectivity, Helium serves as the archetype for the field-deploy model. By incentivizing individuals to host low-power wireless hotspots designed for IoT devices, the network grew to over 900,000 hotspots across more than 190 countries by 2023, demonstrating that token incentives can finance large-scale deployment without a centralized carrier balance sheet. In August 2026, Nova Labs agreed to seek a new operator by year-end, with closure a fallback if the handoff failed.
 
 Historically, rewards for operators were split between providing coverage, witnessing other hotspots' challenges, and actually transferring user data, directly translating the emission and burn mechanics discussed earlier into physical network growth.
 
-However, Helium also illustrated the volatility of the model. As the network pivoted toward 5G cellular coverage and Wi-Fi offload in later years, it had to manage the complex transition from a pure coverage-building phase to a usage-generation phase, competing directly with established carriers on reliability and customer experience, while governance debated how quickly to shift rewards from coverage to actual traffic.
+However, Helium also illustrated the volatility of the model. As the network pivoted toward cellular coverage and Wi-Fi offload, it had to move from a coverage-building phase to a usage-generation phase, competing directly with established carriers on reliability and customer experience. HIP-149 formalized that shift in July 2026 by retiring Proof-of-Coverage rewards. A revenue-linked earnings safety net became active in August to support target data-transfer earnings when base emissions were insufficient. The approved supplemental-emissions framework raises the potential supply ceiling, so the original halving schedule alone no longer describes the full reward policy.
 
 #### Mapping Networks: Hivemapper vs. Google
 
 Mapping and sensor networks confront similar coverage challenges in different data modalities. Hivemapper challenges Google Street View by paying drivers to mount dashcams, resulting in a map that can update weekly rather than annually.
 
-By early 2026, Hivemapper contributors had mapped more than 500 million kilometers of roads and reported coverage of roughly one-third of the global road network, a remarkable pace for a network only a few years old. Google, by contrast, has accumulated on the order of ten million miles of Street View imagery over more than a decade, with near-universal coverage in many countries but slower refresh cycles.
+By October 2026, Hivemapper reported about 23 million unique kilometers, nearly 40% of the world's road network. Counting repeat passes brought the total to almost 800 million kilometers. The two numbers tell different stories: unique coverage measures reach; repeat passes keep the map fresh.
 
 Hivemapper's comparative advantage lies not in absolute coverage, where Google still dominates in many regions, but in freshness and marginal cost. Traditional mapping requires expensive fleets of dedicated cars and staff; DePIN turns data collection into a background task for existing drivers, whose rewards depend on location and novelty of coverage.
 
@@ -148,7 +173,7 @@ Because those rewards are location-sensitive, Hivemapper leans heavily on proof-
 
 Environmental sensor networks extend the same pattern to weather and air quality. WeatherXM operates personal weather stations spread across dozens of countries, cross-validating their readings against nearby stations and satellite imagery and rewarding operators with tokens based on data quality and consistency.
 
-The value proposition is hyper-local coverage that national meteorological agencies or commercial providers would struggle to justify financially. Planetwatch applies a similar playbook to air quality: calibrated sensors, often installed in homes, offices, or street fixtures, feed regulatory-grade measurements into the network.
+The value proposition is hyper-local coverage that national meteorological agencies or commercial providers would struggle to justify financially. Ambios, formerly Ambient, applies a similar playbook to air quality after acquiring the PlanetWatch network in 2024. Its migration to Solana brings sensor incentives into a new network, while the basic model of gathering local environmental measurements remains.
 
 Token rewards are tied to sensor class and sustained uptime, and the resulting datasets are used for public health research, climate analysis, and, in some cases, regulatory monitoring. Here, the trade-off with centralized systems is not purely cost; traditional networks may offer more controlled and audited instrumentation, but DePIN can produce vastly denser coverage if it solves the problems of calibration, fraud, and long-term operator incentives.
 
@@ -160,15 +185,15 @@ While geographic coverage networks focus on where hardware is deployed, data per
 
 Filecoin operates as an open marketplace for storage. Miners compete to offer capacity, and clients negotiate deals specifying price, duration, redundancy, and geographic preferences.
 
-Public analyses have found that, in some periods, advertised Filecoin storage prices have been on the order of a few dollars per terabyte per year, compared to twenty to thirty dollars per terabyte per year for standard AWS S3 tiers, implying an order-of-magnitude cost difference when promotional incentives and aggressive competition are in play. These headline numbers must be treated cautiously: effective cost depends on replication factors, retrieval pricing, and operational complexity. Nonetheless, the competitive pressure is real.
+Filecoin providers have advertised storage for just a few dollars per terabyte per year. By comparison, AWS S3 Standard in Northern Virginia charges roughly $280 a year for a terabyte, before requests and data transfer. Incentives and aggressive competition can therefore put advertised storage prices around a hundred times cheaper than S3. Part of that gap is a subsidy. Filecoin storage providers have earned much of their income from block rewards, which are newly issued FIL, rather than from client payments, and that has let them price deals close to zero. The advertised price measures what clients pay, not what the storage costs to provide; the difference is paid through issuance, by FIL holders and by the buyers of the FIL providers sell. Replication, retrieval, and service guarantees also affect the full cost, but the competitive pressure is real.
 
-IPFS, the InterPlanetary File System (also mentioned in Chapter XI's NFT storage discussion), sits alongside Filecoin as the addressing and distribution layer, identifying files by their cryptographic hash rather than their location. Filecoin adds the incentive layer to ensure that critical content persists over time, using Proof-of-Replication, WindowPoSt, and slashing to enforce deals without traditional legal contracts.
+IPFS, the InterPlanetary File System (also mentioned in Chapter XI's NFT storage discussion), sits alongside Filecoin as the addressing and distribution layer, identifying files by their cryptographic hash rather than their location. Filecoin adds the incentive layer to ensure that critical content persists over time, using Proof-of-Replication, WindowPoSt, and slashing for sealed storage, alongside PDP for accessible storage.
 
 #### Arweave: The Endowment Model
 
-Arweave (also mentioned in Chapter XI's NFT storage discussion) takes a fundamentally different approach, offering permanent storage via an **endowment model**. Users pay a one-time, upfront fee that is effectively invested into a storage endowment; miners are then rewarded from this pool for storing historical data, ensuring that the network's permanent data archive remains accessible indefinitely without recurring monthly payments.
+Arweave (also mentioned in Chapter XI's NFT storage discussion) takes a fundamentally different approach, offering permanent storage via an **endowment model**. Users pay a one-time, upfront fee that is effectively invested into a storage endowment; miners are then rewarded from this pool for storing historical data, so that the network's permanent data archive can remain accessible without recurring monthly payments. In the accounting terms used earlier, the upfront fee is customer revenue received once against a cost that never ends. Whether it is enough depends on assumptions that storage keeps getting cheaper and that an endowment held in AR keeps enough value. If those assumptions fail, the shortfall shows up as lower pay for the miners who store old data and, eventually, as fewer copies of it.
 
-In practice, this model has produced user-facing prices that have often been in the single-digit dollars per gigabyte range for long-term storage, which can be expensive for very large datasets but attractive for high-value archival content such as cultural artifacts, legal records, or irreplaceable application state.
+Storage costs fluctuate with network pricing and the price of AR. An October 11, 2026 estimate was roughly $60 per gigabyte, expensive for large datasets but attractive for high-value archival content such as cultural artifacts, legal records, or irreplaceable application state.
 
 Here the trade-off with AWS is not only price, but time horizon and control. A corporate provider can change pricing or discontinue a service line; Arweave's promise is that, as long as the network and its token economy survive, the data will remain accessible without further negotiation.
 
@@ -226,13 +251,13 @@ A hostile regulatory action, such as banning unlicensed spectrum usage, restrict
 
 ### Market Cyclicality
 
-All of this sits on top of volatile crypto markets. When token prices crash, rewards can suddenly fall below operators' real-world costs even if usage is steady. This cyclicality makes DePIN unusually sensitive to broader crypto market swings. A bear market can trigger mass unplugging long before the underlying infrastructure thesis is actually disproven.
+All of this sits on top of volatile crypto markets. When token prices crash, rewards can suddenly fall below operators' real-world costs even if usage is steady, as in Section II's example, where halving the token price turns a $20 monthly profit per node into a $30 loss. This cyclicality makes DePIN unusually sensitive to broader crypto market swings. A bear market can trigger mass unplugging long before the underlying infrastructure thesis is actually disproven.
 
 In practice, many networks experience a brief period of extreme token appreciation early in their lifetime. During this window, headline yields look absurdly attractive in fiat terms, pulling in operators and capital far faster than organic demand justifies. Hardware fleets get built to serve a price signal, not real usage. Expectations anchor around those inflated rewards.
 
-When the inevitable correction comes, often with drawdowns of 90 to 99 percent from peak, the economics flip overnight. The same fleet that looked wildly profitable now struggles to cover electricity, bandwidth, and maintenance. The result is a reflexive unwind: unplugging degrades service quality, which further discourages demand and reinforces the downtrend.
+When the inevitable correction comes, often wiping out more than 90% of peak token value, the economics flip overnight. The same fleet that looked wildly profitable now struggles to cover electricity, bandwidth, and maintenance. The result is a reflexive unwind: unplugging degrades service quality, which further discourages demand and reinforces the downtrend.
 
-The key long-term metric is whether usage-driven burns can eventually outpace emissions, creating sustainable demand independent of speculation. Most networks never cross this threshold.
+The key long-term question is not whether burns eventually outpace emissions, but whether customers pay enough to cover the full cost of the capacity they actually use, without token buyers making up the difference. Judged that way, deployment has so far proved much easier to finance than paid demand.
 
 ### The Governance and Usability Paradox
 
@@ -244,7 +269,7 @@ For many potential customers, any theoretical economic advantage is offset by op
 
 ### The Path Forward
 
-Yet it would be premature to dismiss DePIN as merely a proof of concept. The networks in this chapter already demonstrate that loosely coordinated communities can build and operate real infrastructure at scale: global IoT coverage, petabyte-level storage markets, GPU render farms, and live environmental sensor grids.
+Yet it would be premature to dismiss DePIN as merely a proof of concept. The networks in this chapter already demonstrate that loosely coordinated communities can build and operate real infrastructure at scale: global IoT coverage, petabyte-level storage markets, GPU render farms, and live environmental sensor grids. Helium’s proposed IoT handoff also shows that financing deployment does not guarantee sustainable operations.
 
 The question is no longer whether the model works, but where it can scale. Moving from niche experiment to mainstream utility will likely require several key pieces. Networks need standardized service layers that bundle heterogeneous nodes into enterprise-grade offerings. Governance frameworks must move quickly without being captured. Regulatory regimes must learn how to classify and supervise decentralized operators. User interfaces need to make consuming DePIN services feel as simple as using today's clouds.
 

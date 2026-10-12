@@ -14,7 +14,7 @@ The Uniswap airdrop was a milestone, but it wasn't crypto's first experiment wit
 
 It's 2016, and Ethereum has been live for barely a year. A group of developers launches "The DAO", a venture capital fund with no managers, no office, and no legal structure. Just smart contracts and the collective wisdom of token holders. Within weeks, it raises $150 million, becoming the largest crowdfunding campaign in history.
 
-Then a week later it gets hacked for $60 million due to a smart contract bug.
+Then about three weeks after the sale ends, it gets hacked for $60 million due to a smart contract bug.
 
 The DAO's spectacular rise and fall taught the crypto world a crucial lesson: decentralized governance requires more than writing smart contracts; it requires reimagining how humans coordinate at scale. If every stakeholder held direct voting power, the thinking went, then no CEO could make self-serving decisions and no board could prioritize shareholders over users. The elimination of traditional principal-agent problems seemed within reach.
 
@@ -24,7 +24,7 @@ The theory was elegant, but reality proved messier. Democracy works differently 
 
 Think of a DAO as a digital nation with programmable laws. The "constitution" is written in smart contract code, and amendments happen through governance proposals that can directly modify protocol parameters, allocate treasury funds, or upgrade entire systems.
 
-This represents a fundamental shift from traditional corporate governance. In Apple, shareholders vote for a board, which hires executives who make decisions. In a DAO, token holders vote on many of the decisions themselves. When a proposal passes, the contracts unlock a predefined set of on-chain actions: an executor (often the proposer, a designated execution contract, or even any user) can trigger those actions after a **timelock** period, subject to whatever safeguards the system enforces. Execution is mediated and constrained by code, but it is not fully automatic. Someone still has to submit the transaction, and in many systems security or treasury multisigs can intervene on sensitive changes.
+This differs from traditional corporate governance. Apple shareholders elect a board, which hires executives to make decisions. DAO token holders vote on many decisions directly. A passed proposal authorizes specific on-chain actions, usually after a **timelock** delay. Someone must still submit the execution transaction, and security multisigs may be able to intervene. Code defines the process; it does not remove people from it.
 
 But here's the catch: unlike owning Apple stock, holding **governance tokens** doesn't necessarily give legal ownership of anything. It only provides the ability to vote. A holder's power is defined entirely by smart contracts and operational controls like timelocks and multisigs. A token holder can steer the protocol but does not "own" it in any traditional sense.
 
@@ -42,7 +42,7 @@ The concentration problem is severe. In major DAOs, single-digit entities often 
 
 Vote-escrow tokenomics (often called "veTokenomics") rewards long-term alignment: voting power scales with lock duration. The "ve" prefix stands for "vote-escrow," indicating tokens locked in exchange for voting rights. Curve's veCRV model pioneered this approach. (Curve's AMM mechanics were covered in Chapter VII.) Holders lock their tokens for longer periods (therefore giving up the ability to sell them) and in exchange receive more voting weight. Because voting power is time-locked and non-transferable, ve-style systems mitigate flash-loan governance capture while naturally filtering out short-term speculation.
 
-On Curve, each liquidity pool has a gauge, which is a configuration that determines what share of weekly CRV emissions that pool will receive. More votes to a pool's gauge means more CRV inflation directed to that pool, which translates into higher yields for its liquidity providers. That yield makes the pool more attractive, deepening liquidity for whatever asset pair it hosts.
+On Curve, each liquidity pool has a gauge, which is a configuration that determines what share of weekly CRV emissions that pool will receive. More votes to a pool's gauge means more CRV inflation directed to that pool, which translates into higher yields for its liquidity providers. That yield makes the pool more attractive, deepening liquidity for whatever asset pair it hosts. It is worth noticing who pays for each part of it. Trading fees come from traders using the pool. CRV emissions come from newly issued tokens, so their cost falls on existing CRV holders through dilution and on whoever buys the CRV that liquidity providers sell. Liquidity that arrives for the emissions can leave when the votes, and the emissions, move elsewhere.
 
 veTokenomics spawned unexpected consequences: vote-bribe markets emerged, where protocols that want deeper liquidity for their own tokens pay veCRV holders to direct gauge votes toward their pools. In effect, protocols buy a slice of future CRV emissions by bribing voters today. This created delegate cartels and new forms of rent extraction, but it also revealed genuine economic demand for governance influence over where emissions (and therefore liquidity) flow.
 
@@ -50,7 +50,7 @@ veTokenomics spawned unexpected consequences: vote-bribe markets emerged, where 
 
 Under quadratic voting, the cost of k votes is k², usually paid with vote credits under a fixed budget; the system needs a way to verify that each participant is a unique person, preventing one person from pretending to be many. In this system, casting one vote requires one credit, but casting two votes requires four credits (2²), three votes requires nine credits (3²), and so on.
 
-It helps prevent wealthy participants or entities from accumulating disproportionate control over decision-making processes. By requiring exponentially more credits to cast additional votes, quadratic voting mitigates risks of oligopolies dominating governance through sheer token accumulation and reduces the direct translation of large stakeholder wealth into outsized political influence over network governance.
+It helps prevent wealthy participants or entities from accumulating disproportionate control over decision-making processes. By making the credit cost grow quadratically with the number of votes, quadratic voting mitigates risks of oligopolies dominating governance through sheer token accumulation and reduces the direct translation of large stakeholder wealth into outsized political influence over network governance.
 
 #### Experimental Frontiers: Futarchy
 
@@ -90,17 +90,17 @@ Every proposal starts with conversation. The proposer posts a new fee-tier propo
 
 This informal discussion phase, often called a Request for Comment (RFC), serves as a crucial filter. Bad ideas get shot down before wasting anyone's time or money. Good ideas get refined through community feedback. A simple fee-tier addition evolves into a nuanced plan with specific technical parameters, implementation timelines, and analysis of how it might affect existing liquidity across other tiers.
 
-#### Stage 2: The Temperature Check and Consensus Check (Snapshot Polling)
+#### Stage 2: The Temperature Check (Snapshot Polling)
 
-Once the proposal has survived the Discord and forum gauntlet, preliminary votes begin. Uniswap uses a two-phase Snapshot process (a temperature check and then a consensus check), although many protocols use just one. Snapshot is a gasless, off-chain voting platform that lets the community signal support without spending any money on transaction fees.
+After at least seven days of RFC discussion, Uniswap uses a single five-day temperature check on Snapshot. Snapshot is a gasless, off-chain voting platform that lets the community signal support without spending any money on transaction fees. Advancing requires at least 10 million UNI voting yes, with yes votes exceeding no votes.
 
 By this point, most of the real refinement should already have happened in the RFC phase: parameters debated, edge cases surfaced, alternatives considered. The temperature check is less about redesigning the proposal and more about answering a simpler question: *“Is there enough rough consensus to justify taking this on-chain in its current form?”* If support is weak or sharply split, the idea usually goes back to the forum for another round (or quietly dies). If support is strong, the proposer can move forward with confidence.
 
-If the temperature check passes the minimum threshold, the proposer moves to a consensus check with a near-final version. This second round of Snapshot voting (with short polls and minimum yes-vote thresholds) must also hit specific requirements before proceeding on-chain. As discussed earlier, the platform prevents manipulation by recording voting power at a fixed block before voting begins, so attackers cannot borrow tokens, vote, and return them within a single transaction. (The platform's name comes from this “snapshot” of token balances at a specific block number.)
+Snapshot records voting power at a fixed block before voting begins, so attackers cannot borrow tokens, vote, and return them within a single transaction. The platform's name comes from this “snapshot” of token balances at a specific block number.
 
 #### Stage 3: The Formal Proposal (On-Chain Submission)
 
-If the consensus check passes the minimum threshold, the proposal moves to official status. Submitting an on-chain governance proposal requires skin in the game: the proposer must have substantial UNI delegated (currently representing significant value) just to create the proposal. This ensures only serious proposals with significant backing make it this far.
+If the temperature check passes, the proposal can move on-chain. The proposer must have at least 1 million UNI delegated to submit it. A two-day voting delay then gives participants time to review the exact actions before the seven-day vote begins.
 
 The proposal contains more than text: it encodes a specific set of on-chain actions that will be triggered if the vote passes. These actions specify what contracts to call, which functions to execute, and with what parameters. In our Uniswap example, that means specifying exactly which new fee tier to add, how the factory contracts should be updated, and what happens during the transition period. There's no room for ambiguity: the exact instructions describing those function calls are the proposal itself.
 
@@ -110,13 +110,13 @@ For the next 7 days, token holders cast their votes. Unlike traditional election
 
 But here's where delegation culture becomes crucial: large delegates and the Uniswap Foundation's governance portal heavily influence outcomes. Social consensus built through forum discussions and delegate calls often determines the proposal's fate before the on-chain vote even begins. The proposal needs significant token support to reach quorum and pass.
 
-Despite billions at stake, typical voter participation rates hover around 3-5% of total token supply in most DAOs, and quorum failures are common even among the top 100 protocols.
+Despite billions at stake, voter participation often amounts to only a few percent of total token supply, and quorum failures are common even among the top 100 protocols.
 
 #### Stage 5: The Execution (Code Becomes Law)
 
-If the proposal passes with sufficient support, the timelock safeguard kicks in. The changes are queued for a minimum delay (and potentially longer for more sensitive changes), giving the community time to react if someone spotted a critical bug in the implementation code or if the proposal passed through manipulation.
+If the proposal passes with sufficient support, the timelock safeguard kicks in. The changes are queued for a two-day timelock in Uniswap, giving the community time to react if someone spotted a critical bug in the implementation code or if the proposal passed through manipulation.
 
-Most DAOs don't trust pure on-chain governance for critical operations. A **multi-sig wallet** requires multiple trusted parties (typically 5 out of 9 signers, or 6 out of 10\) to approve sensitive actions like emergency pauses, cancelling or vetoing queued proposals, or executing upgrades within a narrowly defined scope. These multisigs act as both operational security (no single private key can unilaterally act) and governance backstops during timelock periods.
+Most DAOs don't trust pure on-chain governance for critical operations. A **multi-sig wallet** requires multiple trusted parties (for example, 5 out of 9 signers) to approve sensitive actions like emergency pauses, cancelling or vetoing queued proposals, or executing upgrades within a narrowly defined scope. These multisigs act as both operational security (no single private key can unilaterally act) and governance backstops during timelock periods.
 
 The trade-off is re-centralization, but in practice the powers are usually constrained by contract design: many multisigs cannot arbitrarily drain the treasury or rewrite core logic, they can only trigger specific admin functions the DAO has pre-authorized. Even so, this still creates a privileged “emergency brake” layer controlled by a small group of signers, whose identities are typically public and documented for accountability.
 
@@ -130,7 +130,7 @@ Once the timelock expires and no emergency action has been taken, anyone can tri
 
 #### Tooling
 
-This entire process is supported by a growing stack of specialized tools. Safe (formerly Gnosis Safe) provides multi-sig wallet infrastructure for treasury security. Governance platforms like Tally offer dashboards where participants can track proposals, view voting history, analyze delegate performance, and cast votes. Discussion platforms like Discourse and Commonwealth host the initial debates and RFC threads, while Snapshot enables gasless off-chain voting for temperature checks. Together, these tools transform raw smart contracts into functional governance systems that humans can actually navigate.
+This entire process is supported by a growing stack of specialized tools. Safe (formerly Gnosis Safe) provides multi-sig wallet infrastructure for treasury security. Governance platforms like Agora offer dashboards where participants can track proposals, view voting history, analyze delegate performance, and cast votes. Discussion platforms like Discourse and Commonwealth host the initial debates and RFC threads, while Snapshot enables gasless off-chain voting for temperature checks. Together, these tools transform raw smart contracts into functional governance systems that humans can actually navigate.
 
 ### The Social Layer
 
@@ -158,7 +158,9 @@ The challenge starts with a fundamental question: What should a token actually d
 
 These tokens operate on a simple premise: ownership grants voting rights, and voting rights determine the protocol's future. Holders can propose changes, vote on protocol parameters, and shape strategic decisions. There's no guaranteed income stream or built-in utility beyond governance participation. Value comes entirely from the market's belief that governance control will be valuable as the protocol grows and evolves. Governance tokens give token holders a clean slate but they can evolve into other types by voting.
 
-Take Uniswap's UNI token: hold it, vote with it, hope the protocol succeeds. No immediate utility, no guaranteed returns. Just the right to shape a protocol's future. It's like owning shares in a company that might never pay dividends, where your only value comes from other people wanting to buy your voting rights. Risky? Absolutely. But when governance decisions can unlock billions in value (like enabling fee switches), those voting rights become incredibly valuable.
+Uniswap's UNI token originally illustrated this model: hold it, vote with it, hope the protocol succeeds. No guaranteed returns, just the right to shape a protocol's future. But governance rights can change the economics. In December 2025, Uniswap executed its UNIfication proposal, activating protocol fees that fund UNI burns on v2 and selected v3 pools and burning 100 million UNI from the treasury. The fee program expanded across v3 deployments and selected v4 pools in 2026. UNI now combines governance with a fee-funded supply reduction mechanism. That still does not guarantee a return, but it is a concrete example of a governance token evolving beyond voting rights alone.
+
+The example also shows why it pays to trace where the money comes from. Uniswap's protocol fee is a share of the swap fees that previously went entirely to liquidity providers, so the burns are funded by a transfer from LPs to UNI holders. If LPs respond by moving liquidity elsewhere, traders pay through worse execution. The 100 million treasury UNI were a different case: they had not been circulating, so burning them reduced total supply and the DAO's future spending power without removing any tokens from the market.
 
 ##### Revenue-Sharing Tokens: The Dividend Play
 
@@ -166,17 +168,21 @@ Revenue-sharing tokens distribute protocol earnings directly to holders based on
 
 Some tokens cut straight to the chase: hold them, earn money. When dYdX generates trading fees, it distributes a portion of them directly to DYDX stakers. No complex governance required, just stake your tokens and collect your share of protocol revenue. It's the closest thing to traditional dividend-paying stocks in DeFi, but with the added complexity of smart contract risk and token price volatility.
 
+Even here, check what the distribution is made of. Fees paid by traders are outside money. Rewards paid in newly minted tokens are issuance: they shift ownership from holders who don't stake to holders who do, and bring nothing in from outside. A staker's actual return is the distributions received plus or minus the change in the token's price, so a 10% fee yield on a token that falls 30% is still a loss.
+
 ##### Buyback-and-Burn Tokens: The Scarcity Game
 
-Instead of distributing profits, this approach uses protocol revenue to purchase tokens from the open market and permanently destroy them. The buying creates upward price pressure, while burning reduces total supply over time. The theory is that decreasing supply plus steady or growing demand equals higher token prices. Success depends entirely on the protocol generating substantial and consistent revenue.
+Instead of distributing profits, this approach uses protocol revenue to purchase tokens from the open market and permanently destroy them. The purchases add demand when they happen, and the burn leaves supply lower than it would otherwise have been. The theory is that decreasing supply plus steady or growing demand equals higher token prices, and the condition matters as much as the mechanism. Buybacks compete with everything else reaching the market at the same time: new issuance, insider unlocks, and holders who simply want out. If demand for the token falls faster than supply, the price falls despite the burn.
 
-Hyperliquid (examined in depth in Chapter X) takes this approach with HYPE. Instead of distributing profits, the protocol uses revenue to buy HYPE tokens from the market and burn them forever. Buying tokens creates constant buy pressure, burning tokens makes the remaining supply scarcer. It's like a stock buyback program but relies on the protocol generating meaningful revenue.
+It helps to be precise about who receives what. A buyback pays cash to the holders who sell into it. Holders who keep their tokens receive no cash; they end up owning a slightly larger share of a slightly smaller supply, which is worth something only if the protocol keeps earning. Success depends entirely on the protocol generating substantial, recurring revenue from its users.
+
+Hyperliquid (examined in depth in Chapter X) takes this approach with HYPE. Instead of distributing profits, the protocol directs trading fees to an Assistance Fund that buys HYPE on the market and removes it from circulation. The payer is easy to identify: traders, through their fees. Whether a holder benefits still depends on how those purchases compare with HYPE entering the market through staking rewards and contributor unlocks, and on whether the trading activity behind the fees persists. It resembles a stock buyback program, with the same dependence on recurring revenue.
 
 ##### Utility Tokens: Pay-to-Play
 
 These tokens function as the native currency for accessing protocol services. Users must hold or spend the token to interact with the protocol, creating natural demand independent of speculation or governance participation. The stronger the demand for the protocol's services, the stronger the demand for the token. However, this model faces the risk of being displaced if competitors offer superior services.
 
-Chainlink's LINK token serves a clear function: paying for oracle services. Today, Data Streams supports payment in assets other than LINK (with a surcharge), while Functions bills in LINK. Holding LINK varies by service. This creates natural demand regardless of governance participation while maintaining payment flexibility. The downside? If someone builds a better oracle, your token's utility (and value) could evaporate overnight.
+Chainlink's LINK token pays for oracle services. Its Payment Abstraction system can convert supported payments in other assets into LINK, creating token demand without requiring every customer to hold it directly. The downside? If someone builds a better oracle, that demand could disappear.
 
 #### The Supply Dilemma: Scarcity vs. Sustainability
 
@@ -186,13 +192,36 @@ Every token designer faces the same impossible choice: create scarcity to drive 
 
 Some protocols launch with a hard cap: say, 100 million tokens, never to be increased. This creates scarcity and can drive price appreciation, but it also creates a funding problem. How are developers paid in year five when the initial token allocation is exhausted? Uniswap’s initial tokenomics, for example, defined a total supply of 1 billion UNI with the option for governance to introduce up to 2% annual perpetual inflation after the initial four-year distribution schedule. The mechanism exists on paper to fund ongoing development and ecosystem growth, but actually activating it is a political choice that token holders must vote on.
 
+A treasury holding mostly its own token faces a version of the same problem. Paying contributors from it means someone eventually sells those tokens, so the treasury's runway rises and falls with the token price. Spending tokens that already exist does not increase total supply, but it does increase the supply in circulation, and to the market it can look much like issuance.
+
 ##### Inflation: The Central Bank Model
 
-Other protocols embrace inflation from the start. New tokens are minted continuously to fund development, liquidity incentives, and governance participation. It's sustainable but dilutive. Every new token reduces the percentage ownership of existing holders. The key is keeping inflation low enough that protocol growth outpaces token dilution.
+Other protocols embrace inflation from the start. New tokens are minted continuously to pay validators, liquidity providers, contributors, and governance participants. Issuance is a way of paying for work, not a source of outside money: recipients who need cash must sell, and the cash comes from whoever buys. Every new token reduces the percentage ownership of existing holders. Issuance can continue only as long as buyers keep absorbing the new supply at prices recipients will accept, and that ultimately depends on the protocol producing something people pay for. The familiar rule of thumb, keep inflation low enough that growth outpaces dilution, is useful only if "growth" means customer revenue and genuine demand for the token, not activity that the issuance itself is paying for.
 
 ##### Deflation: The Scarcity Spiral
 
-The most aggressive approach burns tokens faster than they're created, shrinking supply over time. Ethereum's EIP-1559 burns ETH with every transaction, and many DeFi protocols burn tokens using revenue. It sounds great for holders until tokens become so valuable that people stop using them for governance, defeating the entire purpose.
+The most aggressive approach burns tokens faster than they're created, shrinking supply over time. Ethereum's EIP-1559 burns transaction fees, but supply only shrinks when burns exceed issuance; lower fees after Dencun led to net inflation. Many DeFi protocols also use revenue to burn tokens. Net deflation is a statement about token supply, not about whether the business works: a protocol can shrink its supply while its revenue falls, or grow its supply while customers pay it more every year.
+
+A common worry is that a scarce, expensive token will stop being used for governance. Ordinary voting usually does not consume tokens, though. Existing holders vote with the balance they already hold and pay only gas, or nothing at all on Snapshot. What a higher price changes is the cost of acquiring influence: capture becomes more expensive, and so does gaining a meaningful vote as a newcomer.
+
+#### Following the Money
+
+Token debates often collapse several different quantities into one. Six of them need to be kept apart:
+
+- **Customer revenue** is what users pay for the service: swap fees, borrowing interest, payments for data or storage. It is the only item on this list that brings outside money in.
+- **Operating costs** are what it takes to deliver the service: contributors, infrastructure, audits, security, and whatever it costs to keep liquidity providers, validators, or hardware operators in place.
+- **Token subsidies** are the part of those costs paid in the protocol's own token instead of cash: liquidity mining, operator rewards, points that convert into tokens. No cash leaves the treasury, but someone still pays, either existing holders through dilution or the buyers who absorb the tokens that recipients sell.
+- **Issuance** is the creation of new tokens, whatever they are used for.
+- **Burns** destroy tokens, funded either by revenue (buybacks) or directly by usage (fee burns).
+- **Token-holder returns** are what a holder actually receives: any distributions, plus or minus the change in price, measured against a share of supply that issuance may have diluted.
+
+The first three items describe whether the business works: customer revenue minus operating costs, with token subsidies counted as costs at their market value. Issuance and burns describe the token's supply. Holder returns depend on a further decision about how much of any surplus reaches holders, and on the price the market sets. These quantities can move independently. A protocol can report large "revenue" while spending more than that on token incentives, burn tokens while issuing more, or run a profitable business whose token captures none of the profit.
+
+A simple example shows why the headline burn number is not enough. Suppose a protocol starts the year with 100 million tokens. It issues 5 million to contributors and liquidity providers, then uses revenue to buy and burn 3 million. The year ends with 102 million tokens: despite the burn program, net supply increased by 2%. A holder who kept 1 million tokens now owns about 0.98% of supply instead of 1%. The burn helped compared with issuing alone, which would have left that holder with about 0.95%, but it was not a gain. It only partly offset the 5 million issued to others.
+
+Now cut issuance to 2 million, so the same burn shrinks supply by 1%. Supply fell, but price is set by demand as well. If investors decide to hold 20% less of the token by value, perhaps because trading activity slowed, the price ends about 19% lower even with fewer tokens outstanding. An unlock is different again: releasing tokens that insiders already own increases tradable supply without changing total supply at all.
+
+The useful questions therefore come in order. Who pays the protocol, and how much? What does it cost to deliver the service, including the costs paid in tokens? How much of what remains reaches token holders, and through what mechanism? Burn totals and supply charts answer a narrower question. Chapter XIII applies this accounting to a network that looks profitable only because token rewards cover its costs.
 
 #### Vesting: Preventing the Founder Dump
 
@@ -230,9 +259,11 @@ Up and coming protocols now face a dilemma: they need artificial traction to boo
 
 #### Point Programs
 
-Point programs (a form of points farming introduced in Chapter VII's yield generation section) have evolved far beyond simple pre-launch incentives into sophisticated, ongoing engagement mechanisms that continue operating even after tokens launch. Unlike traditional one-and-done airdrops, modern point programs operate in "seasons", recurring periods typically lasting 3-6 months where users compete for rewards through sustained activity.
+Point programs (a form of points farming introduced in Chapter VII's yield generation section) have evolved far beyond simple pre-launch incentives into sophisticated, ongoing engagement mechanisms that continue operating even after tokens launch. Unlike traditional one-and-done airdrops, modern point programs operate in "seasons", recurring periods lasting a few months where users compete for rewards through sustained activity.
 
-This seasonal approach has become the dominant retention strategy because it directly addresses the post-airdrop abandonment problem. Rather than watching engagement collapse after token distribution, protocols can maintain user activity indefinitely through the promise of future seasons. Users who might otherwise move on after claiming initial rewards instead remain active, hoping to qualify for subsequent distributions.
+This seasonal approach has become a common retention strategy because it addresses the post-airdrop abandonment problem. Rather than watching engagement collapse after token distribution, protocols can keep users active through the promise of future seasons. Users who might otherwise move on after claiming initial rewards instead remain active, hoping to qualify for subsequent distributions.
+
+But activity sustained by repeated rewards is purchased activity. Each season is a token subsidy, paid by holders through dilution or by whoever buys the tokens that farmers sell. Seasons show whether a protocol has built a product or rented its users only when rewards shrink or stop. Until then, the evidence to watch is the reward cost compared with the fee revenue those users generate, the number of distinct people rather than wallets, and how many stay once a season ends.
 
 #### Two Strategic Approaches to Season Design
 
@@ -244,13 +275,13 @@ These seasons publish exact point formulas and qualifying requirements upfront. 
 
 ##### Opaque “Guessing Game” Seasons
 
-These seasons deliberately obscure their criteria, creating speculation about which actions will be rewarded. This uncertainty serves multiple strategic purposes. It prevents gaming by making optimization impossible, encourages broader protocol exploration as users try different strategies, and maintains engagement through mystery and anticipation. These systems often retrospectively reward unexpected behaviors, perhaps favoring users who interacted during specific time windows, demonstrated loyalty during market downturns, or engaged with less popular features.
+These seasons deliberately obscure their criteria, creating speculation about which actions will be rewarded. This uncertainty serves several strategic purposes. It changes the farming problem rather than eliminating it: instead of optimizing one known formula, farmers spread activity across more behaviors and more wallets in case any of them counts. It also encourages broader protocol exploration and maintains engagement through anticipation. The costs are real too. Users cannot estimate what their activity is worth, and discretionary criteria leave room for insiders to benefit from knowing the rules in advance. These systems often retrospectively reward unexpected behaviors, perhaps favoring users who interacted during specific time windows, demonstrated loyalty during market downturns, or engaged with less popular features.
 
 ##### Strategic Implications and Market Impact
 
-This seasonal economy fundamentally transforms user relationships with protocols. Instead of extractive farming followed by abandonment, seasons create ongoing "membership" where users maintain positions and activity to remain eligible for future rewards. Protocols can leverage seasons to test new features, gather behavioral data, and build competitive moats through user lock-in.
+Seasons change the shape of user relationships with protocols. Instead of a single burst of farming followed by abandonment, users maintain positions and activity to remain eligible for future rewards. Protocols can use seasons to test new features, gather behavioral data, and slow the exodus that followed one-off airdrops. Whether that loyalty survives the end of the rewards is an empirical question, and one a protocol cannot answer while it is still paying.
 
-The success of seasonal point programs has made them virtually mandatory for new DeFi protocols, transforming crypto from a series of one-time incentive events into an ongoing "game" where users maintain positions across multiple protocols simultaneously, always positioning for the next season's rewards.
+Seasonal point programs have become a standard tool for new DeFi protocols, turning one-time incentive events into an ongoing game where users maintain positions across multiple protocols simultaneously, positioning for the next season's rewards. A protocol's usage figures during a season therefore measure the size of its subsidy as well as the appeal of its product.
 
 ## Section IV: A Three-Pillar Structure
 
@@ -262,11 +293,11 @@ The Uniswap ecosystem provides a clean example of this tripartite structure in a
 
 **Uniswap Labs** is the for-profit technology company focused on research, development, and shipping products. As the team that originally built the protocol, Labs continues to design and implement major upgrades like Uniswap v4, Unichain, and new hook-based functionality. Historically, Labs also monetized its control over key user-facing interfaces (the main web frontend, wallet, and routing API) by charging an interface fee on swaps routed through its products, with that revenue flowing to Labs rather than the DAO.
 
-A November 2025 governance proposal aims to realign this model fundamentally. The proposal turns on the protocol's fee switch and routes a portion of LP fees and Unichain sequencer revenue into a UNI burn mechanism, while committing Labs to set its interface, wallet, and API fees to zero. Instead of extracting rent at the interface layer, Labs would focus on protocol growth funded from the DAO treasury via a UNI-denominated "growth budget". In other words, Labs becomes more explicitly a service provider to UNI holders: paid in UNI, contractually tied to token-holder interests, and incentivized to grow protocol usage rather than capture interface fees.
+The UNIfication proposal, introduced in November 2025 and executed that December, began realigning this model. It activated protocol fees on v2 and selected v3 pools to fund UNI burns, alongside a one-time burn of 100 million treasury UNI. The approved framework also directed Unichain sequencer revenue toward burns and established a UNI-denominated "growth budget" for Labs, while Labs removed its interface fees. Instead of extracting rent at the interface layer, Labs is funded to grow protocol usage. The rollout expanded across v3 deployments and selected v4 pools during 2026.
 
-**The Uniswap Foundation** is a non-profit legal entity created to handle stewardship functions the DAO cannot perform on-chain: running the Protocol Grants Program, supporting governance processes, coordinating ecosystem efforts, and holding certain IP and trademarks on behalf of the community. The Foundation received a large treasury grant from the DAO and, for a time, became the default home for "public goods" work that didn't fit neatly inside Labs or the DAO itself.
+**The Uniswap Foundation** is a non-profit legal entity created to handle stewardship functions the DAO cannot perform on-chain: running the Protocol Grants Program, supporting governance processes, and coordinating ecosystem efforts. Uniswap Labs, not the Foundation, holds the trademarks. The Foundation received a large treasury grant from the DAO and, for a time, became the default home for "public goods" work that didn't fit neatly inside Labs or the DAO itself.
 
-Under this restructuring, most of the Foundation's operational teams (ecosystem support, governance support, and developer relations) are slated to move over to Labs. The Foundation shrinks to a small core group focused on deploying its remaining grants and incentives budget; once that is exhausted, future ecosystem funding is expected to come from the DAO's growth budget administered via Labs under a service-provider agreement with the DAO's legal wrapper (such as DUNI). The Foundation remains a legal and governance scaffold, but much less of an operational center of gravity than it was at launch.
+The approved restructuring also set out a transfer of most Foundation operational teams (ecosystem support, governance support, and developer relations) to Labs. It envisioned a smaller Foundation focused on deploying its remaining grants and incentives budget, with future ecosystem funding coming through the DAO's growth budget and a service-provider agreement under its legal wrapper, DUNI. The intended division leaves the Foundation with a narrower role and makes Labs more directly accountable for funded operations.
 
 **The Uniswap DAO** is the ultimate governing body: UNI token holders propose, debate, and vote on protocol-level changes and treasury allocations. The DAO controls the on-chain treasury (denominated largely in UNI), key parameters like protocol fee levels and where they apply, ownership of core contracts (such as the v3 factory), and now the size and terms of Labs' growth budget. Practically, the DAO acts through governance executors and timelocks, while relying on Labs and other ecosystem contributors to draft proposals, write code, and operate infrastructure.
 
@@ -280,7 +311,7 @@ Some U.S. states now offer onchain-native legal wrappers for DAOs. Vermont creat
 
 These wrappers solve part of the liability problem, but they come with strings attached: registered agents, ongoing filings, tax and reporting obligations, and, most importantly, a clearly identifiable legal entity that regulators and courts can go after. You gain legal clarity and institutional acceptability, but you give up some of the pseudonymous, jurisdiction-blurred nature that DAOs originally experimented with.
 
-The regulatory situation is equally murky. Are governance tokens securities under U.S. law? The SEC has suggested that tokens offering “investment returns” likely are, while pure governance tokens might not be. But the line remains blurry. The Howey Test asks whether token buyers expect profits from others’ efforts. Many governance tokens arguably fail this test, yet few DAOs have definitive regulatory clarity.
+The regulatory picture became more specific in March 2026, when the SEC distinguished crypto assets themselves from the investment contracts through which they may be sold. Functional governance tokens can fall within its digital commodity category, while a sale involving promises of managerial efforts and profits can still satisfy the Howey Test. This is an agency interpretation, not blanket immunity: the token's function and the arrangements around its sale both matter.
 
-Enforcement actions have started to test the edges. In the Ooki DAO case, the CFTC argued that token holders voting on governance proposals could be treated as members of an unincorporated association and held collectively liable for the DAO’s illegal leveraged trading products. Courts allowed service via forum posts and treated the DAO itself as a suable entity, sending a clear signal that “it’s just a DAO” is not a shield against regulation. Most major DAOs now operate in a calculated regulatory gamble: decentralize sufficiently to avoid being labeled securities or unregistered intermediaries, but maintain enough coordination to actually build products. It’s a high-wire act that could end badly if regulators decide to systematically crack down.
+Enforcement actions have started to test the edges. In the Ooki DAO case, the CFTC argued that token holders voting on governance proposals could be treated as members of an unincorporated association and held collectively liable for the DAO’s illegal leveraged trading products. Courts allowed service via forum posts and treated the DAO itself as a suable entity, sending a clear signal that “it’s just a DAO” is not a shield against regulation. The classification of a token does not settle whether a DAO's trading products, services, or organizational structure comply with other laws.
 
