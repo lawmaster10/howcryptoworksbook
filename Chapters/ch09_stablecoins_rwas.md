@@ -24,7 +24,7 @@ These stablecoins maintain their peg through **arbitrage** mechanisms that creat
 
 ### USDT
 
-USDT is a stablecoin issued by Tether and the most widely adopted stablecoin globally, with $187 billion in circulation as of early 2026\. Tether faced early transparency and banking challenges and later published quarterly reserve attestations from BDO Italia. In August 2026, Tether announced that KPMG had issued an unqualified audit opinion on Tether International’s 2025 financial statements, a broader scope than reserve attestations alone.
+USDT is a stablecoin issued by Tether and the most widely adopted stablecoin globally, with about $184 billion in circulation as of late 2026\. Tether faced early transparency and banking challenges and later published quarterly reserve attestations from BDO Italia. In August 2026, Tether announced that KPMG had issued an unqualified audit opinion on Tether International’s 2025 financial statements, a broader scope than reserve attestations alone.
 
 Tether generates most of its revenue from yield earned on U.S. Treasury bills, reverse repos, and money market funds. This business model proved highly profitable in 2024, delivering $13 billion in net profit. The company has been reinvesting these profits into long-term growth areas including AI, renewable energy, and communications infrastructure. Its June 2026 reserve reporting showed about $19 billion in gold and $6 billion in Bitcoin.
 
@@ -38,11 +38,11 @@ Unlike Tether, Circle reported relatively modest profits of $156 million in 2024
 
 ### PYUSD
 
-PayPal USD (PYUSD) is a stablecoin issued in collaboration between PayPal and Paxos. PYUSD can be used on PayPal or Venmo, and it is issued on Ethereum, Solana, Arbitrum, and, since July 2026, Polygon. There are no fees for transactions within PayPal. PYUSD is much smaller than USDT and USDC and had about $3 billion in circulation on October 11, 2026.
+PayPal USD (PYUSD) is a stablecoin issued in collaboration between PayPal and Paxos. PYUSD can be used on PayPal or Venmo, and it is issued on Ethereum, Solana, Arbitrum, and, since July 2026, Polygon. There are no fees for transactions within PayPal. PYUSD is much smaller than USDT and USDC and had about $3 billion in circulation as of late 2026.
 
 ### EUR Stablecoins
 
-EUR stablecoins remain negligible compared to their USD counterparts, representing less than 1% of the total stablecoin market. Circle reported about €390 million of EURC in circulation on August 31, 2026. This disparity stems from the U.S. dollar's global dominance in international trade and finance, which naturally extends to crypto where USD-denominated assets have broader acceptance across centralized exchanges, decentralized exchanges, and DeFi protocols. The EU's MiCA regulation, discussed below, has compounded this structural advantage by creating additional compliance barriers that deter both issuers and users.
+EUR stablecoins remain negligible compared to their USD counterparts, representing less than 1% of the total stablecoin market. As of late 2026, only about €390 million of Circle's EURC was in circulation. This disparity stems from the U.S. dollar's global dominance in international trade and finance, which naturally extends to crypto where USD-denominated assets have broader acceptance across centralized exchanges, decentralized exchanges, and DeFi protocols. The EU's MiCA regulation, discussed below, has compounded this structural advantage by creating additional compliance barriers that deter both issuers and users.
 
 ### Regulations
 
@@ -104,7 +104,7 @@ While trading and arbitrage continue to dominate global stablecoin flows, the in
 
 While stablecoins proved that blockchains could handle money, Real World Asset (RWA) **tokenization** represents the next step: moving conventional financial assets on-chain to provide greater efficiency, transparency, and global accessibility than off-chain rails.
 
-The shift is already underway. Incumbent financial giants like BlackRock, Franklin Templeton, and JPMorgan have launched tokenized products that now handle billions in assets and daily volumes. By April 2026, JPMorgan's Kinexys platform was processing daily volumes exceeding $5 billion, powering short-term collateralized lending between institutions and tokenized settlement processes. What began as crypto-native experiments has now attracted the world's largest asset managers.
+The shift is already underway. Incumbent financial giants like BlackRock, Franklin Templeton, and JPMorgan have launched tokenized products that now handle billions in assets and daily volumes. By late 2026, JPMorgan's Kinexys platform was processing an average of about $7 billion in daily volume, powering short-term collateralized lending between institutions and tokenized settlement processes. What began as crypto-native experiments has now attracted the world's largest asset managers.
 
 RWA tokenization spans the full spectrum of established markets, ranging from U.S. Treasury bills to complex private credit arrangements, with real estate, stocks, and commodities bridging the gap between these extremes.
 
@@ -112,7 +112,7 @@ The tokenization process requires four critical components that work together to
 
 Additionally, U.S. registered investment funds must maintain a dedicated transfer agent. This agent keeps official shareholder records and processes all distributions and redemptions according to regulatory standards.
 
-As of October 11, 2026, RWA.xyz tracked roughly $15 billion in distributed tokenized U.S. Treasuries, $5 billion in commodities, $8 billion in its broader credit category, and $3 billion in stocks and ETFs. These figures exclude stablecoins and describe assets distributed on-chain, rather than the much larger pools merely represented on-chain for recordkeeping. That distinction matters when judging how much capital tokenization actually brings into crypto markets.
+As of late 2026, roughly $15 billion in tokenized U.S. Treasuries had been distributed on-chain, along with about $5 billion in commodities, $8 billion in broader credit, and $3 billion in stocks and ETFs. These figures exclude stablecoins and count only assets distributed on-chain, not the much larger pools merely represented on-chain for recordkeeping. That distinction matters when judging how much capital tokenization actually brings into crypto markets.
 
 ### Regulatory Framework
 

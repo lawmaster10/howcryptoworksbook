@@ -163,7 +163,7 @@ However, Helium also illustrated the volatility of the model. As the network piv
 
 Mapping and sensor networks confront similar coverage challenges in different data modalities. Hivemapper challenges Google Street View by paying drivers to mount dashcams, resulting in a map that can update weekly rather than annually.
 
-By October 2026, Hivemapper reported about 23 million unique kilometers, nearly 40% of the world's road network. Counting repeat passes brought the total to almost 800 million kilometers. The two numbers tell different stories: unique coverage measures reach; repeat passes keep the map fresh.
+By late 2026, Hivemapper had mapped about 23 million unique kilometers, nearly 40% of the world's road network. Counting repeat passes brought the total to almost 800 million kilometers. The two numbers tell different stories: unique coverage measures reach; repeat passes keep the map fresh.
 
 Hivemapper's comparative advantage lies not in absolute coverage, where Google still dominates in many regions, but in freshness and marginal cost. Traditional mapping requires expensive fleets of dedicated cars and staff; DePIN turns data collection into a background task for existing drivers, whose rewards depend on location and novelty of coverage.
 
@@ -193,7 +193,7 @@ IPFS, the InterPlanetary File System (also mentioned in Chapter XI's NFT storage
 
 Arweave (also mentioned in Chapter XI's NFT storage discussion) takes a fundamentally different approach, offering permanent storage via an **endowment model**. Users pay a one-time, upfront fee that is effectively invested into a storage endowment; miners are then rewarded from this pool for storing historical data, so that the network's permanent data archive can remain accessible without recurring monthly payments. In the accounting terms used earlier, the upfront fee is customer revenue received once against a cost that never ends. Whether it is enough depends on assumptions that storage keeps getting cheaper and that an endowment held in AR keeps enough value. If those assumptions fail, the shortfall shows up as lower pay for the miners who store old data and, eventually, as fewer copies of it.
 
-Storage costs fluctuate with network pricing and the price of AR. An October 11, 2026 estimate was roughly $60 per gigabyte, expensive for large datasets but attractive for high-value archival content such as cultural artifacts, legal records, or irreplaceable application state.
+Storage costs fluctuate with network pricing and the price of AR. As of late 2026, the cost was roughly $60 per gigabyte, expensive for large datasets but attractive for high-value archival content such as cultural artifacts, legal records, or irreplaceable application state.
 
 Here the trade-off with AWS is not only price, but time horizon and control. A corporate provider can change pricing or discontinue a service line; Arweave's promise is that, as long as the network and its token economy survive, the data will remain accessible without further negotiation.
 

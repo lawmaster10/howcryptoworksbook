@@ -82,15 +82,15 @@ In January 2021, Flashbots released MEV-Geth, a modified Ethereum client that le
 
 ### The Transition to Proof-of-Stake
 
-When Ethereum moved to proof-of-stake in September 2022 (a transition detailed in Chapter II), the entire MEV landscape needed rebuilding. Flashbots developed **MEV-Boost**, an open-source middleware that provides **Proposer-Builder Separation** (PBS), a design where specialized builders construct blocks and validators simply choose which block to propose, rather than validators doing both jobs themselves. This expanded the builder-validator relationship introduced earlier into a full competitive marketplace via relays. As of early 2026, approximately 90% of Ethereum blocks are built via MEV-Boost.
+When Ethereum moved to proof-of-stake in September 2022 (a transition detailed in Chapter II), the entire MEV landscape needed rebuilding. Flashbots developed **MEV-Boost**, an open-source middleware that provides **Proposer-Builder Separation** (PBS), a design where specialized builders construct blocks and validators simply choose which block to propose, rather than validators doing both jobs themselves. This expanded the builder-validator relationship introduced earlier into a full competitive marketplace via relays. As of late 2026, more than 90% of Ethereum blocks are built via MEV-Boost.
 
-On Ethereum mainnet, this separation still operates outside the core protocol through MEV-Boost. Enshrined PBS, specified in EIP-7732, became part of the Glamsterdam upgrade on Sepolia on October 6, 2026. Mainnet activation had not yet been scheduled as of October 11, 2026.
+On Ethereum mainnet, this separation still operates outside the core protocol through MEV-Boost. Enshrined PBS, specified in EIP-7732, became part of the Glamsterdam upgrade on Sepolia on October 6, 2026. Mainnet activation had not yet been scheduled as of late 2026.
 
 ### How MEV-Boost Works
 
 This process is facilitated by trusted entities called **relays**. Relays act as a neutral escrow and auctioneer: builders send them full blocks, and the relay verifies their validity and bid. The relay then forwards only the block header and the bid to the proposer (validators are also called proposers in this context). The proposer chooses a header without seeing the block’s contents, preventing them from stealing the MEV opportunity. The system evolved from individual miners making direct deals to a sophisticated auction where multiple builders compete for validator selection, with relays facilitating the bidding process.
 
-These trust assumptions are not just theoretical. In April 2023, a validator exploited a vulnerability in MEV-Boost and relay handling to “unbundle” private bundles, copy profitable MEV transactions, and siphon more than $20 million from other searchers in a single block. The episode triggered urgent client patches and became the basis for the first high-profile U.S. criminal case about MEV infrastructure: in 2024, federal prosecutors charged two MIT-educated brothers with wire fraud and money laundering for allegedly orchestrating the exploit, with the case still being litigated as of early 2026\. Whatever one thinks of the legal theory, it underscored that MEV relays and builders are no longer just technical plumbing but also legal and regulatory attack surfaces.
+These trust assumptions are not just theoretical. In April 2023, a validator exploited a vulnerability in MEV-Boost and relay handling to “unbundle” private bundles, copy profitable MEV transactions, and siphon more than $20 million from other searchers in a single block. The episode triggered urgent client patches and became the basis for the first high-profile U.S. criminal case about MEV infrastructure: in 2024, federal prosecutors charged two MIT-educated brothers with wire fraud and money laundering for allegedly orchestrating the exploit. Their first trial ended in a mistrial in November 2025 after the jury deadlocked, and as of late 2026 a retrial was expected in mid-2027\. Whatever one thinks of the legal theory, it underscored that MEV relays and builders are no longer just technical plumbing but also legal and regulatory attack surfaces.
 
 ### Expanding User Protection
 
@@ -102,7 +102,7 @@ The Flashbots approach represents a pragmatic philosophy: given that extraction 
 
 Despite Flashbots' innovations, the MEV ecosystem faces a fundamental challenge: concentration of power among a small number of operators.
 
-The concentration remained clear in October 2026. In Relayscan's week ending October 10, Titan built roughly half of observed MEV-Boost blocks, Quasar about a fifth, and BuilderNet about a sixth. Together, three builders produced around 90% of the total, leaving substantial influence with a handful of operators.
+The concentration remained clear in late 2026, when Titan built roughly half of MEV-Boost blocks, Quasar about a fifth, and BuilderNet about a sixth. Together, three builders produced around 90% of the total, leaving substantial influence with a handful of operators.
 
 The relay layer introduces additional centralization concerns. Because only a handful of trusted relays dominate the market, their compliance decisions (such as filtering transactions to adhere to OFAC sanctions) can have network-wide effects. These supposedly neutral intermediaries become powerful chokepoints that shape which transactions actually make it into blocks regardless of individual validator preferences. The choice of which relays to trust can determine transaction inclusion, making censorship resistance vulnerable to a small set of gatekeepers.
 
@@ -110,7 +110,7 @@ The relay layer introduces additional centralization concerns. Because only a ha
 
 The concentration revealed by these metrics made clear that MEV-Boost alone couldn't solve the centralization problem. The relay layer remained a chokepoint, and builder concentration continued unabated. The industry needed more fundamental restructuring.
 
-In November 2024, Flashbots, Beaverbuild, and Nethermind launched BuilderNet to distribute block building across multiple operators. Its original design used secure enclaves, hardware that isolates code even from the machine's owner. As of October 2026, builder nodes were temporarily running outside these enclaves during an architecture transition, while order routing and backrunning retained enclave protection. Privacy guarantees therefore depend on which part of the system handles the data.
+In November 2024, Flashbots, Beaverbuild, and Nethermind launched BuilderNet to distribute block building across multiple operators. Its original design used secure enclaves, hardware that isolates code even from the machine's owner. As of late 2026, builder nodes were temporarily running outside these enclaves during an architecture transition, while order routing and backrunning retained enclave protection. Privacy guarantees therefore depend on which part of the system handles the data.
 
 The goal is to create a more transparent and permissionless system for MEV distribution, replacing the opaque, custom deals that currently define the market. Beaverbuild retired its centralized builder in May 2025 in favor of this network, with additional permissionless features planned for future releases.
 

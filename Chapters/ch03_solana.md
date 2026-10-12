@@ -28,7 +28,7 @@ These execution constraints and the account model shape how users actually trans
 
 ### The Transaction Model
 
-Each transaction includes a message (which contains the account list, instructions, and recent blockhash) along with the required Ed25519 signatures (Ed25519 is a modern digital signature algorithm known for its speed and security). Every transaction pays a base fee of 5,000 lamports per signature (0.000005 SOL), a fraction of a cent at October 2026 prices. Users can also attach a compute budget and pay priority fees per compute unit, essentially trading cost for faster processing. These compute unit caps serve two purposes: they enforce fairness across users and help the scheduler predict execution time for optimal parallelization.
+Each transaction includes a message (which contains the account list, instructions, and recent blockhash) along with the required Ed25519 signatures (Ed25519 is a modern digital signature algorithm known for its speed and security). Every transaction pays a base fee of 5,000 lamports per signature (0.000005 SOL), a fraction of a cent at late-2026 prices. Users can also attach a compute budget and pay priority fees per compute unit, essentially trading cost for faster processing. These compute unit caps serve two purposes: they enforce fairness across users and help the scheduler predict execution time for optimal parallelization.
 
 A worked example shows how the pieces combine. Take a transaction with one signature that requests a limit of 200,000 compute units at a priority price of 10,000 micro-lamports per unit (a micro-lamport is a millionth of a lamport). The base fee is 5,000 lamports. The priority fee is 200,000 × 10,000 = 2 billion micro-lamports, or 2,000 lamports, for a total of 7,000 lamports. Under this per-unit pricing, which legacy and v0 transactions use, the priority fee is charged on the compute limit requested, not on the compute actually consumed, so a wallet that requests far more than it needs overpays. (A newer v1 transaction format instead lets the sender state the priority fee as a flat total.) Either way, the whole fee is deducted from the fee payer before execution begins.
 
@@ -100,7 +100,7 @@ Under Alpenglow, Proof of History is effectively deprecated. The system replaces
 
 In simulations, Alpenglow achieves median finality of around a tenth of a second, compared to the several-second finality of Tower BFT. These are simulation-based numbers that don't yet account for full computation overhead. Beyond raw performance, faster finality has security benefits. It shrinks the window during which an attacker could attempt to reorganize recent blocks and limits opportunities for certain types of arbitrage that exploit the uncertainty period before transactions become final.
 
-Alpenglow completed its testnet and devnet rollouts in September 2026, but mainnet activation was still pending as of October 11. Its faster finality therefore remained a promise for mainnet users.
+Alpenglow completed its testnet and devnet rollouts in September 2026, but mainnet activation was still pending as of late 2026. Its faster finality therefore remained a promise for mainnet users.
 
 ### MEV and Block Building
 
@@ -136,13 +136,13 @@ However, inflation represents only one side of the supply equation. Fee burning 
 
 During periods of extreme network activity, burn rates can theoretically exceed inflation, making SOL temporarily deflationary. In practice, current transaction volume doesn't consistently achieve this threshold, but the mechanism creates a direct relationship between network usage and token supply dynamics.
 
-The practical impact: gross staking yields on Solana were around 5% APR in October 2026, varying with inflation and the share of SOL staked. Net returns also depend on validator commission and additional rewards such as MEV. Most of that yield is new issuance, which makes it largely a transfer from holders who do not stake to holders who do, not income arriving from outside. A staker's share of total supply grows only by the gap between their yield and the inflation rate, while an unstaked holder's share shrinks by the full inflation rate.
+The practical impact: gross staking yields on Solana were around 5% APR as of late 2026, varying with inflation and the share of SOL staked. Net returns also depend on validator commission and additional rewards such as MEV. Most of that yield is new issuance, which makes it largely a transfer from holders who do not stake to holders who do, not income arriving from outside. A staker's share of total supply grows only by the gap between their yield and the inflation rate, while an unstaked holder's share shrinks by the full inflation rate.
 
 ### Staking Mechanics and Validator Economics
 
 Staking on Solana works through a delegation model where SOL holders can delegate tokens to validators without surrendering custody. Unlike Ethereum's staking model (Chapter II), which requires 32 ETH minimums for solo validators and uses liquid staking derivatives like stETH for smaller holders, Solana allows native delegation of any amount directly to validators. Delegators earn rewards proportional to their stake minus the validator's chosen commission rate. This establishes a competitive marketplace where validators must balance commission revenue against attracting sufficient delegation to maintain profitability.
 
-The mechanics involve several time-based constraints. Stake activation and deactivation occur at epoch boundaries (roughly one day at the October 2026 slot target) and often complete in one epoch, but can take multiple epochs due to network-wide cooldown limits that throttle large stake movements. These delays prevent rapid stake movement that could destabilize consensus but introduce liquidity constraints for delegators who may need quick access to funds.
+The mechanics involve several time-based constraints. Stake activation and deactivation occur at epoch boundaries (roughly one day at the late-2026 slot target) and often complete in one epoch, but can take multiple epochs due to network-wide cooldown limits that throttle large stake movements. These delays prevent rapid stake movement that could destabilize consensus but introduce liquidity constraints for delegators who may need quick access to funds.
 
 #### The Economics of Running a Validator
 
@@ -154,13 +154,13 @@ The viability calculation is straightforward but unforgiving: validators need su
 
 #### Centralization Pressures and Network Security
 
-The validator count has fallen sharply: the Solana Foundation reported about 1,300 consensus validators in April 2025, compared with fewer than 700 block-producing validators reported in October 2026. This raises obvious questions about network security and decentralization.
+The validator count has fallen sharply, from about 1,300 consensus validators in April 2025 to fewer than 700 block-producing validators as of late 2026. This raises obvious questions about network security and decentralization.
 
 However, raw validator count tells only part of the story. A network could have thousands of validators but still be centralized if a handful control most of the stake. What matters more is how stake is distributed among validators, how concentrated the infrastructure is geographically, whether multiple independent software clients exist, and whether validators can actually operate profitably without subsidies.
 
 Part of the recent validator churn reflects the economics of running a node. The Solana Foundation Delegation Program (SFDP) was designed as a temporary bootstrap mechanism. It subsidizes vote costs for new validators and delegates stake to help them get started, but this support tapers over 12 months and then ends. The program explicitly pushes participants to attract delegation from regular token holders rather than rely on foundation support indefinitely. When validators can't attract enough organic delegation to cover their costs, they shut down. This is working as intended, not a system failure.
 
-But even accounting for SFDP transitions, the concentration of power remains concerning. In October 2026, roughly 18 large validators controlled enough stake to reach the "**superminority threshold**," roughly one-third of total stake, which is the amount needed to halt network consensus. If these operators coordinated (or were somehow forced to coordinate), they could stop the network from producing blocks.
+But even accounting for SFDP transitions, the concentration of power remains concerning. As of late 2026, roughly 18 large validators controlled enough stake to reach the "**superminority threshold**," roughly one-third of total stake, which is the amount needed to halt network consensus. If these operators coordinated (or were somehow forced to coordinate), they could stop the network from producing blocks.
 
 Geographic and infrastructure concentration makes this worse. Large portions of stake run through a small number of data centers and hosting providers, mostly concentrated in a handful of countries. This creates correlated risks. A problem at a major hosting provider, or coordinated government action in a key jurisdiction, could knock out enough validators to disrupt the network.
 
@@ -246,7 +246,7 @@ The developer tools and standards described above enable efficient application d
 
 ### The Data Growth Challenge
 
-High throughput drives rapid blockchain expansion. An archive operator reported roughly 400 TB of Solana transaction history in April 2026, an expensive dataset to store and serve. Ordinary validators and RPC nodes (servers that answer queries from wallets and applications) prune old data rather than keeping the full archive. The storage burden falls on specialized history providers.
+High throughput drives rapid blockchain expansion. By late 2026, Solana's full transaction history exceeded 500 TB, an expensive dataset to store and serve. Ordinary validators and RPC nodes (servers that answer queries from wallets and applications) prune old data rather than keeping the full archive. The storage burden falls on specialized history providers.
 
 ### Mitigation Strategies
 
@@ -268,7 +268,7 @@ Solana historically relied on a single codebase lineage (Agave and forks like Ji
 
 Firedancer's design goal is to turn Solana's validator into a deterministic, high-throughput engine capable of processing millions of transactions per second with minimal latency variance. Benchmarks and demos have shown very high transaction rates, though actual network-level throughput remains constrained by protocol-level consensus limits that currently cap Solana well below those benchmark figures. The project also aims to reduce hardware requirements, though this remains aspirational. The hybrid implementation (**Frankendancer**) still depends on Agave for major components, with hardware requirements comparable to those described in Section IV.
 
-Frankendancer, the transitional implementation that combines Firedancer's networking and block production modules with Agave's runtime and consensus components, went live on mainnet with a subset of validators in September 2024. By October 2026, full Firedancer releases were also available for mainnet, allowing validators to run without Agave components. Both the Agave and Firedancer teams have iterated significantly against the backdrop of this competitive relationship, with each implementation pushing the other toward better performance and reliability. Availability is only the first step toward client diversity: the resilience benefit depends on how much stake actually runs each independent implementation.
+Frankendancer, the transitional implementation that combines Firedancer's networking and block production modules with Agave's runtime and consensus components, went live on mainnet with a subset of validators in September 2024. By late 2026, full Firedancer releases were also available for mainnet, allowing validators to run without Agave components. Both the Agave and Firedancer teams have iterated significantly against the backdrop of this competitive relationship, with each implementation pushing the other toward better performance and reliability. Availability is only the first step toward client diversity: the resilience benefit depends on how much stake actually runs each independent implementation.
 
 These infrastructure improvements work alongside the consensus upgrades described in Section III to form a comprehensive strategy for maintaining Solana's competitive position, aiming to unlock use cases that remain economically unviable under current network conditions.
 

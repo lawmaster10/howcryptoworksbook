@@ -80,7 +80,7 @@ Kalshi's approach to crypto is equally compliance-focused. While the platform ac
 
 Recently, Kalshi has pushed further into crypto-native distribution. In December 2025 it began rolling out tokenized prediction positions on Solana (Chapter III), making Kalshi-linked event positions tradeable as tokens that can be bought and sold through popular crypto wallets. Buying these positions through DFlow requires identity verification through its Proof system, even when users access them through a crypto wallet. However, the system is not fully permissionless: access is geo-fenced from the U.S., and a centralized settlement authority still determines outcomes and handles payouts.
 
-In a $112 million deal, Polymarket acquired QCEX, providing the regulatory infrastructure for its U.S. return. By October 2026, both its international platform and its separate U.S. venue were operational. The U.S. exchange, QCX LLC, operates under CFTC oversight, while access to the international platform remains subject to geographic restrictions.
+In a $112 million deal, Polymarket acquired QCEX, providing the regulatory infrastructure for its U.S. return. By late 2026, both its international platform and its separate U.S. venue were operational. The U.S. exchange, QCX LLC, operates under CFTC oversight, while access to the international platform remains subject to geographic restrictions.
 
 The U.S. app offers sports and political event contracts with identity checks and eligibility restrictions. This creates a two-track structure: a regulated U.S. product competing directly with Kalshi alongside the international crypto-native platform that drove Polymarket's breakout. Accounts, market access, and rules differ between the venues.
 

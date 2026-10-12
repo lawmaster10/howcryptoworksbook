@@ -64,7 +64,7 @@ Semi-fungible tokens blur the line between fungible and unique. Event tickets mi
 
 ### NFT Categories by Use Case
 
-Profile Picture Projects represent collections like CryptoPunks, Bored Apes, and Pudgy Penguins that dominated the early boom, serving as digital status symbols and social media avatars. These collections saw explosive growth but also experienced significant value declines from their peaks as speculative fervor cooled. For instance, as of early 2026, the **floor price** (the cost of the cheapest NFT available in a collection) of Bored Apes is down more than 90% from its all-time high of over $400,000.
+Profile Picture Projects represent collections like CryptoPunks, Bored Apes, and Pudgy Penguins that dominated the early boom, serving as digital status symbols and social media avatars. These collections saw explosive growth but also experienced significant value declines from their peaks as speculative fervor cooled. For instance, as of late 2026, the **floor price** (the cost of the cheapest NFT available in a collection) of Bored Apes is down more than 95% from its all-time high of over $400,000.
 
 The question that consistently baffles outsiders is why these digital assets command prices comparable to, or even exceeding, physical luxuries like houses or fine art. The answer lies partially in speculation but mostly in the fundamental human need for digital tribal signaling. In our increasingly online world, these digital artifacts serve a purpose that extends far beyond their visual appeal.
 
